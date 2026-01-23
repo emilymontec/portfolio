@@ -1,285 +1,154 @@
-:root {
-    --primary: #c00c23;
-    --primary-glow: rgba(255, 94, 0, 0.4);
-    --dark: #0a0a0a;
-    --card-bg: #151515;
-    --text-main: #ffffff;
-    --text-dim: #a0a0a0;
-}
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: var(--dark);
-    color: var(--text-main);
-    line-height: 1.6;
-    overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f5f5;
+  min-height: 100vh;
+  color: #1a1a1a;
 }
 
-/* Fondo con efecto de luz */
-.background-glow {
-    position: fixed;
-    top: -100px;
-    right: -100px;
-    width: 500px;
-    height: 500px;
-    background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
-    z-index: -1;
-    filter: blur(60px);
+/* ===== NAVBAR ===== */
+.navbar {
+  position: absolute;
+  top: 30px;
+  right: 40px;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 8%;
+.btn-toggle-theme {
+  padding: 10px 20px;
+  border: 1.5px solid #000;
+  border-radius: 50px;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
 }
 
-/* Localiza la clase .logo y actualízala así: */
-.logo {
-    display: flex;
-    align-items: center;
+.btn-toggle-theme:hover {
+  background-color: #111;
+  color: #f5f5f5;
 }
 
-.logo img {
-    height: 50px; /* Ajusta esta altura según lo necesites */
-    width: auto;  /* Mantiene la proporción original */
-    transition: transform 0.3s ease;
+/* ===== MAIN ===== */
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 52vh;
 }
 
-/* Efecto opcional: un ligero resplandor al pasar el mouse */
-.logo img:hover {
-    transform: scale(1.05);
-    filter: drop-shadow(0 0 8px var(--primary-glow));
+/* ===== CONTENEDOR ===== */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+
+  max-width: 1100px;
+  width: 100%;
+  padding: 40px;
+
+  border: 1px solid #c0c0c0;
+  border-radius: 15px;
 }
 
-nav a {
-    color: var(--text-dim);
-    text-decoration: none;
-    margin-right: 2rem;
-    transition: 0.3s;
-    font-size: 0.9rem;
+/* ===== IMAGEN ===== */
+.image-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
-nav a:hover, nav a.active {
-    color: var(--primary);
+.image-section img {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 50%;
 }
 
-.btn-cv {
-    font-weight: bold;
-    background: transparent;
-    border: 1px solid var(--primary);
-    color: var(--primary);
-    padding: 0.5rem 1.2rem;
-    border-radius: 25px;
-    cursor: pointer;
+/* ===== TEXTO ===== */
+.text-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-.btn-cv:hover {
-    color: #ffffff;
-    background: #c00c23;
-    box-shadow: 0 0 10px var(--primary-glow);
-    transition: 0.3s;
-}
-
-/* Hero Section */
-.hero {
-    display: flex;
-    align-items: center;
-    padding: 4rem 8%;
-    gap: 4rem;
-    min-height: 80vh;
-}
-
-.hero-text {
-    flex: 1;
-}
-
-.badge {
-    color: var(--primary);
-    font-weight: 700;
-    letter-spacing: 4px;
-    font-size: 25px;
+.intro {
+  font-size: 1rem;
+  margin-bottom: 4px;
 }
 
 h1 {
-    font-size: 3.5rem;
-    margin: 0.5rem 0;
+  font-size: 3rem;
+  margin-bottom: 12px;
 }
 
-h1 span {
-    color: var(--primary);
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+  max-width: 400px;
+  margin-bottom: 20px;
 }
 
-.typing-text {
-    color: var(--primary);
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
+/* ===== BOTÓN ===== */
+.btn-say-hey {
+  padding: 12px 40px;
+  border: 1.5px solid #000;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #000;
+  transition: all 0.3s ease;
 }
 
-p {
-    color: var(--text-dim);
-    max-width: 500px;
-    margin-bottom: 2rem;
+.btn-say-hey:hover {
+  background-color: #000;
+  color: #fff;
 }
 
-/* Contenedor de imagen mejorado */
-.hero-visual {
-    flex: 1;
+/* ===== SCROLL TOP ===== */
+.scroll-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #f0f0f0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #606060;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .navbar {
+    position: static;
     display: flex;
     justify-content: center;
-}
+    margin: 20px 0;
+  }
 
-/* 1. Ampliamos el tamaño y quitamos la animación */
-.image-container {
-    position: relative;
-    width: 580px; 
-    height: 580px;
-    border-radius: 50%;
-    border: 3px solid var(--primary);
-    padding: 10px;
-    background: transparent;
-    
-    /* Mantenemos el brillo base */
-    box-shadow: 0 0 30px var(--primary-glow);
-    
-    /* Transición suave para el efecto de brillo */
-    transition: all 0.4s ease-in-out;
-    cursor: pointer;
-    
-    /* Eliminamos la línea de animation: float... */
-}
+  .main {
+    align-items: flex-start;
+  }
 
-/* 2. Efecto de aumento de brillo al poner el puntero (Hover) */
-.image-container:hover {
-    /* Aumenta el resplandor exterior */
-    box-shadow: 0 0 60px var(--primary), 0 0 20px var(--primary);
-    
-    /* Hace que la imagen y el borde brillen más (efecto exposure) */
-    filter: brightness(1.2);
-    
-    /* Opcional: un ligero aumento de escala para dar feedback */
-    transform: scale(1.02);
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-@keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
-}
-
-/* Botones y Sociales */
-.btn-primary {
-    background: var(--primary);
-    color: white;
-    padding: 1rem 2.5rem;
-    border: none;
-    border-radius: 50px;
-    font-weight: 600;
-    cursor: pointer;
-    box-shadow: 0 10px 20px var(--primary-glow);
-    transition: 0.3s;
-}
-
-.btn-primary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 25px var(--primary-glow);
-}
-
-/* Projects Grid */
-.projects {
-    padding: 4rem 8%;
+  .container {
+    flex-direction: column;
     text-align: center;
-}
+    gap: 30px;
+    margin: 0 20px;
+  }
 
-.section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-}
-
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.project-card {
-    background: var(--card-bg);
-    padding: 3rem 2rem;
-    border-radius: 20px;
-    transition: 0.3s;
-    border: 1px solid #222;
-}
-
-.project-card:hover {
-    border-color: var(--primary);
-    transform: translateY(-10px);
-}
-
-.icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-/* Espacio entre el botón principal y el grupo de redes sociales */
-.hero-btns {
-    display: flex;
+  .text-section {
     align-items: center;
-    gap: 30px; /* Ajusta este valor para separar el botón de los iconos */
-    margin-top: 20px;
-}
+  }
 
-/* Espacio individual entre cada icono de red social */
-.social-links {
-    display: flex;
-    gap: 15px; /* Separación entre botones */
-}
-
-/* Estilo para los iconos (para que se vean como en la imagen) */
-.social-icon {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    color: var(--text-main);
-    font-size: 0.8rem;
-    transition: 0.3s;
-}
-
-.social-icon:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-    box-shadow: 0 0 20px var(--primary-glow);
-}
-
-.about-me {
-    padding: 4rem 8%;
+  .description {
     text-align: center;
-}
-
-.about-text {
-    max-width: 800px;
-    margin: 0 auto;
-    color: var(--text-dim);
-    font-size: 1.1rem;
-    line-height: 1.8;
-}
-
-.about-span {
-    color: var(--primary);
-    font-weight: 600;
+  }
 }

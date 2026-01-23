@@ -1,82 +1,50 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emily Monterrosa | Portfolio</title>
-    <link rel="stylesheet" href="styles/main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>emontec</title>
+
+  <link rel="stylesheet" href="styles/main.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
 </head>
+
 <body>
+  <header class="navbar">
+    <button class="btn-toggle-theme" aria-label="Cambiar modo">
+      Full mode
+    </button>
+  </header>
 
-    <div class="background-glow"></div>
+  <main class="main">
+    <section class="container">
+      <section class="image-section">
+        <img
+          src="assets/images/photo_bw.png"
+          alt="Foto de Emily Monterrosa"
+        />
+      </section>
 
-    <header>
-        <div class="logo">
-            <img src="assets/icons/logo.png" alt="LogoEmily">
-        </div>
-        <nav>
-            <a href="#" class="active">Home</a>
-            <a href="#">About me</a>
-            <a href="#">Projects</a>
-            <button class="btn-cv">Download CV</button>
-        </nav>
-    </header>
+      <section class="text-section">
+        <p class="intro">Hallo! I'm</p>
+        <h1>Emily Monterrosa</h1>
+        <p class="description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
 
-    <main>
-        <section class="hero">
-            <div class="hero-text">
-                <span class="badge">HALLO!</span>
-                <h1>I'm <span>Emily Monterrosa</span></h1>
-                <h2 class="typing-text">Full-stack Developer Student</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nunc nisl aliquam nisl, eget ultricies nisl nunc eget nisl.</p>
-                
-                <div class="hero-btns">
-                    <button class="btn-primary">Let's talk</button>
-                    <div class="social-links">
-                        <a href="https://github.com/emilymontec"
-                        class="social-icon"><img src="assets/icons/github.png"
-                        alt="GitHub" width="50" /></a>
-                        <a href="https://www.linkedin.com/in/emilymontec/"
-                        class="social-icon"><img src="assets/icons/linkedin.png"
-                        alt="LinkedIn" width="45" /></a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="hero-visual">
-                <div class="image-container">
-                    <img src="assets/images/photo.png" alt="Emily">
-                </div>
-            </div>
-        </section>
+        <a href="mailto:tuemail@ejemplo.com" class="btn-say-hey">
+          Let's talk!
+        </a>
         
-        <section class="about-me">
-            <h3 class="section-title">About Me</h3>
-            <p class="about-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nunc nisl aliquam nisl, eget ultricies nisl nunc eget nisl.</p>
-        </section>
 
-        <section class="projects">
-            <h3 class="section-title">My <span>Projects</span></h3>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="icon">🚀</div>
-                    <h4>Web Development</h4>
-                    <p>Sitios rápidos y escalables.</p>
-                </div>
-                <div class="project-card">
-                    <div class="icon">📈</div>
-                    <h4>Digital Marketer</h4>
-                    <p>Estrategias de crecimiento.</p>
-                </div>
-                <div class="project-card">
-                    <div class="icon">📈</div>
-                    <h4>Digital Marketer</h4>
-                    <p>Estrategias de crecimiento.</p>
-                </div>
-            </div>
-        </section>
-    </main>
 
+      </section>
+    </section>
+  </main>
+
+  <button class="scroll-top" aria-label="Volver arriba">↑</button>
 </body>
 </html>
