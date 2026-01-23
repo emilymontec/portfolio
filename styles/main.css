@@ -124,6 +124,32 @@ h1 {
   color: #606060;
 }
 
+/* ===== STACK ===== */
+.stack {
+  margin-top: 30px;
+}
+
+.stack h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.stack-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.stack-list li {
+  padding: 6px 14px;
+  border: 1px solid #000;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .navbar {
