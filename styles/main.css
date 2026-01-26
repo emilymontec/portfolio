@@ -26,7 +26,7 @@ body {
   background-color: #f5f5f5;
   color: #1a1a1a;
   margin-bottom: 35px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.6s ease, color 0.4s ease;
 }
 
 /* NAVBAR */
@@ -215,8 +215,8 @@ body.full-mode em {
 }
 
 body.full-mode .btn-toggle-theme {
-  border-color: var(--red-primary);
-  color: var(--red-primary);
+  border-color: transparent;
+  color: white;
 }
 
 body.full-mode .btn-toggle-theme:hover {
@@ -243,6 +243,64 @@ body.full-mode .project-divider {
     transparent
   );
   opacity: 0.4;
+}
+
+/* ===================== */
+/* ===== AURORA FX ===== */
+/* ===================== */
+
+#auroraOverlay {
+  position: fixed;
+  inset: -25%;
+  z-index: 0;
+  pointer-events: none;
+
+  opacity: 0;
+  transform: scale(1.1);
+
+  background:
+    radial-gradient(
+      40% 40% at 20% 30%,
+      rgba(177, 18, 38, 0.45),
+      transparent 70%
+    ),
+    radial-gradient(
+      55% 55% at 80% 20%,
+      rgba(255, 94, 0, 0.35),
+      transparent 72%
+    ),
+    radial-gradient(
+      60% 60% at 50% 80%,
+      rgba(110, 15, 31, 0.45),
+      transparent 75%
+    );
+
+  filter: blur(70px) saturate(130%);
+  transition: opacity 2s ease;
+}
+
+/* SOLO en full mode */
+body.full-mode #auroraOverlay {
+  opacity: 1;
+  animation: aurora-move 20s ease-in-out infinite;
+}
+
+@keyframes aurora-move {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  25% {
+    transform: translate(-4%, 3%) rotate(2deg);
+  }
+  50% {
+    transform: translate(3%, -4%) rotate(-2deg);
+  }
+  75% {
+    transform: translate(-3%, -5%) rotate(1deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
 }
 
 
@@ -272,6 +330,10 @@ body.full-mode .project-divider {
 
   .description {
     text-align: center;
+  }
+
+  .stack-list {
+    justify-content: center;
   }
 
   .projects-section {
