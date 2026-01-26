@@ -1,25 +1,44 @@
+:root {
+  --red-primary: #b11226;
+  --red-glow: rgba(177, 18, 38, 0.35);
+
+  --bg-main: #0b0b0c;
+  --bg-secondary: #151517;
+  --bg-tertiary: #1c1c1f;
+
+  --text-main: #f5f5f5;
+  --text-secondary: #a6a6a6;
+  --text-muted: #6f6f6f;
+
+  --accent-neutral: #2a2a2d;
+}
+
+/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* BASE */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #f5f5f5;
   color: #1a1a1a;
   margin-bottom: 35px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* ===== NAVBAR ===== */
+/* NAVBAR */
 .navbar {
   position: absolute;
   top: 30px;
   right: 40px;
+  z-index: 1000;
 }
 
 .btn-toggle-theme {
-  padding: 10px 20px;
+  padding: 10px 22px;
   border: 1.5px solid #000;
   border-radius: 50px;
   background: none;
@@ -33,32 +52,34 @@ body {
   color: #f5f5f5;
 }
 
-/* ===== MAIN ===== */
+/* MAIN */
 .main {
   display: flex;
-  flex-direction: column; /* 🔥 CLAVE */
+  flex-direction: column;
   align-items: center;
   padding-top: 30px;
-  gap: 40px; /* espacio entre info y proyectos */
+  gap: 40px;
 }
 
-
-/* ===== CONTENEDOR ===== */
-.container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 60px;
-
+/* CONTAINER */
+.container,
+.projects-section {
   max-width: 1100px;
   width: 100%;
   padding: 40px;
-
   border: 1px solid #c0c0c0;
   border-radius: 15px;
+  background: transparent;
+  transition: background 0.3s ease, border 0.3s ease;
 }
 
-/* ===== IMAGEN ===== */
+.container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+/* IMAGE */
 .image-section {
   flex: 1;
   display: flex;
@@ -71,12 +92,11 @@ body {
   border-radius: 50%;
 }
 
-/* ===== TEXTO ===== */
+/* TEXT */
 .text-section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
 }
 
 .intro {
@@ -97,29 +117,10 @@ h1 {
   margin-bottom: 20px;
 }
 
-/* ===== SCROLL TOP ===== */
-.scroll-top {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  background: #f0f0f0;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  color: #606060;
-}
-
-/* ===== STACK ===== */
-.stack {
-  margin-top: 10px;
-}
-
+/* STACK */
 .stack h2 {
   font-size: 1.2rem;
   margin-bottom: 10px;
-  font-weight: 700;
 }
 
 .stack-list {
@@ -134,18 +135,10 @@ h1 {
   border: 1px solid #000;
   border-radius: 20px;
   font-size: 0.85rem;
+  transition: all 0.2s ease;
 }
 
-/* ===== PROJECTS SECTION ===== */
-.projects-section {
-  max-width: 1100px;
-  width: 100%;
-  margin: 5px auto 0;
-  padding: 40px;
-  border: 1px solid #c0c0c0;
-  border-radius: 15px;
-}
-
+/* PROJECTS */
 .projects-section h2 {
   font-size: 1.5rem;
   margin-bottom: 22px;
@@ -166,6 +159,92 @@ h1 {
   background-color: rgba(0, 0, 0, 0.15);
   margin: 20px 0;
 }
+
+/* SCROLL TOP */
+.scroll-top {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #f0f0f0;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #606060;
+}
+
+/* OVERLAY TRANSICIÓN */
+#modeOverlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg-main);
+  z-index: 999;
+  pointer-events: none;
+
+  clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
+  transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+#modeOverlay.active {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+/* ===================== */
+/* ===== FULL MODE ===== */
+/* ===================== */
+
+body.full-mode {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+}
+
+body.full-mode .container,
+body.full-mode .projects-section {
+  background: var(--bg-secondary);
+  border: 1px solid var(--accent-neutral);
+}
+
+body.full-mode .description,
+body.full-mode .project-item p {
+  color: var(--text-secondary);
+}
+
+body.full-mode em {
+  color: var(--text-muted);
+}
+
+body.full-mode .btn-toggle-theme {
+  border-color: var(--red-primary);
+  color: var(--red-primary);
+}
+
+body.full-mode .btn-toggle-theme:hover {
+  background: var(--red-primary);
+  color: #fff;
+  box-shadow: 0 0 12px var(--red-glow);
+}
+
+body.full-mode .stack-list li {
+  border-color: var(--accent-neutral);
+  color: var(--text-secondary);
+}
+
+body.full-mode .stack-list li:hover {
+  border-color: var(--red-primary);
+  color: var(--text-main);
+}
+
+body.full-mode .project-divider {
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--red-primary),
+    transparent
+  );
+  opacity: 0.4;
+}
+
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
