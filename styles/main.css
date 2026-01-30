@@ -190,9 +190,7 @@ h1 {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-/* ===================== */
 /* ===== FULL MODE ===== */
-/* ===================== */
 
 body.full-mode {
   background-color: var(--bg-main);
@@ -245,9 +243,7 @@ body.full-mode .project-divider {
   opacity: 0.4;
 }
 
-/* ===================== */
-/* ===== AURORA FX ===== */
-/* ===================== */
+/* AURORA FX */
 
 #auroraOverlay {
   position: fixed;
@@ -285,23 +281,112 @@ body.full-mode #auroraOverlay {
   animation: aurora-move 20s ease-in-out infinite;
 }
 
+/* AURORA MOVE ANIMATION */
 @keyframes aurora-move {
-  0% {
-    transform: translate(0%, 0%) rotate(0deg);
-  }
-  25% {
-    transform: translate(-4%, 3%) rotate(2deg);
-  }
-  50% {
-    transform: translate(3%, -4%) rotate(-2deg);
-  }
-  75% {
-    transform: translate(-3%, -5%) rotate(1deg);
-  }
-  100% {
-    transform: translate(0%, 0%) rotate(0deg);
-  }
+  0% { transform: translate(0%, 0%) rotate(0deg); }
+  25% { transform: translate(-4%, 3%) rotate(2deg); }
+  50% { transform: translate(3%, -4%) rotate(-2deg); }
+  75% { transform: translate(-3%, -5%) rotate(1deg); }
+  100% { transform: translate(0%, 0%) rotate(0deg); }
 }
+
+/* ===== EXTENDED CONTENT & ANIMATIONS ===== */
+
+/* Profile Image Grayscale Transition */
+.profile-img {
+  filter: grayscale(100%);
+  transition: filter 0.8s ease, transform 0.5s ease;
+}
+
+body.full-mode .profile-img {
+  filter: grayscale(0%);
+}
+
+/* Extended Content (Bio & Projects) */
+.extended-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), 
+              opacity 0.5s ease, 
+              margin 0.5s ease;
+}
+
+body.full-mode .extended-content.bio-extended {
+  max-height: 200px; /* Approximate height for bio */
+  opacity: 1;
+  margin-top: 15px;
+}
+
+body.full-mode .extended-content.project-details {
+  max-height: 500px; /* Accommodate image + tags + text */
+  opacity: 1;
+  margin-top: 20px;
+}
+
+/* Extended Stack Items */
+.extended-item {
+  display: none;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+body.full-mode .extended-item {
+  display: block;
+  animation: fade-in-up 0.5s forwards;
+}
+
+/* Staggered animation for list items could be done with nth-child if desired, 
+   but simple fade-in is cleaner for now. */
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Project Previews */
+.project-preview {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid var(--accent-neutral);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+/* Tech Tags */
+.tech-tags {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-tags span {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--accent-neutral);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-family: monospace;
+}
+
+body.full-mode .tech-tags span {
+    border-color: var(--red-glow);
+    color: var(--text-main);
+}
+
+/* Container Expansion */
+.container, .projects-section {
+    transition: max-width 0.8s ease, padding 0.5s ease, background 0.5s ease;
+}
+
+body.full-mode .container, 
+body.full-mode .projects-section {
+    max-width: 1200px; /* Slightly wider */
+}
+
 
 
 /* ===== RESPONSIVE ===== */
