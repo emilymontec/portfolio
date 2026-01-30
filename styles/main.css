@@ -63,16 +63,7 @@ body {
 
 /* CONTAINER */
 .container,
-.projects-section {
-  max-width: 1100px;
-  width: 100%;
-  padding: 40px;
-  border: 1px solid #c0c0c0;
-  border-radius: 15px;
-  background: transparent;
-  transition: background 0.3s ease, border 0.3s ease, max-width 0.8s ease, padding 0.5s ease;
-}
-
+.projects-section,
 .stack-section-full {
   max-width: 1100px;
   width: 100%;
@@ -80,7 +71,6 @@ body {
   border: 1px solid #c0c0c0;
   border-radius: 15px;
   background: transparent;
-  transition: background 0.3s ease, border 0.3s ease, max-width 0.8s ease, padding 0.5s ease;
 }
 
 /* Full Stack Section (Hidden by Default) */
@@ -89,12 +79,16 @@ body {
   opacity: 0;
   overflow: hidden;
   padding: 0 40px;
-  /* Keep side padding, animate top/bottom */
+  /* Keep side padding, animate top/bottom vertical padding separately if needed, or rely on max-height */
   border: none;
   margin: 0;
+  /* No margin when hidden */
 
   /* Transition for appearing */
-  transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    max-height 0.6s ease,
+    opacity 0.25s ease,
+    padding 0.4s ease;
 }
 
 .stack-section-full h2 {
@@ -104,12 +98,15 @@ body {
 
 /* Full Mode Activations */
 body.full-mode .stack-section-full {
-  max-height: 500px;
+  max-height: 600px;
+  /* Increased to fit categories */
   opacity: 1;
   padding: 40px;
   border: 1px solid var(--accent-neutral);
   background: var(--bg-secondary);
-  margin-bottom: 0;
+  margin-bottom: 0px;
+  /* Main container gap handles spacing, but ensure no extra double margins */
+  transition-delay: 0s;
 }
 
 /* Icon Grid Styling */
@@ -155,7 +152,7 @@ body.full-mode .stack-section-full .icons-grid li:hover {
 
 /* Hide small stack in full mode */
 .stack {
-  transition: max-height 0.5s ease, opacity 0.5s ease;
+  transition: all 0.3s ease;
   max-height: 200px;
   opacity: 1;
 }
@@ -165,6 +162,15 @@ body.full-mode .stack {
   opacity: 0;
   overflow: hidden;
   margin: 0;
+}
+
+body.full-mode .basics-intro {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  display: block;
+  /* Ensure it behaves like a block for height transition if needed, or rely on span behavior */
 }
 
 .container {
@@ -306,6 +312,15 @@ body.full-mode em {
   color: var(--text-muted);
 }
 
+body.full-mode .project-item h3 {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--accent-neutral);
+  padding-bottom: 5px;
+  display: inline-block;
+}
+
 body.full-mode .btn-toggle-theme {
   border-color: transparent;
   color: white;
@@ -394,12 +409,21 @@ body.full-mode #auroraOverlay {
 
 /* Profile Image Grayscale Transition */
 .profile-img {
-  filter: grayscale(100%) brightness(1.35);
-  transition: filter 0.8s ease, transform 0.5s ease;
+  filter: grayscale(100%) brightness(1.35) contrast(0.9);
+  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  /* Bouncy 'pop' effect */
 }
 
 body.full-mode .profile-img {
   filter: grayscale(0%);
+  transform: scale(1.2);
+  box-shadow: 0 0 35px var(--red-glow), 0 0 10px rgba(177, 18, 38, 0.4);
+  border: 1px solid var(--red-primary);
+}
+
+body.full-mode .profile-img:hover {
+  box-shadow: 0 0 60px rgba(239, 40, 22, 0.8), 0 0 30px var(--red-primary);
+  filter: brightness(1.1);
 }
 
 /* Extended Content (Bio & Projects) */
@@ -424,6 +448,32 @@ body.full-mode .extended-content.project-details {
   /* Accommodate image + tags + text */
   opacity: 1;
   margin-top: 20px;
+  /* Flexbox for side-by-side layout */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+body.full-mode .project-info-wrapper {
+  flex: 1;
+}
+
+/* Project Previews */
+.project-preview {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid var(--accent-neutral);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+body.full-mode .project-preview {
+  flex: 0 0 350px;
+  /* Fixed width for image column */
+  margin-bottom: 0;
+  height: auto;
+  object-fit: cover;
 }
 
 /* Extended Stack Items */
@@ -547,5 +597,18 @@ body.full-mode .stack-section-full {
   .projects-section {
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* Stack full mode projects on mobile */
+  body.full-mode .extended-content.project-details {
+    flex-direction: column;
+    max-height: 800px;
+    /* Allow more height for stacked content */
+  }
+
+  body.full-mode .project-preview {
+    flex: none;
+    width: 100%;
+    margin-top: 15px;
   }
 }
