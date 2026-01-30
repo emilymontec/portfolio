@@ -3,9 +3,14 @@ const body = document.body;
 const aurora = document.getElementById("auroraOverlay");
 
 toggle.addEventListener("click", () => {
-  aurora.classList.add("active");
+  // Toggle logic
+  const isFullMode = body.classList.toggle("full-mode");
 
-  setTimeout(() => {
-    body.classList.toggle("full-mode");
-  }, 400);
+  if (isFullMode) {
+    toggle.textContent = "Back to the surface";
+    aurora.classList.add("active");
+  } else {
+    toggle.textContent = "Go deeper";
+    aurora.classList.remove("active");
+  }
 });
