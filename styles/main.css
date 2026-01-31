@@ -38,13 +38,14 @@ body {
 }
 
 .btn-toggle-theme {
-  padding: 10px 22px;
+  padding: 8px 20px;
   border: 1.5px solid #000;
   border-radius: 50px;
   background: none;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 12px;
   transition: all 0.3s ease;
+  margin-right: -20px;
 }
 
 .btn-toggle-theme:hover {
@@ -274,22 +275,6 @@ h1 {
   color: #606060;
 }
 
-/* OVERLAY TRANSICIÓN */
-#modeOverlay {
-  position: fixed;
-  inset: 0;
-  background: var(--bg-main);
-  z-index: 999;
-  pointer-events: none;
-
-  clip-path: polygon(100% 0, 100% 0, 100% 0, 100% 0);
-  transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-}
-
-#modeOverlay.active {
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-}
-
 /* ===== FULL MODE ===== */
 
 body.full-mode {
@@ -511,12 +496,16 @@ body.full-mode .basics-intro {
 body.full-mode .btn-toggle-theme {
   border-color: transparent;
   color: white;
+  text-decoration: underline;
+  text-underline-offset: 8px;
 }
 
 body.full-mode .btn-toggle-theme:hover {
   background: var(--red-primary);
   color: #fff;
   box-shadow: 0 0 12px var(--red-glow);
+  text-decoration: none;
+  transition: all 0.5s ease;
 }
 
 /* --- COMMON COMPONENTS (Base + Full Mode Overrides) --- */
