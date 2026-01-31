@@ -116,9 +116,9 @@ body.full-mode .stack-section-full .stack-category {
 
 body.full-mode .stack-section-full .stack-category h3 {
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   margin-bottom: 15px;
-  border-bottom: 1px solid var(--accent-neutral);
+  border-bottom: 1px solid var(--text-secondary);
   padding-bottom: 5px;
   display: inline-block;
 }
@@ -133,8 +133,8 @@ body.full-mode .stack-section-full .icons-grid {
 }
 
 body.full-mode .stack-section-full .icons-grid li {
-  padding: 10px;
-  font-size: 3rem;
+  padding: 8px;
+  font-size: 2rem;
   /* Icon size */
   color: var(--text-secondary);
   transition: all 0.3s ease;
@@ -145,8 +145,8 @@ body.full-mode .stack-section-full .icons-grid li {
 
 body.full-mode .stack-section-full .icons-grid li:hover {
   color: var(--text-main);
-  transform: translateY(-5px) scale(1.1);
-  text-shadow: 0 0 8px currentColor;
+  transform: translateY(-1px) scale(1.1);
+  text-shadow: 0 0 6px currentColor;
   /* Reduced glow effect */
 }
 
@@ -295,32 +295,219 @@ h1 {
 body.full-mode {
   background-color: var(--bg-main);
   color: var(--text-main);
+  overflow-x: hidden;
 }
 
-body.full-mode .container,
-body.full-mode .projects-section {
-  background: var(--bg-secondary);
-  border: 1px solid var(--accent-neutral);
+/* --- MAIN LAYOUT GRID --- */
+body.full-mode .main {
+  display: grid;
+  grid-template-areas:
+    "profile stack"
+    "projects projects";
+  grid-template-columns: 1.4fr 0.8fr;
+  grid-template-rows: auto auto;
+  gap: 30px;
+  max-width: 1200px;
+  /* Reduced slightly for better density */
+  width: 95%;
+  padding-bottom: 60px;
+  margin: 0 auto;
 }
 
-body.full-mode .description,
-body.full-mode .project-item p {
+/* 1. Profile / Info Box (Top Left) */
+body.full-mode .container {
+  grid-area: profile;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* Subtler border */
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+  max-width: 100%;
+  height: 100%;
+  padding: 30px;
+  /* Reduced padding */
+  gap: 15px;
+  /* Reduced gap */
+
+  /* Layout Changes */
+  justify-content: center;
+
+  /* Entry Animation */
+  opacity: 0;
+  animation: slide-up-fade 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+body.full-mode .image-section {
+  width: 100%;
+  margin-bottom: 10px;
+  flex: 0 0 auto;
+}
+
+body.full-mode .text-section {
+  align-items: center;
+  width: 100%;
+  flex: 0 0 auto;
+  /* Prevent vertical expansion to ensure centering */
+}
+
+body.full-mode .description {
   color: var(--text-secondary);
+  max-width: 100%;
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+  /* Reduced font size */
+  line-height: 1.5;
 }
 
-body.full-mode em {
-  color: var(--text-muted);
+body.full-mode h1 {
+  font-size: 2.2rem;
+  /* Reduced header size */
+  margin-bottom: 8px;
 }
 
-body.full-mode .project-item h3 {
+/* 2. Stack Box (Top Right) */
+body.full-mode .stack-section-full {
+  grid-area: stack;
+  display: flex;
+  flex-direction: column;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* Subtler border */
+  padding: 30px;
+  /* Reduced padding */
+  margin: 0;
+  max-height: none;
+  opacity: 1;
+  overflow: visible;
+
+  /* Entry Animation */
+  animation: slide-up-fade 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.1s;
+}
+
+body.full-mode .stack-section-full h2 {
+  font-size: 1.5rem;
+  margin-bottom: 22px;
+  color: var(--text-main);
+}
+
+body.full-mode .stack-category {
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+body.full-mode .stack-category h3 {
   font-size: 1.1rem;
   color: var(--text-muted);
   margin-bottom: 15px;
-  border-bottom: 1px solid var(--accent-neutral);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  /* Matches box border */
   padding-bottom: 5px;
   display: inline-block;
 }
 
+body.full-mode .icons-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  list-style: none;
+}
+
+body.full-mode .icons-grid li {
+  padding: 8px;
+  font-size: 1rem;
+  /* Further reduced */
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 6px;
+}
+
+body.full-mode .icons-grid li:hover {
+  color: var(--text-main);
+  transform: translateY(-5px) scale(1.1);
+  text-shadow: 0 0 8px currentColor;
+  background: transparent;
+}
+
+/* 3. Projects Area (Bottom) */
+body.full-mode .projects-section {
+  grid-area: projects;
+  background: transparent;
+  border: none;
+  padding: 0;
+  max-width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+body.full-mode .projects-section h2 {
+  display: none;
+  /* Hide header in full mode grid? Or keep it? The ASCII didn't show it inside the boxes. */
+}
+
+/* Project Card Styles */
+body.full-mode .project-item {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* Subtler border */
+  border-radius: 12px;
+  padding: 20px;
+  /* Reduced padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  position: relative;
+
+  /* Entry Animation */
+  opacity: 0;
+  animation: slide-up-fade 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.2s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+body.full-mode .project-item:hover {
+  transform: translateY(-8px);
+  border-color: var(--red-primary);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+body.full-mode .project-item h3 {
+  font-size: 1.3rem;
+  color: var(--text-main);
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  /* Matches box border */
+  padding-bottom: 8px;
+  width: 100%;
+}
+
+body.full-mode .project-item p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+/* Hides */
+body.full-mode .project-divider {
+  display: none;
+}
+
+body.full-mode .stack {
+  display: none;
+}
+
+body.full-mode .basics-intro {
+  display: none;
+}
+
+/* Aurora Button Active State */
 body.full-mode .btn-toggle-theme {
   border-color: transparent;
   color: white;
@@ -332,35 +519,16 @@ body.full-mode .btn-toggle-theme:hover {
   box-shadow: 0 0 12px var(--red-glow);
 }
 
-body.full-mode .stack-list li {
-  border-color: var(--accent-neutral);
-  color: var(--text-secondary);
-}
+/* --- COMMON COMPONENTS (Base + Full Mode Overrides) --- */
 
-body.full-mode .stack-list li:hover {
-  border-color: var(--red-primary);
-  color: var(--text-main);
-}
-
-body.full-mode .project-divider {
-  background: linear-gradient(to right,
-      transparent,
-      var(--red-primary),
-      transparent);
-  opacity: 0.4;
-}
-
-/* AURORA FX */
-
+/* Aurora FX */
 #auroraOverlay {
   position: fixed;
   inset: -25%;
   z-index: 0;
   pointer-events: none;
-
   opacity: 0;
   transform: scale(1.1);
-
   background:
     radial-gradient(40% 40% at 20% 30%,
       rgba(177, 18, 38, 0.45),
@@ -371,18 +539,15 @@ body.full-mode .project-divider {
     radial-gradient(60% 60% at 50% 80%,
       rgba(110, 15, 31, 0.45),
       transparent 75%);
-
   filter: blur(70px) saturate(130%);
   transition: opacity 2s ease;
 }
 
-/* SOLO en full mode */
 body.full-mode #auroraOverlay {
   opacity: 1;
   animation: aurora-move 20s ease-in-out infinite;
 }
 
-/* AURORA MOVE ANIMATION */
 @keyframes aurora-move {
   0% {
     transform: translate(0%, 0%) rotate(0deg);
@@ -405,25 +570,26 @@ body.full-mode #auroraOverlay {
   }
 }
 
-/* ===== EXTENDED CONTENT & ANIMATIONS ===== */
-
-/* Profile Image Grayscale Transition */
+/* Profile Image */
 .profile-img {
   filter: grayscale(100%) brightness(1.35) contrast(0.9);
   transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-  /* Bouncy 'pop' effect */
 }
 
 body.full-mode .profile-img {
   filter: grayscale(0%);
-  transform: scale(1.2);
+  transform: scale(1.1);
+  /* Reduced scale */
   box-shadow: 0 0 35px var(--red-glow), 0 0 10px rgba(177, 18, 38, 0.4);
   border: 1px solid var(--red-primary);
+  margin-bottom: 10px;
+  /* Reduced margin */
 }
 
 body.full-mode .profile-img:hover {
-  box-shadow: 0 0 60px rgba(239, 40, 22, 0.8), 0 0 30px var(--red-primary);
+  box-shadow: 0 0 60px rgba(239, 40, 22, 0.8), 0 0 15px var(--red-primary);
   filter: brightness(1.1);
+  border: 1px solid #ff6363b9;
 }
 
 /* Extended Content (Bio & Projects) */
@@ -437,83 +603,36 @@ body.full-mode .profile-img:hover {
 }
 
 body.full-mode .extended-content.bio-extended {
-  max-height: 200px;
-  /* Approximate height for bio */
+  max-height: 400px;
   opacity: 1;
-  margin-top: 15px;
+  margin-top: 10px;
+  /* Reduced margin */
+  display: block;
+  font-size: 0.9rem;
+  /* Smaller text */
 }
 
+body.full-mode em {
+  color: var(--text-muted);
+}
+
+/* Project Details - Card Layout Logic */
 body.full-mode .extended-content.project-details {
-  max-height: 500px;
-  /* Accommodate image + tags + text */
+  max-height: none;
   opacity: 1;
-  margin-top: 20px;
-  /* Flexbox for side-by-side layout */
+  margin-top: auto;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 30px;
+  flex-direction: column;
+  gap: 15px;
 }
 
 body.full-mode .project-info-wrapper {
-  flex: 1;
+  /* This contains the tags and description */
+  display: flex;
+  flex-direction: column;
 }
 
-/* Project Previews */
-.project-preview {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  border: 1px solid var(--accent-neutral);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-body.full-mode .project-preview {
-  flex: 0 0 350px;
-  /* Fixed width for image column */
-  margin-bottom: 0;
-  height: auto;
-  object-fit: cover;
-}
-
-/* Extended Stack Items */
-.extended-item {
-  display: none;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-body.full-mode .extended-item {
-  display: block;
-  animation: fade-in-up 0.5s forwards;
-}
-
-/* Staggered animation for list items could be done with nth-child if desired, 
-   but simple fade-in is cleaner for now. */
-
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Project Previews */
-.project-preview {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  border: 1px solid var(--accent-neutral);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Tech Tags */
+/* Tech Tags (Stack) */
 .tech-tags {
   display: flex;
   gap: 8px;
@@ -523,7 +642,8 @@ body.full-mode .extended-item {
 
 .tech-tags span {
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--accent-neutral);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  /* Subtler border */
   padding: 4px 10px;
   border-radius: 4px;
   font-size: 0.75rem;
@@ -531,24 +651,58 @@ body.full-mode .extended-item {
   font-family: monospace;
 }
 
+body.full-mode .tech-tags {
+  justify-content: flex-start;
+  margin-bottom: 15px;
+}
+
 body.full-mode .tech-tags span {
   border-color: var(--red-glow);
   color: var(--text-main);
+  background: rgba(177, 18, 50, 0.1);
 }
 
-/* Container Expansion */
+/* Project Preview (Logo App) */
+.project-preview {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  border: 1px solid var(--accent-neutral);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.5s ease;
+}
+
+body.full-mode .project-preview {
+  height: 160px;
+  /* Fixed height for consistency */
+  object-fit: cover;
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+
+body.full-mode .project-item:hover .project-preview {
+  opacity: 1;
+  transform: scale(1.02);
+}
+
+/* Container Transitions */
 .container,
 .projects-section {
   transition: max-width 0.8s ease, padding 0.5s ease, background 0.5s ease;
 }
 
-body.full-mode .container,
-body.full-mode .projects-section,
-body.full-mode .stack-section-full {
-  max-width: 1200px;
-  /* Slightly wider */
-}
+/* --- ANIMATIONS --- */
+@keyframes slide-up-fade {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 
 /* ===== RESPONSIVE ===== */
@@ -610,5 +764,21 @@ body.full-mode .stack-section-full {
     flex: none;
     width: 100%;
     margin-top: 15px;
+  }
+}
+
+/* Full Mode Responsive Grid */
+@media (max-width: 1024px) {
+  body.full-mode .main {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "profile"
+      "stack"
+      "projects";
+    gap: 40px;
+  }
+
+  body.full-mode .projects-section {
+    grid-template-columns: 1fr;
   }
 }
