@@ -60,6 +60,7 @@ body {
   align-items: center;
   padding-top: 30px;
   gap: 40px;
+  perspective: 1000px;
 }
 
 /* CONTAINER */
@@ -84,17 +85,22 @@ body {
   border: none;
   margin: 0;
   /* No margin when hidden */
+  transform: scaleY(0);
+  transform-origin: top center;
 
   /* Transition for appearing */
   transition:
-    max-height 0.6s ease,
-    opacity 0.25s ease,
-    padding 0.4s ease;
+    max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.6s ease 0.1s,
+    padding 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+    transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .stack-section-full h2 {
   font-size: 1.5rem;
   margin-bottom: 22px;
+  opacity: 0;
+  animation: slide-up-fade 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.15s;
 }
 
 /* Full Mode Activations */
@@ -107,12 +113,27 @@ body.full-mode .stack-section-full {
   background: var(--bg-secondary);
   margin-bottom: 0px;
   /* Main container gap handles spacing, but ensure no extra double margins */
-  transition-delay: 0s;
+  transform: scaleY(1);
+  transition-delay: 0.1s;
 }
 
 /* Icon Grid Styling */
 body.full-mode .stack-section-full .stack-category {
   margin-bottom: 30px;
+  opacity: 0;
+  animation: slide-up-fade 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+}
+
+body.full-mode .stack-section-full .stack-category:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+body.full-mode .stack-section-full .stack-category:nth-child(3) {
+  animation-delay: 0.35s;
+}
+
+body.full-mode .stack-section-full .stack-category:nth-child(4) {
+  animation-delay: 0.5s;
 }
 
 body.full-mode .stack-section-full .stack-category h3 {
@@ -142,7 +163,20 @@ body.full-mode .stack-section-full .icons-grid li {
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0;
+  transform: scale(0.7) translateY(20px);
+  animation: scale-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
+
+/* Staggered animation for each icon */
+body.full-mode .stack-section-full .icons-grid li:nth-child(1) { animation-delay: 0.35s; }
+body.full-mode .stack-section-full .icons-grid li:nth-child(2) { animation-delay: 0.4s; }
+body.full-mode .stack-section-full .icons-grid li:nth-child(3) { animation-delay: 0.45s; }
+body.full-mode .stack-section-full .icons-grid li:nth-child(4) { animation-delay: 0.5s; }
+body.full-mode .stack-section-full .icons-grid li:nth-child(5) { animation-delay: 0.55s; }
+body.full-mode .stack-section-full .icons-grid li:nth-child(6) { animation-delay: 0.6s; }
+body.full-mode .stack-section-full .icons-grid li:nth-child(7) { animation-delay: 0.65s; }
+body.full-mode .stack-section-full .icons-grid li:nth-child(n+8) { animation-delay: calc(0.65s + (var(--icon-index, 1) - 8) * 0.05s); }
 
 body.full-mode .stack-section-full .icons-grid li:hover {
   color: var(--text-main);
@@ -153,9 +187,10 @@ body.full-mode .stack-section-full .icons-grid li:hover {
 
 /* Hide small stack in full mode */
 .stack {
-  transition: all 0.3s ease;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   max-height: 200px;
   opacity: 1;
+  transform: scale(1);
 }
 
 body.full-mode .stack {
@@ -163,6 +198,7 @@ body.full-mode .stack {
   opacity: 0;
   overflow: hidden;
   margin: 0;
+  transform: scale(0.95);
 }
 
 body.full-mode .basics-intro {
@@ -297,6 +333,7 @@ body.full-mode .main {
   width: 95%;
   padding-bottom: 60px;
   margin: 0 auto;
+  perspective: 1200px;
 }
 
 /* 1. Profile / Info Box (Top Left) */
@@ -321,7 +358,8 @@ body.full-mode .container {
 
   /* Entry Animation */
   opacity: 0;
-  animation: slide-up-fade 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+  transform: scale(0.95) translateY(20px);
+  animation: expand-container 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
 }
 
 body.full-mode .image-section {
@@ -366,9 +404,10 @@ body.full-mode .stack-section-full {
   max-height: none;
   opacity: 1;
   overflow: visible;
+  transform: scale(1);
 
   /* Entry Animation */
-  animation: slide-up-fade 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.1s;
+  animation: expand-container 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.1s;
 }
 
 body.full-mode .stack-section-full h2 {
@@ -453,9 +492,17 @@ body.full-mode .project-item {
 
   /* Entry Animation */
   opacity: 0;
-  animation: slide-up-fade 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards 0.2s;
+  transform: scale(0.9) translateY(30px) rotateX(-5deg);
+  animation: expand-card 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
+
+body.full-mode .project-item:nth-child(1) { animation-delay: 0.25s; }
+body.full-mode .project-item:nth-child(2) { animation-delay: 0.35s; }
+body.full-mode .project-item:nth-child(3) { animation-delay: 0.45s; }
+body.full-mode .project-item:nth-child(4) { animation-delay: 0.55s; }
+body.full-mode .project-item:nth-child(5) { animation-delay: 0.65s; }
+body.full-mode .project-item:nth-child(6) { animation-delay: 0.75s; }
 
 body.full-mode .project-item:hover {
   transform: translateY(-8px);
@@ -690,6 +737,42 @@ body.full-mode .project-item:hover .project-preview {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes scale-pop {
+  from {
+    opacity: 0;
+    transform: scale(0.7) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes expand-container {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes expand-card {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(30px) rotateX(-5deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0) rotateX(0deg);
   }
 }
 
