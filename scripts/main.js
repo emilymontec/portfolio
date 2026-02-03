@@ -9,8 +9,15 @@ toggle.addEventListener("click", () => {
   if (isFullMode) {
     toggle.textContent = "Back to the surface";
     aurora.classList.add("active");
+    body.classList.remove("returning-to-basic");
   } else {
     toggle.textContent = "Go deeper";
     aurora.classList.remove("active");
+    body.classList.add("returning-to-basic");
+    
+    // Remove the returning class after animation completes
+    setTimeout(() => {
+      body.classList.remove("returning-to-basic");
+    }, 800);
   }
 });

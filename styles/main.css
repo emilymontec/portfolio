@@ -20,6 +20,31 @@
   box-sizing: border-box;
 }
 
+/* Border fade animation for transitions */
+@keyframes border-fade-transition {
+  0% {
+    border-color: #c0c0c0;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+}
+
+@keyframes border-fade-transition-back {
+  0% {
+    border-color: rgba(255, 255, 255, 0.15);
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: #c0c0c0;
+  }
+}
+
 /* BASE */
 body {
   font-family: 'Montserrat', sans-serif;
@@ -73,6 +98,19 @@ body {
   border: 1px solid #c0c0c0;
   border-radius: 15px;
   background: transparent;
+  transition: border-color 0.8s ease;
+}
+
+body.full-mode .container,
+body.full-mode .projects-section,
+body.full-mode .stack-section-full {
+  animation: border-fade-transition 0.8s ease forwards;
+}
+
+body.returning-to-basic .container,
+body.returning-to-basic .projects-section,
+body.returning-to-basic .stack-section-full {
+  animation: border-fade-transition-back 0.8s ease forwards;
 }
 
 /* Full Stack Section (Hidden by Default) */
@@ -340,7 +378,7 @@ body.full-mode .main {
 body.full-mode .container {
   grid-area: profile;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   /* Subtler border */
   flex-direction: column;
   align-items: center;
@@ -359,7 +397,7 @@ body.full-mode .container {
   /* Entry Animation */
   opacity: 0;
   transform: scale(0.95) translateY(20px);
-  animation: expand-container 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: expand-container 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, border-fade-transition 0.8s ease forwards;
 }
 
 body.full-mode .image-section {
@@ -396,7 +434,7 @@ body.full-mode .stack-section-full {
   display: flex;
   flex-direction: column;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   /* Subtler border */
   padding: 30px;
   /* Reduced padding */
@@ -407,7 +445,7 @@ body.full-mode .stack-section-full {
   transform: scale(1);
 
   /* Entry Animation */
-  animation: expand-container 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.1s;
+  animation: expand-container 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.1s, border-fade-transition 0.8s ease forwards 0.1s;
 }
 
 body.full-mode .stack-section-full h2 {
@@ -479,7 +517,7 @@ body.full-mode .projects-section h2 {
 /* Project Card Styles */
 body.full-mode .project-item {
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   /* Subtler border */
   border-radius: 12px;
   padding: 20px;
@@ -493,7 +531,7 @@ body.full-mode .project-item {
   /* Entry Animation */
   opacity: 0;
   transform: scale(0.9) translateY(30px) rotateX(-5deg);
-  animation: expand-card 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: expand-card 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, border-fade-transition 0.8s ease forwards;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
