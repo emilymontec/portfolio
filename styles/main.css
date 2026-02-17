@@ -125,13 +125,9 @@ nav ul li a:hover {
   border: none;
 }
 
-/* ANIMATION */
+/* ABOUT IFRAME */
 
-.about-frame {
-  width: 100%;
-  min-height: 100vh;
-  border: none;
-}
+/* ANIMATION */
 
 @keyframes revealBlur {
   0% {

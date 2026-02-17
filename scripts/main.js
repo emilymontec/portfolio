@@ -4,7 +4,6 @@ const aurora = document.getElementById("auroraOverlay");
 
 if (toggle) {
   toggle.addEventListener("click", () => {
-    // Toggle logic
     const isFullMode = body.classList.toggle("full-mode");
 
     if (isFullMode) {
@@ -16,7 +15,6 @@ if (toggle) {
       if (aurora) aurora.classList.remove("active");
       body.classList.add("returning-to-basic");
 
-      // Remove the returning class after animation completes
       setTimeout(() => {
         body.classList.remove("returning-to-basic");
       }, 800);
@@ -24,4 +22,4 @@ if (toggle) {
   });
 }
 
-// No dynamic loading needed; About se incluye vía iframe en index.html
+// About se carga directamente como iframe, sin JS adicional
