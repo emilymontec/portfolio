@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles/main.css">
-<title>EMC</title>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/about.css">
+    <title>EMC</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<nav>
-    <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Thinking</a></li>
-        <li><a href="#">Contact</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Thinking</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
 
-<section class="hero">
+    <section class="hero">
 
-    <div class="hero-image">
-        <img src="./assets/images/photo.jpg" alt="Profile">
+        <div class="hero-image">
+            <img src="./assets/images/photo.jpg" alt="Profile">
+        </div>
+
+        <div class="hero-content">
+            <h1>
+                Emily
+                Monterrosa
+            </h1>
+            <h2> Full-Stack Dev. In Progress</h2>
+            <span>
+                Interfaz + Lógica + Sistema = Nada extraño
+            </span>
+        </div>
+
+    </section>
+
+    <div class="info-strip">
+        <div>Systems Thinking</div>
+        <div>Calculated Risk</div>
+        <div>Modern Architecture</div>
     </div>
 
-    <div class="hero-content">
-        <h1>
-            Emily
-            Monterrosa
-        </h1>
-        <h2> Full-Stack Dev. In Progress</h2>
-        <span>
-          Interfaz + Lógica + Sistema = Nada extraño
-        </span>
-    </div>
+    <section class="section" id="about">
+        <iframe src="./pages/about.html" class="about-frame"></iframe>
+    </section>
 
-</section>
-
-<div class="info-strip">
-    <div>Systems Thinking</div>
-    <div>Calculated Risk</div>
-    <div>Modern Architecture</div>
-</div>
-
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>

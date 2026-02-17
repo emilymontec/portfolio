@@ -127,6 +127,12 @@ nav ul li a:hover {
 
 /* ANIMATION */
 
+.about-frame {
+  width: 100%;
+  min-height: 100vh;
+  border: none;
+}
+
 @keyframes revealBlur {
   0% {
     opacity: 0;
