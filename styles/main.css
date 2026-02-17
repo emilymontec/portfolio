@@ -1,894 +1,188 @@
 :root {
-  --red-primary: #b11226;
-  --red-glow: rgba(177, 18, 38, 0.35);
-
-  --bg-main: #0b0b0c;
-  --bg-secondary: #151517;
-  --bg-tertiary: #1c1c1f;
-
-  --text-main: #f5f5f5;
-  --text-secondary: #a6a6a6;
-  --text-muted: #6f6f6f;
-
-  --accent-neutral: #2a2a2d;
+  --primary: #5f0000;
+  --primary-dark: #3f0000;
+  --text-main: #f4f1f0;
+  --text-soft: #d8c7c9;
 }
 
-/* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Border fade animation for transitions */
-@keyframes border-fade-transition {
-  0% {
-    border-color: #c0c0c0;
-  }
-  50% {
-    border-color: transparent;
-  }
-  100% {
-    border-color: rgba(255, 255, 255, 0.15);
-  }
-}
-
-@keyframes border-fade-transition-back {
-  0% {
-    border-color: rgba(255, 255, 255, 0.15);
-  }
-  50% {
-    border-color: transparent;
-  }
-  100% {
-    border-color: #c0c0c0;
-  }
-}
-
-/* BASE */
 body {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #f5f5f5;
-  color: #1a1a1a;
-  margin-bottom: 35px;
-  transition: background-color 0.6s ease, color 0.4s ease;
+  font-family: 'Inter', sans-serif;
+  background: var(--primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+  animation: revealBlur 1.5s ease-out forwards;
 }
 
-/* NAVBAR */
-.navbar {
+/* NAV */
+
+nav {
   position: absolute;
   top: 30px;
-  right: 40px;
-  z-index: 1000;
+  right: 5%;
+  z-index: 10;
 }
 
-.btn-toggle-theme {
-  padding: 8px 20px;
-  border: 1.5px solid #000;
-  border-radius: 50px;
-  background: none;
-  cursor: pointer;
-  font-size: 12px;
-  transition: all 0.3s ease;
-  margin-right: -20px;
-}
-
-.btn-toggle-theme:hover {
-  background-color: #111;
-  color: #f5f5f5;
-}
-
-/* MAIN */
-.main {
+nav ul {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 30px;
-  gap: 40px;
-  perspective: 1000px;
-}
-
-/* CONTAINER */
-.container,
-.projects-section,
-.stack-section-full {
-  max-width: 1100px;
-  width: 100%;
-  padding: 40px;
-  border: 1px solid #c0c0c0;
-  border-radius: 15px;
-  background: transparent;
-  transition: border-color 0.8s ease;
-}
-
-body.full-mode .container,
-body.full-mode .projects-section,
-body.full-mode .stack-section-full {
-  animation: border-fade-transition 0.8s ease forwards;
-}
-
-body.returning-to-basic .container,
-body.returning-to-basic .projects-section,
-body.returning-to-basic .stack-section-full {
-  animation: border-fade-transition-back 0.8s ease forwards;
-}
-
-/* Full Stack Section (Hidden by Default) */
-.stack-section-full {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  padding: 0 40px;
-  /* Keep side padding, animate top/bottom vertical padding separately if needed, or rely on max-height */
-  border: none;
-  margin: 0;
-  /* No margin when hidden */
-  transform: scaleY(0);
-  transform-origin: top center;
-
-  /* Transition for appearing */
-  transition:
-    max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.6s ease 0.1s,
-    padding 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-.stack-section-full h2 {
-  font-size: 1.5rem;
-  margin-bottom: 22px;
-  opacity: 0;
-  animation: slide-up-fade 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.15s;
-}
-
-/* Full Mode Activations */
-body.full-mode .stack-section-full {
-  max-height: 600px;
-  /* Increased to fit categories */
-  opacity: 1;
-  padding: 40px;
-  border: 1px solid var(--accent-neutral);
-  background: var(--bg-secondary);
-  margin-bottom: 0px;
-  /* Main container gap handles spacing, but ensure no extra double margins */
-  transform: scaleY(1);
-  transition-delay: 0.1s;
-}
-
-/* Icon Grid Styling */
-body.full-mode .stack-section-full .stack-category {
-  margin-bottom: 30px;
-  opacity: 0;
-  animation: slide-up-fade 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-body.full-mode .stack-section-full .stack-category:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
-body.full-mode .stack-section-full .stack-category:nth-child(3) {
-  animation-delay: 0.35s;
-}
-
-body.full-mode .stack-section-full .stack-category:nth-child(4) {
-  animation-delay: 0.5s;
-}
-
-body.full-mode .stack-section-full .stack-category h3 {
-  font-size: 1.1rem;
-  color: var(--text-secondary);
-  margin-bottom: 15px;
-  border-bottom: 1px solid var(--text-secondary);
-  padding-bottom: 5px;
-  display: inline-block;
-}
-
-body.full-mode .stack-section-full .icons-grid {
-  display: flex;
-  flex-wrap: wrap;
-  /* Allow wrapping */
-  gap: 25px;
   list-style: none;
-  /* Ensure no bullets */
+  gap: 2rem;
 }
 
-body.full-mode .stack-section-full .icons-grid li {
-  padding: 8px;
-  font-size: 2rem;
-  /* Icon size */
-  color: var(--text-secondary);
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transform: scale(0.7) translateY(20px);
-  animation: scale-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-/* Staggered animation for each icon */
-body.full-mode .stack-section-full .icons-grid li:nth-child(1) { animation-delay: 0.35s; }
-body.full-mode .stack-section-full .icons-grid li:nth-child(2) { animation-delay: 0.4s; }
-body.full-mode .stack-section-full .icons-grid li:nth-child(3) { animation-delay: 0.45s; }
-body.full-mode .stack-section-full .icons-grid li:nth-child(4) { animation-delay: 0.5s; }
-body.full-mode .stack-section-full .icons-grid li:nth-child(5) { animation-delay: 0.55s; }
-body.full-mode .stack-section-full .icons-grid li:nth-child(6) { animation-delay: 0.6s; }
-body.full-mode .stack-section-full .icons-grid li:nth-child(7) { animation-delay: 0.65s; }
-body.full-mode .stack-section-full .icons-grid li:nth-child(n+8) { animation-delay: calc(0.65s + (var(--icon-index, 1) - 8) * 0.05s); }
-
-body.full-mode .stack-section-full .icons-grid li:hover {
+nav ul li a {
+  text-decoration: none;
   color: var(--text-main);
-  transform: translateY(-1px) scale(1.1);
-  text-shadow: 0 0 6px currentColor;
-  /* Reduced glow effect */
+  font-size: 0.9rem;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: 0.3s;
 }
 
-/* Hide small stack in full mode */
-.stack {
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-  max-height: 200px;
+nav ul li a:hover {
   opacity: 1;
-  transform: scale(1);
 }
 
-body.full-mode .stack {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  margin: 0;
-  transform: scale(0.95);
-}
+/* HERO */
 
-body.full-mode .basics-intro {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  margin: 0;
-  display: block;
-  /* Ensure it behaves like a block for height transition if needed, or rely on span behavior */
-}
-
-.container {
+.hero {
+  height: 100vh;
   display: flex;
   align-items: center;
-  gap: 60px;
+  justify-content: space-between;
+  padding: 0 10%;
+  gap: 4rem;
 }
 
 /* IMAGE */
-.image-section {
+
+.hero-image {
   flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.image-section img {
-  max-width: 300px;
+.hero-image img {
   width: 100%;
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 50%;
 }
 
-/* TEXT */
-.text-section {
+/* CONTENT */
+
+.hero-content {
   flex: 1;
-  display: flex;
-  flex-direction: column;
 }
 
-.intro {
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+}
+
+.hero-content h1 span {
+  display: block;
+  font-weight: 300;
+  font-size: 1.25rem;
+  color: var(--text-soft);
+  margin-bottom: 0.25rem;
+}
+
+.hero-content h2 {
+  margin-top: 1rem;
+  font-weight: 400;
   font-size: 1rem;
-  margin-bottom: 4px;
+  letter-spacing: 1px;
+  color: var(--text-soft);
+  opacity: 0.9;
 }
 
-h1 {
-  font-size: 3rem;
-  margin-bottom: 12px;
-}
+/* Bottom Info Strip */
 
-.description {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: #444;
-  max-width: 400px;
-  margin-bottom: 20px;
-}
-
-/* STACK */
-.stack h2 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-}
-
-.stack-list {
-  list-style: none;
+.info-strip {
+  position: absolute;
+  bottom: 30px;
+  left: 5%;
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  gap: 2rem;
+  font-size: 0.8rem;
+  opacity: 0.6;
 }
 
-.stack-list li {
-  padding: 6px 14px;
-  border: 1px solid #000;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  transition: all 0.2s ease;
+.info-strip div {
+  border-right: 1px solid #ffffff30;
+  padding-right: 1.5rem;
 }
 
-/* PROJECTS */
-.projects-section h2 {
-  font-size: 1.5rem;
-  margin-bottom: 22px;
-}
-
-.project-item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 8px;
-}
-
-.project-item p {
-  max-width: 700px;
-  color: #444;
-}
-
-.project-divider {
-  height: 1px;
-  background-color: rgba(0, 0, 0, 0.15);
-  margin: 20px 0;
-}
-
-/* SCROLL TOP */
-.scroll-top {
-  position: fixed;
-  bottom: 40px;
-  right: 40px;
-  background: #f0f0f0;
+.info-strip div:last-child {
   border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  cursor: pointer;
-  color: #606060;
 }
 
-/* ===== FULL MODE ===== */
+/* ANIMATION */
 
-body.full-mode {
-  background-color: var(--bg-main);
-  color: var(--text-main);
-  overflow-x: hidden;
-}
-
-/* --- MAIN LAYOUT GRID --- */
-body.full-mode .main {
-  display: grid;
-  grid-template-areas:
-    "profile stack"
-    "projects projects";
-  grid-template-columns: 1.4fr 0.8fr;
-  grid-template-rows: auto auto;
-  gap: 30px;
-  max-width: 1200px;
-  /* Reduced slightly for better density */
-  width: 95%;
-  padding-bottom: 60px;
-  margin: 0 auto;
-  perspective: 1200px;
-}
-
-/* 1. Profile / Info Box (Top Left) */
-body.full-mode .container {
-  grid-area: profile;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  /* Subtler border */
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin: 0;
-  max-width: 100%;
-  height: 100%;
-  padding: 30px;
-  /* Reduced padding */
-  gap: 15px;
-  /* Reduced gap */
-
-  /* Layout Changes */
-  justify-content: center;
-
-  /* Entry Animation */
-  opacity: 0;
-  transform: scale(0.95) translateY(20px);
-  animation: expand-container 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, border-fade-transition 0.8s ease forwards;
-}
-
-body.full-mode .image-section {
-  width: 100%;
-  margin-bottom: 10px;
-  flex: 0 0 auto;
-}
-
-body.full-mode .text-section {
-  align-items: center;
-  width: 100%;
-  flex: 0 0 auto;
-  /* Prevent vertical expansion to ensure centering */
-}
-
-body.full-mode .description {
-  color: var(--text-secondary);
-  max-width: 100%;
-  margin-bottom: 5px;
-  font-size: 0.95rem;
-  /* Reduced font size */
-  line-height: 1.5;
-}
-
-body.full-mode h1 {
-  font-size: 2.2rem;
-  /* Reduced header size */
-  margin-bottom: 8px;
-}
-
-/* 2. Stack Box (Top Right) */
-body.full-mode .stack-section-full {
-  grid-area: stack;
-  display: flex;
-  flex-direction: column;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  /* Subtler border */
-  padding: 30px;
-  /* Reduced padding */
-  margin: 0;
-  max-height: none;
-  opacity: 1;
-  overflow: visible;
-  transform: scale(1);
-
-  /* Entry Animation */
-  animation: expand-container 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards 0.1s, border-fade-transition 0.8s ease forwards 0.1s;
-}
-
-body.full-mode .stack-section-full h2 {
-  font-size: 1.5rem;
-  margin-bottom: 22px;
-  color: var(--text-main);
-}
-
-body.full-mode .stack-category {
-  padding: 10px;
-  margin-bottom: 25px;
-}
-
-body.full-mode .stack-category h3 {
-  font-size: 1.1rem;
-  color: var(--text-muted);
-  margin-bottom: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  /* Matches box border */
-  padding-bottom: 5px;
-  display: inline-block;
-}
-
-body.full-mode .icons-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  list-style: none;
-}
-
-body.full-mode .icons-grid li {
-  padding: 8px;
-  font-size: 1rem;
-  /* Further reduced */
-  color: var(--text-secondary);
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid transparent;
-  border-radius: 6px;
-}
-
-body.full-mode .icons-grid li:hover {
-  color: var(--text-main);
-  transform: translateY(-5px) scale(1.1);
-  text-shadow: 0 0 8px currentColor;
-  background: transparent;
-}
-
-/* 3. Projects Area (Bottom) */
-body.full-mode .projects-section {
-  grid-area: projects;
-  background: transparent;
-  border: none;
-  padding: 0;
-  max-width: 100%;
-
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 25px;
-}
-
-body.full-mode .projects-section h2 {
-  display: none;
-  /* Hide header in full mode grid? Or keep it? The ASCII didn't show it inside the boxes. */
-}
-
-/* Project Card Styles */
-body.full-mode .project-item {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  /* Subtler border */
-  border-radius: 12px;
-  padding: 20px;
-  /* Reduced padding */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 100%;
-  position: relative;
-
-  /* Entry Animation */
-  opacity: 0;
-  transform: scale(0.9) translateY(30px) rotateX(-5deg);
-  animation: expand-card 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards, border-fade-transition 0.8s ease forwards;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-body.full-mode .project-item:nth-child(1) { animation-delay: 0.25s; }
-body.full-mode .project-item:nth-child(2) { animation-delay: 0.35s; }
-body.full-mode .project-item:nth-child(3) { animation-delay: 0.45s; }
-body.full-mode .project-item:nth-child(4) { animation-delay: 0.55s; }
-body.full-mode .project-item:nth-child(5) { animation-delay: 0.65s; }
-body.full-mode .project-item:nth-child(6) { animation-delay: 0.75s; }
-
-body.full-mode .project-item:hover {
-  transform: translateY(-8px);
-  border-color: var(--red-primary);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-}
-
-body.full-mode .project-item h3 {
-  font-size: 1.3rem;
-  color: var(--text-main);
-  margin-bottom: 15px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  /* Matches box border */
-  padding-bottom: 8px;
-  width: 100%;
-}
-
-body.full-mode .project-item p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  margin-bottom: 15px;
-}
-
-/* Hides */
-body.full-mode .project-divider {
-  display: none;
-}
-
-body.full-mode .stack {
-  display: none;
-}
-
-body.full-mode .basics-intro {
-  display: none;
-}
-
-/* Aurora Button Active State */
-body.full-mode .btn-toggle-theme {
-  border-color: transparent;
-  color: white;
-  text-decoration: underline;
-  text-underline-offset: 8px;
-}
-
-body.full-mode .btn-toggle-theme:hover {
-  background: var(--red-primary);
-  color: #fff;
-  box-shadow: 0 0 12px var(--red-glow);
-  text-decoration: none;
-  transition: all 0.5s ease;
-}
-
-/* --- COMMON COMPONENTS (Base + Full Mode Overrides) --- */
-
-/* Aurora FX */
-#auroraOverlay {
-  position: fixed;
-  inset: -25%;
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0;
-  transform: scale(1.1);
-  background:
-    radial-gradient(40% 40% at 20% 30%,
-      rgba(177, 18, 38, 0.45),
-      transparent 70%),
-    radial-gradient(55% 55% at 80% 20%,
-      rgba(255, 94, 0, 0.35),
-      transparent 72%),
-    radial-gradient(60% 60% at 50% 80%,
-      rgba(110, 15, 31, 0.45),
-      transparent 75%);
-  filter: blur(70px) saturate(130%);
-  transition: opacity 2s ease;
-}
-
-body.full-mode #auroraOverlay {
-  opacity: 1;
-  animation: aurora-move 20s ease-in-out infinite;
-}
-
-@keyframes aurora-move {
+@keyframes revealBlur {
   0% {
-    transform: translate(0%, 0%) rotate(0deg);
-  }
-
-  25% {
-    transform: translate(-4%, 3%) rotate(2deg);
-  }
-
-  50% {
-    transform: translate(3%, -4%) rotate(-2deg);
-  }
-
-  75% {
-    transform: translate(-3%, -5%) rotate(1deg);
+    opacity: 0;
+    filter: blur(20px);
+    transform: scale(1.02);
   }
 
   100% {
-    transform: translate(0%, 0%) rotate(0deg);
-  }
-}
-
-/* Profile Image */
-.profile-img {
-  filter: grayscale(100%) brightness(1.35) contrast(0.9);
-  transition: all 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-
-body.full-mode .profile-img {
-  filter: grayscale(0%);
-  transform: scale(1.1);
-  /* Reduced scale */
-  box-shadow: 0 0 35px var(--red-glow), 0 0 10px rgba(177, 18, 38, 0.4);
-  border: 1px solid var(--red-primary);
-  margin-bottom: 10px;
-  /* Reduced margin */
-}
-
-body.full-mode .profile-img:hover {
-  box-shadow: 0 0 60px rgba(239, 40, 22, 0.8), 0 0 15px var(--red-primary);
-  filter: brightness(1.1);
-  border: 1px solid #ff6363b9;
-}
-
-/* Extended Content (Bio & Projects) */
-.extended-content {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 0.5s ease,
-    margin 0.5s ease;
-}
-
-body.full-mode .extended-content.bio-extended {
-  max-height: 400px;
-  opacity: 1;
-  margin-top: 10px;
-  /* Reduced margin */
-  display: block;
-  font-size: 0.9rem;
-  /* Smaller text */
-}
-
-body.full-mode em {
-  color: var(--text-muted);
-}
-
-/* Project Details - Card Layout Logic */
-body.full-mode .extended-content.project-details {
-  max-height: none;
-  opacity: 1;
-  margin-top: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-body.full-mode .project-info-wrapper {
-  /* This contains the tags and description */
-  display: flex;
-  flex-direction: column;
-}
-
-/* Tech Tags (Stack) */
-.tech-tags {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 8px;
-  flex-wrap: wrap;
-}
-
-.tech-tags span {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  /* Subtler border */
-  padding: 4px 10px;
-  border-radius: 4px;
-  font-size: 0.75rem;
-  color: var(--text-secondary);
-  font-family: monospace;
-}
-
-body.full-mode .tech-tags {
-  justify-content: flex-start;
-  margin-bottom: 15px;
-}
-
-body.full-mode .tech-tags span {
-  border-color: var(--red-glow);
-  color: var(--text-main);
-  background: rgba(177, 18, 50, 0.1);
-}
-
-/* Project Preview (Logo App) */
-.project-preview {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  border: 1px solid var(--accent-neutral);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: all 0.5s ease;
-}
-
-body.full-mode .project-preview {
-  height: 160px;
-  /* Fixed height for consistency */
-  object-fit: cover;
-  margin-bottom: 0;
-  opacity: 0.8;
-}
-
-body.full-mode .project-item:hover .project-preview {
-  opacity: 1;
-  transform: scale(1.02);
-}
-
-/* Container Transitions */
-.container,
-.projects-section {
-  transition: max-width 0.8s ease, padding 0.5s ease, background 0.5s ease;
-}
-
-/* --- ANIMATIONS --- */
-@keyframes slide-up-fade {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
     opacity: 1;
-    transform: translateY(0);
+    filter: blur(0);
+    transform: scale(1);
   }
 }
 
-@keyframes scale-pop {
-  from {
-    opacity: 0;
-    transform: scale(0.7) translateY(20px);
+/* MEDIA QUERIES */
+
+@media (max-width: 900px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding-top: 5rem;
+    gap: 2rem;
   }
 
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-@keyframes expand-container {
-  from {
-    opacity: 0;
-    transform: scale(0.95) translateY(20px);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-}
-
-@keyframes expand-card {
-  from {
-    opacity: 0;
-    transform: scale(0.9) translateY(30px) rotateX(-5deg);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1) translateY(0) rotateX(0deg);
-  }
-}
-
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .navbar {
-    position: static;
+  nav {
+    position: absolute;
+    /* Keep it absolute if desired, or relative */
+    width: 100%;
     display: flex;
     justify-content: center;
-    margin: 20px 0;
+    right: 0;
+    top: 20px;
   }
 
-  .main {
-    align-items: flex-start;
+  .hero-image {
+    order: -1;
+    /* Image on top on mobile usually looks better */
+    margin-bottom: 1rem;
   }
 
-  .container {
-    flex-direction: column;
-    text-align: center;
-    gap: 30px;
-    margin: 0 20px;
+  .hero-image img {
+    max-width: 280px;
   }
 
-  .text-section {
-    align-items: center;
+  .hero-content h1 {
+    font-size: 2.5rem;
   }
 
-  .description {
-    text-align: center;
-  }
-
-  .stack-list {
+  .info-strip {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 2rem;
     justify-content: center;
-  }
-
-  .projects-section {
-    margin: 30px 20px 0;
-    padding: 30px 20px;
-    text-align: center;
-  }
-
-  .project-item p {
-    margin: 0 auto;
-  }
-
-  .container,
-  .projects-section {
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  /* Stack full mode projects on mobile */
-  body.full-mode .extended-content.project-details {
-    flex-direction: column;
-    max-height: 800px;
-    /* Allow more height for stacked content */
-  }
-
-  body.full-mode .project-preview {
-    flex: none;
     width: 100%;
-    margin-top: 15px;
-  }
-}
-
-/* Full Mode Responsive Grid */
-@media (max-width: 1024px) {
-  body.full-mode .main {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "profile"
-      "stack"
-      "projects";
-    gap: 40px;
-  }
-
-  body.full-mode .projects-section {
-    grid-template-columns: 1fr;
   }
 }

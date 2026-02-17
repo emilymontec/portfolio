@@ -1,171 +1,47 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>emontec</title>
-
-  <link rel="stylesheet" href="styles/main.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles/main.css">
+<title>EMC</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- Aurora Overlay -->
-  <div id="auroraOverlay"></div>
 
-  <header class="navbar">
-    <button id="toggleMode" class="btn-toggle-theme" aria-label="cambiar modo">
-      Go deeper
-    </button>
-  </header>
+<nav>
+    <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Thinking</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
 
-  <main class="main">
-    <section class="container">
-      <section class="image-section">
-        <img src="assets/images/photo.png" alt="Foto de Emily Monterrosa" class="profile-img" />
-      </section>
+<section class="hero">
 
-      <section class="text-section">
-        <p class="intro">Hallo! I'm</p>
-        <h1>Emily Monterrosa</h1>
-        <p class="description">
-          Software Engineering student focused on building clean,
-          scalable and intentional systems.
-        </p>
+    <div class="hero-image">
+        <img src="./assets/images/photo.jpg" alt="Profile">
+    </div>
 
-        <div class="extended-content bio-extended">
-          <p class="description">
-            I believe technology should be indistinguishable from magic.
-            My journey started with a curiosity for how things work, leading me to deep dive into algorithms, system
-            design, and creative frontend development.
-            When I'm not coding, I'm exploring new aesthetics or optimizing my workflow.
-          </p>
-        </div>
+    <div class="hero-content">
+        <h1>
+            <span>I build</span>
+            Structured
+            Systems
+        </h1>
 
-        <span class="description basics-intro">
-          <em>Starting with the basics...</em>
-        </span>
+        <h2>Developer / Problem Architect</h2>
+    </div>
 
-        <div class="stack">
-          <h2>Common Tools</h2>
-          <ul class="stack-list">
-            <li>Python</li>
-            <li>Node.js</li>
-            <li>React</li>
-            <li>PostgreSQL</li>
-            <li>Git</li>
-          </ul>
-        </div>
-      </section>
-    </section>
+</section>
 
-    <!-- Full Mode Stack Section (Hidden by default) -->
-    <section class="stack-section-full">
-      <h2>Full Tech Stack</h2>
+<div class="info-strip">
+    <div>Systems Thinking</div>
+    <div>Calculated Risk</div>
+    <div>Modern Architecture</div>
+</div>
 
-      <div class="stack-category">
-        <h3>Core</h3>
-        <ul class="icons-grid">
-          <li><i class="devicon-python-plain" title="Python"></i></li>
-          <li><i class="devicon-nodejs-plain" title="Node.js"></i></li>
-          <li><i class="devicon-react-original" title="React"></i></li>
-          <li><i class="devicon-typescript-plain" title="TypeScript"></i></li>
-          <li><i class="devicon-nextjs-plain" title="Next.js"></i></li>
-          <li><i class="devicon-postgresql-plain" title="PostgreSQL"></i></li>
-          <li><i class="devicon-git-plain" title="Git"></i></li>
-        </ul>
-      </div>
-
-      <div class="stack-category">
-        <h3>Comfortable</h3>
-        <ul class="icons-grid">
-          <li><i class="devicon-docker-plain" title="Docker"></i></li>
-          <li><i class="devicon-amazonwebservices-plain-wordmark" title="AWS"></i></li>
-          <li><i class="devicon-graphql-plain" title="GraphQL"></i></li>
-          <li><i class="devicon-redis-plain" title="Redis"></i></li>
-          <li><i class="devicon-figma-plain" title="Figma"></i></li>
-        </ul>
-      </div>
-
-      <div class="stack-category">
-        <h3>Familiar</h3>
-        <ul class="icons-grid">
-          <li><i class="devicon-vuejs-plain" title="Vue"></i></li>
-          <li><i class="devicon-firebase-plain" title="Firebase"></i></li>
-          <li><i class="devicon-d3js-plain" title="D3.js"></i></li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="projects-section">
-      <h2>My Projects</h2>
-
-      <article class="project-item">
-        <h3>Project One</h3>
-        <p>
-          Real-world problem, clear solution, tech chosen with intent.
-        </p>
-        <div class="extended-content project-details">
-          <div class="project-info-wrapper">
-            <div class="tech-tags">
-              <span>React</span><span>Node.js</span><span>MongoDB</span>
-            </div>
-            <p class="mt-2">
-              A comprehensive platform designed to streamline workflow automation.
-              Features include real-time collaboration, intuitive dashboard, and automated reporting.
-            </p>
-          </div>
-          <img src="assets/images/project1.png" alt="Project One Preview" class="project-preview" />
-        </div>
-      </article>
-
-      <div class="project-divider"></div>
-
-      <article class="project-item">
-        <h3>Project Two</h3>
-        <p>
-          Performance-focused app with attention to UX and architecture.
-        </p>
-        <div class="extended-content project-details">
-          <div class="project-info-wrapper">
-            <div class="tech-tags">
-              <span>Next.js</span><span>Tailwind</span><span>Redis</span>
-            </div>
-            <p class="mt-2">
-              Built for speed and scalability. This application handles high-concurrency traffic
-              while maintaining sub-100ms response times.
-            </p>
-          </div>
-          <img src="assets/images/project2.png" alt="Project Two Preview" class="project-preview" />
-        </div>
-      </article>
-
-      <div class="project-divider"></div>
-
-      <article class="project-item">
-        <h3>Project Three</h3>
-        <p>
-          Clean idea, clean execution. No lorem, no smoke.
-        </p>
-        <div class="extended-content project-details">
-          <div class="project-info-wrapper">
-            <div class="tech-tags">
-              <span>Vue</span><span>Firebase</span><span>D3.js</span>
-            </div>
-            <p class="mt-2">
-              A minimalist approach to data visualization.
-              Focusing on clarity and user interaction to tell a story through data.
-            </p>
-          </div>
-          <img src="assets/images/project3.png" alt="Project Three Preview" class="project-preview" />
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <script src="scripts/main.js"></script>
 </body>
-
 </html>
