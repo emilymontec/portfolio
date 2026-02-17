@@ -104,6 +104,39 @@ nav ul li a:hover {
   line-height: 1.5;
 }
 
+.section-label {
+  width: 100%;
+  max-width: 1300px;
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  opacity: 0.7;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+  /* Space between label and content */
+}
+
+.section-label::before,
+.section-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
+
+.section-label::before {
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1));
+}
+
+.section-label::after {
+  background: linear-gradient(-90deg, transparent, rgba(255, 255, 255, 0.1));
+}
+
 /* Bottom Info Strip */
 
 .info-strip {
@@ -124,8 +157,6 @@ nav ul li a:hover {
 .info-strip div:last-child {
   border: none;
 }
-
-/* ABOUT IFRAME */
 
 /* ANIMATION */
 

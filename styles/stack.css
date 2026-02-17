@@ -1,0 +1,144 @@
+#stack {
+  padding: 5.5rem 10% 7.5rem;
+  /* Reduced padding */
+}
+
+.stack-section {
+  min-height: auto;
+  /* Allow natural height */
+  display: flex;
+  flex-direction: column;
+  /* Stack content vertically */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Stack specific overrides if any */
+
+.stack-container {
+  display: flex;
+  gap: 2rem;
+  /* Reduced gap for grid layout */
+  width: 100%;
+  max-width: 1300px;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  /* Ensure centered if odd number */
+}
+
+.stack-card {
+  flex: 1 1 45%;
+  /* Grow, shrink, base width ~45% for 2 per row */
+  min-width: 300px;
+  /* Prevent getting too small */
+  max-width: 600px;
+  /* Optional constraint */
+}
+
+/* Updated Stack Icons Design */
+.stack-icons {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.stack-icon {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 12px;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.stack-icon i {
+  font-size: 32px;
+  color: #fff;
+  display: block;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  transform: scale(1);
+}
+
+.stack-icon:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+}
+
+.stack-icon:hover i {
+  opacity: 1;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.stack-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 15px);
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(8px);
+  color: var(--text-main);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  min-width: 200px;
+  max-width: 240px;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  z-index: 100;
+  visibility: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stack-icon::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 5px);
+  transform: translateX(-50%) translateY(10px);
+  border-width: 6px;
+  border-style: solid;
+  border-color: rgba(20, 20, 20, 0.9) transparent transparent transparent;
+  opacity: 0;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 100;
+  visibility: hidden;
+}
+
+.stack-icon:hover::after,
+.stack-icon:hover::before {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 900px) {
+  #stack {
+    padding: 4rem 5% 5rem;
+  }
+
+  .stack-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .stack-icons {
+    justify-content: center;
+    gap: 1rem;
+  }
+}

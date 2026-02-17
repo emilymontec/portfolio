@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/main.css">
     <link rel="stylesheet" href="./styles/about.css">
+    <link rel="stylesheet" href="./styles/stack.css">
     <title>EMC</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 
 <body>
@@ -15,6 +17,7 @@
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#stack">Stack</a></li>
             <li><a href="#">Work</a></li>
             <li><a href="#">Thinking</a></li>
             <li><a href="#">Contact</a></li>
@@ -47,6 +50,9 @@
     </div>
 
     <section class="section" id="about">
+        <div class="section-label">
+            ABOUT
+        </div>
 
         <div class="container">
 
@@ -98,6 +104,81 @@
                     Busco coherencia.
                 </p>
 
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="section stack-section" id="stack">
+        <div class="section-label">
+            TOOLS
+        </div>
+        <div class="container stack-container">
+
+            <div class="card stack-card">
+                <h2>Frontend Dev.</h2>
+
+                <div class="stack-icons">
+                    <div class="stack-icon"
+                        data-tooltip="HTML como base semántica que decide si una interfaz es estructura o nada.">
+                        <i class="devicon-html5-plain"></i>
+                    </div>
+                    <div class="stack-icon"
+                        data-tooltip="CSS es donde el detalle separa lo funcional de lo profesional.">
+                        <i class="devicon-css3-plain"></i>
+                    </div>
+                    <div class="stack-icon" data-tooltip="React me permite construir interfaces que crecen sin desordenarse.">
+                        <i class="devicon-react-original"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card stack-card">
+                <h2>Backend Dev.</h2>
+
+                <div class="stack-icons">
+                    <div class="stack-icon" data-tooltip="Django me da disciplina sin frenar iteración.">
+                        <i class="devicon-django-plain"></i>
+                    </div>
+                    <div class="stack-icon" data-tooltip="Spring Boot; diseño pensando en el futuro.">
+                        <i class="devicon-spring-plain"></i>
+                    </div>
+                    <div class="stack-icon" data-tooltip="Node.js; iteración rápida sin perder claridad en la lógica.">
+                        <i class="devicon-nodejs-plain"></i>
+                    </div>
+                    <div class="stack-icon" data-tooltip="Express me deja construir APIs sin sobreingeniería.">
+                        <i class="devicon-express-original"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card stack-card">
+                <h2>Data Base</h2>
+
+                <div class="stack-icons">
+                    <div class="stack-icon" data-tooltip="MySQL para claridad en relaciones antes que ambigüedad.">
+                        <i class="devicon-mysql-plain"></i>
+                    </div>
+                    <div class="stack-icon" data-tooltip="PostgreSQL si la base de datos necesita crecer conmigo.">
+                        <i class="devicon-postgresql-plain"></i>
+                    </div>
+                    <div class="stack-icon"
+                        data-tooltip="MongoDB me permite experimentar sin pelear con el esquema desde el día uno.">
+                        <i class="devicon-mongodb-plain"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card stack-card">
+                <h2>Other Tools</h2>
+
+                <div class="stack-icons">
+                    <div class="stack-icon" data-tooltip="Git, control de versiones y colaboración.">
+                        <i class="devicon-git-plain"></i>
+                    </div>
+                </div>
             </div>
 
         </div>

@@ -1,12 +1,13 @@
-
 /* DYNAMIC CONTENT SECTIONS */
 
 .section {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 6rem 10%;
+  padding: 4rem 10%;
+  /* Reduced padding */
   position: relative;
 }
 
