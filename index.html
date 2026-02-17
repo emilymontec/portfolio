@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/about.css">
     <link rel="stylesheet" href="./styles/stack.css">
     <title>EMC</title>
+    <link rel="icon" type="image/png" href="./assets/icons/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
@@ -15,9 +16,12 @@
 <body>
 
     <nav>
+        <div class="logo">
+            <img src="./assets/icons/logo.png" alt="Logo">
+        </div>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#stack">Stack</a></li>
+            <li><a href="#about">'Bout Me</a></li>
+            <li><a href="#stack">Tools</a></li>
             <li><a href="#">Work</a></li>
             <li><a href="#">Thinking</a></li>
             <li><a href="#">Contact</a></li>
@@ -43,15 +47,9 @@
 
     </section>
 
-    <div class="info-strip">
-        <div>Systems Thinking</div>
-        <div>Calculated Risk</div>
-        <div>Modern Architecture</div>
-    </div>
-
     <section class="section" id="about">
         <div class="section-label">
-            ABOUT
+            'BOUT ME
         </div>
 
         <div class="container">
@@ -128,7 +126,8 @@
                         data-tooltip="CSS es donde el detalle separa lo funcional de lo profesional.">
                         <i class="devicon-css3-plain"></i>
                     </div>
-                    <div class="stack-icon" data-tooltip="React me permite construir interfaces que crecen sin desordenarse.">
+                    <div class="stack-icon"
+                        data-tooltip="React me permite construir interfaces que crecen sin desordenarse.">
                         <i class="devicon-react-original"></i>
                     </div>
                 </div>
@@ -184,6 +183,12 @@
         </div>
 
     </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 /emilymontec</p>
+        </div>
+    </footer>
 
     <script src="scripts/main.js"></script>
 </body>

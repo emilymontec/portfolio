@@ -23,9 +23,24 @@ body {
 
 nav {
   position: absolute;
-  top: 30px;
-  right: 5%;
+  top: 20px;
+  left: 3%;
+  right: 3%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   z-index: 10;
+}
+
+.logo img {
+  height: 40px;
+  width: auto;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.logo img:hover {
+  opacity: 1;
 }
 
 nav ul {
@@ -72,6 +87,12 @@ nav ul li a:hover {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
+  transition: transform 0.5s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
 
 /* CONTENT */
@@ -137,25 +158,22 @@ nav ul li a:hover {
   background: linear-gradient(-90deg, transparent, rgba(255, 255, 255, 0.1));
 }
 
-/* Bottom Info Strip */
+/* FOOTER */
 
-.info-strip {
-  position: absolute;
-  bottom: 30px;
-  left: 5%;
+.main-footer {
+  padding: 1rem;
+  background: var(--primary);
+  border-top: none;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
   display: flex;
-  gap: 2rem;
-  font-size: 0.8rem;
+  justify-content: center;
+  align-items: center;
   opacity: 0.6;
-}
-
-.info-strip div {
-  border-right: 1px solid #ffffff30;
-  padding-right: 1.5rem;
-}
-
-.info-strip div:last-child {
-  border: none;
+  font-size: 0.85rem;
 }
 
 /* ANIMATION */
@@ -188,12 +206,20 @@ nav ul li a:hover {
 
   nav {
     position: absolute;
-    /* Keep it absolute if desired, or relative */
-    width: 100%;
+    width: 90%;
+    left: 5%;
     display: flex;
-    justify-content: center;
-    right: 0;
+    justify-content: space-between;
+    align-items: center;
     top: 20px;
+  }
+
+  .logo img {
+    height: 30px;
+  }
+
+  nav ul {
+    gap: 1rem;
   }
 
   .hero-image {
@@ -211,11 +237,12 @@ nav ul li a:hover {
   }
 
   .info-strip {
-    position: relative;
-    bottom: auto;
-    left: auto;
-    margin-top: 2rem;
-    justify-content: center;
-    width: 100%;
+    display: none;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
   }
 }
