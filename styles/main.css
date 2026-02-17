@@ -68,7 +68,7 @@ nav ul li a:hover {
 
 .hero-image img {
   width: 100%;
-  max-width: 380px;
+  max-width: 500px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
@@ -84,24 +84,24 @@ nav ul li a:hover {
   font-size: 3.5rem;
   font-weight: 900;
   line-height: 1.1;
-  margin-bottom: 0.5rem;
-}
-
-.hero-content h1 span {
-  display: block;
-  font-weight: 300;
-  font-size: 1.25rem;
-  color: var(--text-soft);
   margin-bottom: 0.25rem;
 }
 
 .hero-content h2 {
-  margin-top: 1rem;
-  font-weight: 400;
-  font-size: 1rem;
-  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 1.5rem;
   color: var(--text-soft);
-  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  margin-top: 0;
+}
+
+.hero-content>span {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-soft);
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+  line-height: 1.5;
 }
 
 /* Bottom Info Strip */
