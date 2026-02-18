@@ -1,6 +1,6 @@
 #stack {
-  padding: 5.5rem 10% 7.5rem;
-  /* Reduced padding */
+  padding: 5.5rem 10% 2.5rem;
+  /* Espacio reducido hacia proyectos */
 }
 
 .stack-section {
@@ -55,7 +55,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, background;
 }
 
 .stack-icon i {
@@ -63,14 +64,14 @@
   color: #fff;
   display: block;
   opacity: 0.6;
-  transition: all 0.3s ease;
-  transform: scale(1);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translate3d(0, 0, 0);
 }
 
 .stack-icon:hover {
   background: rgba(255, 255, 255, 0.05);
   border-color: rgba(255, 255, 255, 0.15);
-  transform: translateY(-4px);
+  transform: translate3d(0, -5px, 0);
 }
 
 .stack-icon:hover i {
@@ -85,7 +86,7 @@
   left: 50%;
   bottom: calc(100% + 15px);
   transform: translateX(-50%) translateY(10px);
-  background: rgba(20, 20, 20, 0.9);
+  background: #3f0000;
   backdrop-filter: blur(8px);
   color: var(--text-main);
   padding: 0.8rem 1rem;
@@ -99,10 +100,10 @@
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 5px 20px #3f0000;
   z-index: 100;
   visibility: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgb(193 156 156 / 30%);
 }
 
 .stack-icon::before {

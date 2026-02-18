@@ -11,178 +11,240 @@
     <link rel="icon" type="image/png" href="./assets/icons/logo.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <link rel="stylesheet" href="./styles/projects.css">
 </head>
 
 <body>
 
-    <nav>
-        <div class="logo">
-            <img src="./assets/icons/logo.png" alt="Logo">
-        </div>
-        <ul>
-            <li><a href="#about">'Bout Me</a></li>
-            <li><a href="#stack">Tools</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Thinking</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
+    <div id="content-wrapper">
+        <nav>
+            <div class="logo">
+                <img src="./assets/icons/logo.png" alt="Logo">
+            </div>
+            <ul>
+                <li><a href="#about">'Bout Me</a></li>
+                <li><a href="#stack">Tools</a></li>
+                <li><a href="#projects">Ideas Lab</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
 
-    <section class="hero">
+        <section class="hero">
 
-        <div class="hero-image">
-            <img src="./assets/images/photo.jpg" alt="Profile">
-        </div>
-
-        <div class="hero-content">
-            <h1>
-                Emily
-                Monterrosa
-            </h1>
-            <h2> Full-Stack Dev. In Progress</h2>
-            <span>
-                Interfaz + Lógica + Sistema = Nada extraño
-            </span>
-        </div>
-
-    </section>
-
-    <section class="section" id="about">
-        <div class="section-label">
-            'BOUT ME
-        </div>
-
-        <div class="container">
-
-            <div class="card">
-                <h2>Who I Am</h2>
-                <p>
-                    Soy curiosa, pero no caótica.
-                </p>
-                <p>
-                    Me gusta explorar ideas nuevas, probar enfoques distintos y
-                    cuestionar lo establecido.
-                    Pero también me interesa entender las reglas antes de decidir romperlas.
-                    Estoy en un punto donde cada proyecto es una oportunidad para experimentar
-                    con intención.
-                    No busco soluciones llamativas.
-                    Busco soluciones que tengan sentido.
-                </p>
-                <p>
-                    A veces eso implica simplificar.
-                    A veces implica arriesgar.
-                </p>
-                <p>
-                    Estoy aprendiendo a distinguir la diferencia.
-                </p>
+            <div class="hero-image">
+                <img src="./assets/images/photo.jpg" alt="Profile">
             </div>
 
-            <div class="card">
-                <h2>How I Think</h2>
-                <p>
-                    No aprendo a usar herramientas.
-                    Aprendo a tomar decisiones.
-                </p>
-                <p>
-                    Cuando enfrento un problema, no asumo que está bien planteado.
-                    Primero reviso qué parte es realmente técnica y
-                    qué parte es de enfoque.
-                    Defino la restricción principal y trabajo en función de eso.
-                    No intento optimizar todo al mismo tiempo.
-                    Construyo lo mínimo que resuelve el caso actual.
-                    Si el sistema necesita crecer, que crezca por necesidad,
-                    no por anticipación.
-                    Entiendo que cada decisión tiene un costo.
-                    Evalúo ese intercambio antes de avanzar.
-                    Si algo es innecesario, lo elimino.
-                    Si algo puede ser más claro, lo simplifico.
-                </p>
-                <p>
-                    No busco complejidad.
-                    Busco coherencia.
-                </p>
-
+            <div class="hero-content">
+                <h1>
+                    Emily
+                    Monterrosa
+                </h1>
+                <h2> Full-Stack Dev. In Progress</h2>
+                <span>
+                    Interfaz + Lógica + Sistema = Nada extraño
+                </span>
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <section class="section" id="about">
+            <div class="section-label">
+                'BOUT ME
+            </div>
 
-    <section class="section stack-section" id="stack">
-        <div class="section-label">
-            TOOLS
-        </div>
-        <div class="container stack-container">
+            <div class="container">
 
-            <div class="card stack-card">
-                <h2>Frontend Dev.</h2>
-
-                <div class="stack-icons">
-                    <div class="stack-icon"
-                        data-tooltip="HTML como base semántica que decide si una interfaz es estructura o nada.">
-                        <i class="devicon-html5-plain"></i>
-                    </div>
-                    <div class="stack-icon"
-                        data-tooltip="CSS es donde el detalle separa lo funcional de lo profesional.">
-                        <i class="devicon-css3-plain"></i>
-                    </div>
-                    <div class="stack-icon"
-                        data-tooltip="React me permite construir interfaces que crecen sin desordenarse.">
-                        <i class="devicon-react-original"></i>
-                    </div>
+                <div class="card">
+                    <h2>Who I Am</h2>
+                    <p>
+                        Soy curiosa, pero no caótica.
+                    </p>
+                    <p>
+                        Me gusta explorar ideas nuevas, probar enfoques distintos y
+                        cuestionar lo establecido.
+                        Pero también me interesa entender las reglas antes de decidir romperlas.
+                        Estoy en un punto donde cada proyecto es una oportunidad para experimentar
+                        con intención.
+                        No busco soluciones llamativas.
+                        Busco soluciones que tengan sentido.
+                    </p>
+                    <p>
+                        A veces eso implica simplificar.
+                        A veces implica arriesgar.
+                    </p>
+                    <p>
+                        Estoy aprendiendo a distinguir la diferencia.
+                    </p>
                 </div>
-            </div>
 
-            <div class="card stack-card">
-                <h2>Backend Dev.</h2>
+                <div class="card">
+                    <h2>How I Think</h2>
+                    <p>
+                        No aprendo a usar herramientas.
+                        Aprendo a tomar decisiones.
+                    </p>
+                    <p>
+                        Cuando enfrento un problema, no asumo que está bien planteado.
+                        Primero reviso qué parte es realmente técnica y
+                        qué parte es de enfoque.
+                        Defino la restricción principal y trabajo en función de eso.
+                        No intento optimizar todo al mismo tiempo.
+                        Construyo lo mínimo que resuelve el caso actual.
+                        Si el sistema necesita crecer, que crezca por necesidad,
+                        no por anticipación.
+                        Entiendo que cada decisión tiene un costo.
+                        Evalúo ese intercambio antes de avanzar.
+                        Si algo es innecesario, lo elimino.
+                        Si algo puede ser más claro, lo simplifico.
+                    </p>
+                    <p>
+                        No busco complejidad.
+                        Busco coherencia.
+                    </p>
 
-                <div class="stack-icons">
-                    <div class="stack-icon" data-tooltip="Django me da disciplina sin frenar iteración.">
-                        <i class="devicon-django-plain"></i>
-                    </div>
-                    <div class="stack-icon" data-tooltip="Spring Boot; diseño pensando en el futuro.">
-                        <i class="devicon-spring-plain"></i>
-                    </div>
-                    <div class="stack-icon" data-tooltip="Node.js; iteración rápida sin perder claridad en la lógica.">
-                        <i class="devicon-nodejs-plain"></i>
-                    </div>
-                    <div class="stack-icon" data-tooltip="Express me deja construir APIs sin sobreingeniería.">
-                        <i class="devicon-express-original"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="card stack-card">
-                <h2>Data Base</h2>
-
-                <div class="stack-icons">
-                    <div class="stack-icon" data-tooltip="MySQL para claridad en relaciones antes que ambigüedad.">
-                        <i class="devicon-mysql-plain"></i>
-                    </div>
-                    <div class="stack-icon" data-tooltip="PostgreSQL si la base de datos necesita crecer conmigo.">
-                        <i class="devicon-postgresql-plain"></i>
-                    </div>
-                    <div class="stack-icon"
-                        data-tooltip="MongoDB me permite experimentar sin pelear con el esquema desde el día uno.">
-                        <i class="devicon-mongodb-plain"></i>
-                    </div>
                 </div>
 
             </div>
 
-            <div class="card stack-card">
-                <h2>Other Tools</h2>
+        </section>
 
-                <div class="stack-icons">
-                    <div class="stack-icon" data-tooltip="Git, control de versiones y colaboración.">
-                        <i class="devicon-git-plain"></i>
+        <section class="section stack-section" id="stack">
+            <div class="section-label">
+                TOOLS
+            </div>
+            <div class="container stack-container">
+
+                <div class="card stack-card">
+                    <h2>Frontend Dev.</h2>
+
+                    <div class="stack-icons">
+                        <div class="stack-icon"
+                            data-tooltip="HTML como base semántica que decide si una interfaz es estructura o nada.">
+                            <i class="devicon-html5-plain"></i>
+                        </div>
+                        <div class="stack-icon"
+                            data-tooltip="CSS es donde el detalle separa lo funcional de lo profesional.">
+                            <i class="devicon-css3-plain"></i>
+                        </div>
+                        <div class="stack-icon"
+                            data-tooltip="React me permite construir interfaces que crecen sin desordenarse.">
+                            <i class="devicon-react-original"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card stack-card">
+                    <h2>Backend Dev.</h2>
+
+                    <div class="stack-icons">
+                        <div class="stack-icon" data-tooltip="Django me da disciplina sin frenar iteración.">
+                            <i class="devicon-django-plain"></i>
+                        </div>
+                        <div class="stack-icon" data-tooltip="Spring Boot; diseño pensando en el futuro.">
+                            <i class="devicon-spring-plain"></i>
+                        </div>
+                        <div class="stack-icon"
+                            data-tooltip="Node.js; iteración rápida sin perder claridad en la lógica.">
+                            <i class="devicon-nodejs-plain"></i>
+                        </div>
+                        <div class="stack-icon" data-tooltip="Express me deja construir APIs sin sobreingeniería.">
+                            <i class="devicon-express-original"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card stack-card">
+                    <h2>Data Base</h2>
+
+                    <div class="stack-icons">
+                        <div class="stack-icon" data-tooltip="MySQL para claridad en relaciones antes que ambigüedad.">
+                            <i class="devicon-mysql-plain"></i>
+                        </div>
+                        <div class="stack-icon" data-tooltip="PostgreSQL si la base de datos necesita crecer conmigo.">
+                            <i class="devicon-postgresql-plain"></i>
+                        </div>
+                        <div class="stack-icon"
+                            data-tooltip="MongoDB me permite experimentar sin pelear con el esquema desde el día uno.">
+                            <i class="devicon-mongodb-plain"></i>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card stack-card">
+                    <h2>Other Tools</h2>
+
+                    <div class="stack-icons">
+                        <div class="stack-icon" data-tooltip="Git, control de versiones.">
+                            <i class="devicon-git-plain"></i>
+                        </div>
+                        <div class="stack-icon" data-tooltip="GitHub, colaboraciones.">
+                            <i class="devicon-github-plain"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="section projects-section" id="projects">
+            <div class="section-label">
+                IDEAS LAB
+            </div>
+            <div class="container">
+                <!-- Grid de proyectos -->
+                <div class="projects-grid" id="projectsGrid">
+                    <div class="project-card">
+                        <div>
+                            <h3>Proyecto 1</h3>
+                            <p>Descripción del proyecto...</p>
+                        </div>
+                        <button class="see-more-btn" onclick="showDetail('project1')">See More</button>
+                    </div>
+
+                    <div class="project-card">
+                        <div>
+                            <h3>Proyecto 2</h3>
+                            <p>Descripción del proyecto...</p>
+                        </div>
+                        <button class="see-more-btn" onclick="showDetail('project2')">See More</button>
+                    </div>
+
+                    <div class="project-card">
+                        <div>
+                            <h3>Proyecto 3</h3>
+                            <p>Descripción del proyecto...</p>
+                        </div>
+                        <button class="see-more-btn" onclick="showDetail('project3')">See More</button>
+                    </div>
+                </div>
+
+                <!-- Vista detallada del proyecto -->
+                <div class="project-detail" id="projectDetail">
+                    <div class="detail-header">
+                        <div class="detail-title-section">
+                            <h2 id="detailTitle">Proyecto</h2>
+                            <h3 id="detailSubtitle">Subtítulo</h3>
+                        </div>
+                        <button class="back-btn" onclick="hideDetail()">← Volver</button>
+                    </div>
+                    <p class="detail-description" id="detailDescription">Descripción del proyecto...</p>
+                    <div class="detail-links">
+                        <a href="#" id="detailRepo" class="detail-link" target="_blank">
+                            <i class="devicon-github-original"></i> Repositorio
+                        </a>
+                        <a href="#" id="detailDemo" class="detail-link" target="_blank">
+                            <i class="devicon-chrome-plain"></i> Despliegue
+                        </a>
                     </div>
                 </div>
             </div>
+        </section>
 
-        </div>
-
-    </section>
+    </div>
 
     <footer class="main-footer">
         <div class="footer-content">
@@ -191,6 +253,7 @@
     </footer>
 
     <script src="scripts/main.js"></script>
+    <script src="scripts/projects.js"></script>
 </body>
 
 </html>
