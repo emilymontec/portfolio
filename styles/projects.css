@@ -189,12 +189,12 @@
 }
 
 .detail-link {
-    padding: 1.1rem 1.8rem;
+    padding: 10px;
     border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
-    background: rgba(255, 255, 255, 0.05);
+    background: transparent;
     border: none;
     color: var(--text-main);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
