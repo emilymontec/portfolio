@@ -115,7 +115,7 @@
                 TOOLS
             </div>
             <div class="container stack-container">
-                
+
                 <div class="card stack-card">
                     <h2>Architecture & Logic</h2>
 
@@ -198,27 +198,37 @@
                 <!-- Grid de proyectos -->
                 <div class="projects-grid" id="projectsGrid">
                     <div class="project-card">
-                        <div>
-                            <h3>Proyecto 1</h3>
-                            <p>Descripción del proyecto...</p>
+                        <div class="project-image">
+                            <img src="./assets/images/projects/siglo.png" alt="SIGLO">
                         </div>
-                        <button class="see-more-btn" onclick="showDetail('project1')">See More</button>
+                        <div class="project-info">
+                            <h3>SIGLO</h3>
+                            <p>Plataforma web para digitalizar la gestión y reserva de lotes inmobiliarios con
+                                visualización geográfica interactiva.</p>
+                        </div>
+                        <button class="explore-btn" onclick="showDetail('SIGLO')">Explore</button>
                     </div>
 
                     <div class="project-card">
-                        <div>
+                        <div class="project-image">
+                            <img src="./assets/images/projects/placeholder.jpg" alt="Proyecto 2">
+                        </div>
+                        <div class="project-info">
                             <h3>Proyecto 2</h3>
                             <p>Descripción del proyecto...</p>
                         </div>
-                        <button class="see-more-btn" onclick="showDetail('project2')">See More</button>
+                        <button class="explore-btn" onclick="showDetail('project2')">Explore</button>
                     </div>
 
                     <div class="project-card">
-                        <div>
+                        <div class="project-image">
+                            <img src="./assets/images/projects/placeholder.jpg" alt="Proyecto 3">
+                        </div>
+                        <div class="project-info">
                             <h3>Proyecto 3</h3>
                             <p>Descripción del proyecto...</p>
                         </div>
-                        <button class="see-more-btn" onclick="showDetail('project3')">See More</button>
+                        <button class="explore-btn" onclick="showDetail('project3')">Explore</button>
                     </div>
                 </div>
 
@@ -231,7 +241,13 @@
                         </div>
                         <button class="back-btn" onclick="hideDetail()">← Volver</button>
                     </div>
+                    <div class="detail-image-container">
+                        <img id="detailImage" src="" alt="Project Preview">
+                    </div>
                     <p class="detail-description" id="detailDescription">Descripción del proyecto...</p>
+                    <div class="detail-tech-icons" id="detailTech">
+                        <!-- Icons will be injected here -->
+                    </div>
                     <div class="detail-links">
                         <a href="#" id="detailRepo" class="detail-link" target="_blank">
                             <i class="devicon-github-original"></i> Repository
