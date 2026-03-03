@@ -1,0 +1,118 @@
+#contact {
+  padding: 7px 10% 7px;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 2rem;
+  color: var(--text-main);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  color: var(--text-soft);
+  max-width: 650px;
+  line-height: 1.8;
+  margin: 0 auto 3rem;
+  opacity: 0.9;
+}
+
+.contact-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.contact-icon {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 12px;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.contact-icon i {
+  font-size: 28px;
+  color: var(--text-main);
+  opacity: 0.5;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.contact-icon:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: scale(1.1) translateY(-5px);
+}
+
+.contact-icon:hover i {
+  opacity: 1;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Tooltip behavior mimicking stack icons */
+.contact-icon::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 15px);
+  transform: translateX(-50%) translateY(10px);
+  background: #3f0000;
+  backdrop-filter: blur(8px);
+  color: var(--text-main);
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  box-shadow: 0 5px 20px #3f0000;
+  z-index: 100;
+  visibility: hidden;
+  border: 1px solid rgb(193 156 156 / 30%);
+  white-space: nowrap;
+}
+
+.contact-icon:hover::after {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 900px) {
+  .contact-container {
+    align-items: center;
+    text-align: center;
+  }
+
+  .contact-links {
+    justify-content: center;
+  }
+}
