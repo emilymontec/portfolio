@@ -40,8 +40,23 @@ async function showDetail(id) {
     document.getElementById('detailTitle').textContent = project.title;
     document.getElementById('detailSubtitle').textContent = project.subtitle;
     document.getElementById('detailDescription').textContent = project.description;
-    document.getElementById('detailRepo').href = project.repo;
-    document.getElementById('detailDemo').href = project.demo;
+    // Actualizar botones de enlaces
+    const repoBtn = document.getElementById('detailRepo');
+    const demoBtn = document.getElementById('detailDemo');
+
+    if (project.repo && project.repo !== "#") {
+      repoBtn.href = project.repo;
+      repoBtn.style.display = 'inline-flex';
+    } else {
+      repoBtn.style.display = 'none';
+    }
+
+    if (project.demo && project.demo !== "#") {
+      demoBtn.href = project.demo;
+      demoBtn.style.display = 'inline-flex';
+    } else {
+      demoBtn.style.display = 'none';
+    }
 
     // Iconos de tecnologías
     const techContainer = document.getElementById('detailTech');
@@ -134,15 +149,20 @@ document.addEventListener('keydown', function (e) {
   }
 });
 
-// Suavizado general de la página
+// Suavizado general de la página solo para enlaces internos reales
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({
-        behavior: 'smooth'
-      });
+    const href = this.getAttribute('href');
+
+    // Solo actuar si el href empieza con # y tiene más caracteres (evita "#" solo)
+    if (href && href.startsWith('#') && href.length > 1) {
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: 'smooth'
+        });
+      }
     }
   });
 });
