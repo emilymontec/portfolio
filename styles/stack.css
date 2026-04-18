@@ -143,3 +143,21 @@
     gap: 1rem;
   }
 }
+
+.stack-icon.exploring i {
+  opacity: 0.25; /* más bajo que el resto */
+  filter: grayscale(80%);
+}
+
+.stack-icon.exploring:hover i {
+  opacity: 0.6; /* nunca llega al nivel de los otros */
+  transform: scale(1.05); /* menos énfasis */
+}
+
+.stack-icon.exploring:hover {
+  background: rgba(255, 255, 255, 0.03);
+  transform: translate3d(0, -2px, 0); /* menos movimiento */
+}
+.stack-icon.exploring::after {
+  border: 1px dashed rgba(255,255,255,0.2);
+}
