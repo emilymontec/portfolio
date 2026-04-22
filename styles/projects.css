@@ -1,8 +1,6 @@
 /* PROJECTS SECTION */
 .projects-section {
-    padding-top: 2.5rem;
-    padding-bottom: 8rem;
-    min-height: 100vh;
+    padding: 4rem 10% 4rem;
     position: relative;
     /* Evitar saltos de layout durante la animación */
     overflow-anchor: none;
