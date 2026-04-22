@@ -24,7 +24,7 @@
   backdrop-filter: blur(15px);
   transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .resume-card::before {
@@ -36,6 +36,7 @@
   bottom: 0;
   background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.03), transparent);
   pointer-events: none;
+  border-radius: inherit;
 }
 
 .resume-card:hover {
@@ -88,44 +89,17 @@
   gap: 1rem;
 }
 
-.resume-action-btn {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+/* Ensure SVGs inside stack-icon match the style of icons in the stack section */
+.stack-icon svg {
+  color: #fff;
+  opacity: 0.6;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.view-btn {
-  padding: 0.8rem 1.8rem;
-  border-radius: 10px;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--text-main);
-  font-size: 0.9rem;
-  font-weight: 500;
-  letter-spacing: 1px;
-}
-
-.view-btn:hover {
-  background: var(--text-main);
-  color: var(--primary);
-  border-color: var(--text-main);
-}
-
-.download-btn {
-  width: 45px;
-  height: 45px;
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--text-main);
-}
-
-.download-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.3);
+.stack-icon:hover svg {
+  opacity: 1;
   transform: scale(1.1);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.3));
 }
 
 @media (max-width: 768px) {
@@ -139,9 +113,5 @@
   .resume-actions {
     width: 100%;
     justify-content: center;
-  }
-  
-  .view-btn {
-    flex: 1;
   }
 }
