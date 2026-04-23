@@ -43,6 +43,12 @@ nav {
   opacity: 1;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
 nav ul {
   display: flex;
   list-style: none;
@@ -60,6 +66,30 @@ nav ul li a {
 
 nav ul li a:hover {
   opacity: 1;
+}
+
+/* LANGUAGE TOGGLE */
+
+.lang-btn {
+  background: transparent;
+  border: 1px solid rgba(244, 241, 240, 0.35);
+  color: var(--text-main);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  padding: 0.28rem 0.75rem;
+  border-radius: 4px;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: opacity 0.25s, border-color 0.25s, background 0.25s;
+  flex-shrink: 0;
+}
+
+.lang-btn:hover {
+  opacity: 1;
+  border-color: rgba(244, 241, 240, 0.65);
+  background: rgba(244, 241, 240, 0.07);
 }
 
 /* HERO */

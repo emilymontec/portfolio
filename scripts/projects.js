@@ -36,10 +36,11 @@ async function showDetail(id) {
   setTimeout(() => {
     if (!project) return;
 
-    // Actualizar contenido del detalle
-    document.getElementById('detailTitle').textContent = project.title;
-    document.getElementById('detailSubtitle').textContent = project.subtitle;
-    document.getElementById('detailDescription').textContent = project.description;
+    // Actualizar contenido del detalle (respeta idioma activo)
+    const lang = localStorage.getItem('emc-lang') || 'es';
+    document.getElementById('detailTitle').textContent = project[`title_${lang}`] || project.title;
+    document.getElementById('detailSubtitle').textContent = project[`subtitle_${lang}`] || project.subtitle;
+    document.getElementById('detailDescription').textContent = project[`description_${lang}`] || project.description;
     // Actualizar botones de enlaces
     const repoBtn = document.getElementById('detailRepo');
     const demoBtn = document.getElementById('detailDemo');
