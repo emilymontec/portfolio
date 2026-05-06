@@ -1,6 +1,6 @@
 #contact {
   padding: 8rem 10%;
-  background: linear-gradient(180deg, var(--primary) 0%, rgba(37, 6, 16, 0.9) 100%);
+  background: transparent;
 }
 
 .contact-container {
@@ -15,23 +15,16 @@
 
 .contact-info {
   flex: 1;
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
   padding: 4rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
-  position: relative;
-  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.contact-info::before {
-  content: "";
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+.contact-info:hover {
+  background: rgba(255, 255, 255, 0.02);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .contact-info h2 {
@@ -47,8 +40,8 @@
 
 .contact-info p {
   font-family: 'Didact Gothic', sans-serif;
-  font-size: 1.15rem;
-  color: rgba(255, 255, 255, 0.85);
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.65);
   max-width: 650px;
   line-height: 1.8;
   margin: 0 auto 3.5rem;
@@ -56,43 +49,41 @@
 
 .contact-links {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
   justify-content: center;
   margin-top: 1rem;
 }
 
 .contact-icon {
   position: relative;
-  width: 80px;
-  height: 80px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.03);
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  background: transparent;
   border: 1px solid rgba(255, 255, 255, 0.1);
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
   cursor: pointer;
 }
 
 .contact-icon i {
-  font-size: 32px;
+  font-size: 24px;
   color: #fff;
-  opacity: 0.7;
+  opacity: 0.5;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .contact-icon:hover {
-  background: var(--accent);
-  border-color: var(--accent);
-  transform: translateY(-8px);
-  box-shadow: 0 15px 30px rgba(139, 34, 82, 0.3);
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-5px);
 }
 
 .contact-icon:hover i {
   opacity: 1;
-  transform: scale(1.15);
 }
 
 /* Tooltip behavior */
@@ -102,21 +93,19 @@
   left: 50%;
   bottom: calc(100% + 15px);
   transform: translateX(-50%) translateY(10px);
-  background: var(--primary-dark);
-  backdrop-filter: blur(8px);
+  background: #1a1a1a;
   color: #fff;
-  padding: 0.8rem 1.2rem;
-  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
   font-family: 'Didact Gothic', sans-serif;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   text-align: center;
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
   z-index: 100;
   visibility: hidden;
-  border: 1px solid rgba(139, 34, 82, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   white-space: nowrap;
 }
 
@@ -126,9 +115,9 @@
   left: 50%;
   bottom: calc(100% + 5px);
   transform: translateX(-50%) translateY(10px);
-  border-width: 6px;
+  border-width: 5px;
   border-style: solid;
-  border-color: var(--primary-dark) transparent transparent transparent;
+  border-color: #1a1a1a transparent transparent transparent;
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   z-index: 100;

@@ -119,8 +119,8 @@ nav ul li a:hover {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(120, 15, 34, 0.301) 0%,
-    rgba(55, 9, 18, 0.459) 60%,
+    rgba(55, 9, 18, 0.699) 0%,
+    rgba(120, 15, 34, 0.404) 60%,
     var(--primary) 100%
   );
   z-index: 0;
