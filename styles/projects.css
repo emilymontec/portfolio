@@ -30,7 +30,7 @@
 
 .project-card {
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: none;
     border-radius: 8px;
     padding: 2.5rem;
     display: flex;
@@ -42,7 +42,6 @@
 .project-card:hover {
     transform: translateY(-8px);
     background: rgba(255, 255, 255, 0.02);
-    border-color: rgba(255, 255, 255, 0.2);
 }
 
 .project-card h3 {

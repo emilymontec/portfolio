@@ -20,7 +20,10 @@ body {
   animation: revealBlur 1.5s ease-out forwards;
 }
 
-h1, h2, h3, .section-label {
+h1,
+h2,
+h3,
+.section-label {
   font-family: 'Italiana', serif;
   font-weight: 400;
 }
@@ -104,29 +107,27 @@ nav ul li a:hover {
 /* HERO */
 
 .hero {
-  height: 110vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
   padding: 0 10%;
   position: relative;
-  background: url('../assets/images/photo.jpg') center 20% / cover no-repeat;
+  background: url('../assets/images/photo.jpg') center 25% / cover no-repeat;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(55, 9, 18, 0.767) 0%,
-    rgba(120, 15, 34, 0.37) 60%,
-    var(--primary) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(65, 11, 20, 0.575) 30%,
+      rgba(134, 22, 44, 0.267) 50%,
+      var(--primary) 100%);
   z-index: 0;
 }
 
-.hero > * {
+.hero>* {
   position: relative;
   z-index: 1;
 }
@@ -141,38 +142,35 @@ nav ul li a:hover {
 
 .hero-content {
   flex: 0 1 auto;
-  max-width: 650px;
-  text-align: right;
-  padding-right: 5%;
+  max-width: 500px;
+  text-align: center;
 }
 
 .hero-content h1 {
-  font-family: 'Italiana', serif;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 400;
   line-height: 1.15;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.06em;
   color: #fff;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   text-transform: uppercase;
-  text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.3);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.6), 0 0 45px rgba(255, 255, 255, 0.3);
 }
 
 .hero-content h2 {
-  font-family: 'Didact Gothic', sans-serif;
-  font-weight: 400;
-  font-size: 1.35rem;
-  color: #fff;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.65);
+  margin-bottom: 1.25rem;
   margin-top: 0;
   letter-spacing: 0.02em;
 }
 
-.hero-content > span {
+.hero-content>span {
   display: block;
   font-family: 'Didact Gothic', sans-serif;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.45);
   letter-spacing: 0.04em;
   line-height: 1.6;
 }
@@ -253,24 +251,23 @@ nav ul li a:hover {
     justify-content: center;
     text-align: center;
     padding-top: 5rem;
-    background-position: center 20%;
+    background-position: center 25%;
   }
 
   .hero-content {
     text-align: center;
     max-width: 90%;
-    padding-right: 0;
   }
 
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .hero-content h2 {
-    font-size: 1.1rem;
+    font-size: 1rem;
   }
 
-  .hero-content > span {
+  .hero-content>span {
     font-size: 0.85rem;
   }
 
