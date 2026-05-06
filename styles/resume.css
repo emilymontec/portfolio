@@ -22,13 +22,12 @@
   display: flex;
   align-items: center;
   gap: 3rem;
-  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   border: none;
 }
 
 .resume-card:hover {
   background: rgba(255, 255, 255, 0.02);
-  transform: translateY(-8px);
 }
 
 .resume-icon {
@@ -46,9 +45,10 @@
 }
 
 .resume-card:hover .resume-icon {
-  background: transparent;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
   color: #fff;
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.6));
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.6));
 }
 
 .resume-content {
@@ -100,13 +100,14 @@
 }
 
 .resume-actions .stack-icon:hover {
-  background: transparent;
-  transform: translateY(-5px);
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  transform: translateY(-5px) scale(1.1);
 }
 
 .resume-actions .stack-icon:hover svg {
   opacity: 1;
-  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.6));
+  color: #fff;
+  filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
 }
 
 /* Tooltips */
