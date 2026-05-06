@@ -1,5 +1,5 @@
 :root {
-  --primary: #370912;
+  --primary: #450815;
   --primary-dark: #250610;
   --accent: #8b2252;
   --text-main: #f5e6e8;
@@ -113,7 +113,7 @@ nav ul li a:hover {
   justify-content: flex-end;
   padding: 0 10%;
   position: relative;
-  background: url('../assets/images/photo.jpg') center 25% / cover no-repeat;
+  background: url('../assets/images/photo.png') center 25% / cover no-repeat;
 }
 
 .hero::before {
@@ -121,8 +121,9 @@ nav ul li a:hover {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-      rgba(129, 74, 83, 0.575) 30%,
-      rgba(134, 22, 44, 0.267) 50%,
+      rgba(80, 7, 7, 0.397) 0%,
+      rgba(84, 14, 14, 0.616) 30%,
+      rgba(134, 22, 59, 0.288) 50%,
       var(--primary) 100%);
   z-index: 0;
 }
