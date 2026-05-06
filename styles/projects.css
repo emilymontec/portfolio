@@ -358,3 +358,54 @@
         align-self: flex-start;
     }
 }
+@media (max-width: 900px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .projects-section {
+        padding: 4rem 5%;
+    }
+
+    .project-card {
+        padding: 1.5rem;
+    }
+
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+
+    /* Vista extendida responsive */
+    .project-detail-content {
+        padding: 2rem 5% 5rem;
+    }
+
+    .detail-image-container {
+        margin-bottom: 2rem;
+        aspect-ratio: 4/3;
+    }
+
+    .detail-title-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .detail-tech-icons {
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .detail-tech-icons .stack-icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .detail-tech-icons .stack-icon i {
+        font-size: 28px;
+    }
+}
