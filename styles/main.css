@@ -104,7 +104,7 @@ nav ul li a:hover {
 /* HERO */
 
 .hero {
-  height: 100vh;
+  height: 110vh;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -119,8 +119,8 @@ nav ul li a:hover {
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(55, 9, 18, 0.699) 0%,
-    rgba(120, 15, 34, 0.404) 60%,
+    rgba(55, 9, 18, 0.767) 0%,
+    rgba(120, 15, 34, 0.37) 60%,
     var(--primary) 100%
   );
   z-index: 0;

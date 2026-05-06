@@ -53,6 +53,7 @@
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
 .project-image {
@@ -170,6 +171,7 @@
     font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.3);
 }
 
 .detail-title-section h3 {
