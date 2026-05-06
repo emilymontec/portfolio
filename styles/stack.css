@@ -1,41 +1,89 @@
 #stack {
-  padding: 4rem 10%;
+  padding: 6rem 10%;
 }
 
 .stack-section {
   min-height: auto;
-  /* Allow natural height */
   display: flex;
   flex-direction: column;
-  /* Stack content vertically */
   align-items: center;
   justify-content: center;
 }
 
-/* Stack specific overrides if any */
-
 .stack-container {
   display: flex;
-  gap: 2rem;
-  /* Reduced gap for grid layout */
+  gap: 2.5rem;
   width: 100%;
   max-width: 1300px;
   flex-wrap: wrap;
   align-items: stretch;
   justify-content: center;
-  /* Ensure centered if odd number */
 }
 
 .stack-card {
   flex: 1 1 45%;
-  /* Grow, shrink, base width ~45% for 2 per row */
   min-width: 300px;
-  /* Prevent getting too small */
   max-width: 600px;
-  /* Optional constraint */
+  padding: 3.5rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* Updated Stack Icons Design */
+.stack-card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.stack-card:hover {
+  transform: translateY(-8px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(139, 34, 82, 0.15);
+}
+
+.stack-card:hover::before {
+  opacity: 1;
+}
+
+.stack-card h2 {
+  font-family: 'Italiana', serif;
+  font-size: 1.8rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  position: relative;
+  display: inline-block;
+}
+
+.stack-card h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px; 
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.4s ease;
+}
+
+.stack-card:hover h2::after {
+  width: 100%;
+}
+
 .stack-icons {
   margin-top: 2rem;
   display: flex;
@@ -48,35 +96,36 @@
   width: 72px;
   height: 72px;
   border-radius: 12px;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
   cursor: pointer;
   outline: none;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, background;
+  will-change: transform, background, box-shadow;
 }
 
 .stack-icon i {
   font-size: 32px;
   color: #fff;
-  display: block;
   opacity: 0.6;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translate3d(0, 0, 0);
 }
 
 .stack-icon:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.15);
-  transform: translate3d(0, -5px, 0);
+  background: rgba(139, 34, 82, 0.15);
+  border-color: var(--accent);
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(139, 34, 82, 0.2);
 }
 
 .stack-icon:hover i {
   opacity: 1;
-  transform: scale(1.1);
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+  transform: scale(1.15);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
 .stack-icon::after {
@@ -85,13 +134,13 @@
   left: 50%;
   bottom: calc(100% + 15px);
   transform: translateX(-50%) translateY(10px);
-  background: #3f0000;
+  background: var(--primary-dark);
   backdrop-filter: blur(8px);
-  color: var(--text-main);
-  padding: 0.8rem 1rem;
+  color: #fff;
+  padding: 0.8rem 1.2rem;
   border-radius: 8px;
-  font-size: 0.8rem;
-  font-weight: 400;
+  font-size: 0.85rem;
+  font-family: 'Didact Gothic', sans-serif;
   line-height: 1.5;
   min-width: 200px;
   max-width: 240px;
@@ -99,10 +148,10 @@
   opacity: 0;
   pointer-events: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-  box-shadow: 0 5px 20px #3f0000;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
   z-index: 100;
   visibility: hidden;
-  border: 1px solid rgb(193 156 156 / 30%);
+  border: 1px solid rgba(139, 34, 82, 0.3);
 }
 
 .stack-icon::before {
@@ -113,7 +162,7 @@
   transform: translateX(-50%) translateY(10px);
   border-width: 6px;
   border-style: solid;
-  border-color: rgba(20, 20, 20, 0.9) transparent transparent transparent;
+  border-color: var(--primary-dark) transparent transparent transparent;
   opacity: 0;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
   z-index: 100;
@@ -131,12 +180,10 @@
   #stack {
     padding: 4rem 5% 5rem;
   }
-
   .stack-container {
     flex-direction: column;
     gap: 2rem;
   }
-
   .stack-icons {
     justify-content: center;
     gap: 1rem;
@@ -144,18 +191,20 @@
 }
 
 .stack-icon.exploring i {
-  opacity: 0.25; /* más bajo que el resto */
+  opacity: 0.3;
   filter: grayscale(80%);
 }
 
 .stack-icon.exploring:hover i {
-  opacity: 0.6; /* nunca llega al nivel de los otros */
-  transform: scale(1.05); /* menos énfasis */
+  opacity: 0.7;
+  transform: scale(1.05);
 }
 
 .stack-icon.exploring:hover {
-  background: rgba(255, 255, 255, 0.03);
-  transform: translate3d(0, -2px, 0); /* menos movimiento */
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: none;
 }
 .stack-icon.exploring::after {
   border: 1px dashed rgba(255,255,255,0.2);

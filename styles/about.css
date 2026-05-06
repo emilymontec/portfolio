@@ -1,7 +1,7 @@
 /* DYNAMIC CONTENT SECTIONS */
 
 .section {
-  padding: 4rem 10%;
+  padding: 6rem 10%;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -20,38 +20,71 @@
 
 .card {
   flex: 1;
-  padding: 3rem;
-  background: rgba(255, 255, 255, 0.03);
-  backdrop-filter: blur(10px);
+  padding: 3.5rem;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 8px;
-  /* Transición más suave y natural (Ease Out Expo) */
-  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-    background 0.6s cubic-bezier(0.16, 1, 0.3, 1),
-    box-shadow 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: transform, background;
+  border-radius: 16px;
+  transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  will-change: transform, background, box-shadow;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  opacity: 0;
+  transition: opacity 0.6s ease;
 }
 
 .card:hover {
-  transform: perspective(1000px) translate3d(0, -8px, 0);
-  background: rgba(255, 255, 255, 0.06);
+  transform: translateY(-8px);
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.02));
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(139, 34, 82, 0.15); /* var(--accent) glow */
+}
+
+.card:hover::before {
+  opacity: 1;
 }
 
 .card h2 {
-  font-size: 1.5rem;
-  color: var(--text-main);
-  margin-bottom: 1.5rem;
-  font-weight: 700;
+  font-family: 'Italiana', serif;
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-weight: 400;
   text-transform: uppercase;
-  letter-spacing: 2px;
-  border-left: 3px solid var(--text-soft);
-  padding-left: 1rem;
+  letter-spacing: 0.1em;
+  position: relative;
+  display: inline-block;
+}
+
+.card h2::after {
+  content: "";
+  position: absolute;
+  bottom: -8px; 
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.4s ease;
+}
+
+.card:hover h2::after {
+  width: 100%;
 }
 
 .card p {
   line-height: 1.8;
-  font-size: 1rem;
-  color: var(--text-soft);
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.75);
   margin: 0 0 1.5rem;
 }
 
@@ -59,7 +92,6 @@
   margin-bottom: 0;
 }
 
-/* Ambas cards alineadas, sin desplazamiento vertical extra */
 .card:first-child {
   margin-top: 0;
 }
@@ -69,11 +101,6 @@
     flex-direction: column;
     gap: 2rem;
   }
-
-  .card:first-child {
-    margin-top: 0;
-  }
-
   .section {
     padding: 4rem 5%;
   }
