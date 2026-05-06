@@ -27,7 +27,7 @@
   background: transparent;
   border: none;
   border-radius: 8px;
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: var(--transition-slow);
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -35,7 +35,7 @@
 }
 
 .card:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .card:hover h2 {
@@ -58,6 +58,7 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.3);
+  transition: var(--transition-slow);
 }
 
 .card h2::after {
@@ -67,7 +68,7 @@
   width: 30px;
   height: 1px;
   background: var(--text-soft);
-  transition: width 0.4s ease;
+  transition: var(--transition-slow);
 }
 
 .card:hover h2::after {
@@ -80,6 +81,7 @@
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.65);
   margin: 0 0 1.5rem;
+  transition: var(--transition-slow);
 }
 
 .card p:last-child {

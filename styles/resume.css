@@ -22,12 +22,12 @@
   display: flex;
   align-items: center;
   gap: 3rem;
-  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: var(--transition-slow);
   border: none;
 }
 
 .resume-card:hover {
-  background: rgba(255, 255, 255, 0.02);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .resume-icon {
@@ -40,7 +40,7 @@
   align-items: center;
   justify-content: center;
   color: rgba(255, 255, 255, 0.5);
-  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: var(--transition-slow);
   flex-shrink: 0;
 }
 
@@ -64,6 +64,7 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.3);
+  transition: var(--transition-slow);
 }
 
 .resume-content p {
@@ -71,6 +72,7 @@
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.6;
+  transition: var(--transition-slow);
 }
 
 .resume-actions {
@@ -88,7 +90,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: var(--transition-slow);
   position: relative;
   text-decoration: none;
 }
@@ -96,7 +98,7 @@
 .resume-actions .stack-icon svg {
   color: #fff;
   opacity: 0.5;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: var(--transition-slow);
 }
 
 .resume-actions .stack-icon:hover {

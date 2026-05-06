@@ -4,6 +4,7 @@
   --accent: #8b2252;
   --text-main: #f5e6e8;
   --text-soft: #d4a5a5;
+  --transition-slow: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
