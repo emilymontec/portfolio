@@ -77,7 +77,6 @@
 
 .project-card:hover h3 {
     color: #fff;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 .project-card:hover::after {
@@ -218,6 +217,7 @@
 }
 
 .detail-title-section h3 {
+    font-family: 'Didact Gothic', sans-serif;
     font-size: 1rem;
     color: rgba(255, 255, 255, 0.6);
     font-weight: 400;
