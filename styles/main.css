@@ -116,6 +116,8 @@ nav ul li a:hover {
   padding: 0 10%;
   position: relative;
   background: url('../assets/images/photo.png') center 25% / cover no-repeat;
+  -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 .hero::before {
@@ -221,15 +223,15 @@ nav ul li a:hover {
 }
 
 .footer-content {
-  color: #d4a5a5;
+  color: #fff;
   font-family: 'Lato', sans-serif;
   font-weight: 700;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
+  opacity: 0.6;
   justify-content: center;
   align-items: center;
-  
   font-size: 0.85rem;
 }
 
