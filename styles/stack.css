@@ -91,13 +91,13 @@
 }
 
 .stack-icon:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: transparent;
   transform: translateY(-5px);
 }
 
 .stack-icon:hover i {
   opacity: 1;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.6);
 }
 
 .stack-icon::after {
@@ -170,6 +170,5 @@
 
 .stack-icon.exploring:hover {
   background: transparent;
-  border-color: rgba(255, 255, 255, 0.15);
   transform: translateY(-2px);
 }

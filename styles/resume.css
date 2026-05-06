@@ -35,7 +35,7 @@
   width: 80px;
   height: 80px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -46,9 +46,9 @@
 }
 
 .resume-card:hover .resume-icon {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: transparent;
   color: #fff;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.6));
 }
 
 .resume-content {
@@ -84,7 +84,7 @@
   height: 56px;
   border-radius: 8px;
   background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,13 +100,13 @@
 }
 
 .resume-actions .stack-icon:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.3);
+  background: transparent;
   transform: translateY(-5px);
 }
 
 .resume-actions .stack-icon:hover svg {
   opacity: 1;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 30px rgba(255, 255, 255, 0.6));
 }
 
 /* Tooltips */

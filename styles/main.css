@@ -121,7 +121,7 @@ nav ul li a:hover {
   position: absolute;
   inset: 0;
   background: linear-gradient(180deg,
-      rgba(65, 11, 20, 0.575) 30%,
+      rgba(129, 74, 83, 0.575) 30%,
       rgba(134, 22, 44, 0.267) 50%,
       var(--primary) 100%);
   z-index: 0;

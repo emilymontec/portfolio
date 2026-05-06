@@ -236,7 +236,7 @@
     font-weight: 700;
     font-size: 0.85rem;
     background: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: none;
     color: #fff;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     text-align: center;
@@ -256,12 +256,13 @@
 }
 
 .detail-link:hover {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.5);
+    background: transparent;
+    transform: translateY(-3px);
 }
 
 .detail-link:hover i {
     opacity: 1;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 30px rgba(255, 255, 255, 0.6);
 }
 
 @media (max-width: 768px) {
