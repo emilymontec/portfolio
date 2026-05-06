@@ -14,7 +14,9 @@
 
 body {
   font-family: 'Didact Gothic', sans-serif;
-  background: var(--primary);
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
+  background-attachment: scroll;
+  min-height: 100vh;
   color: var(--text-main);
   overflow-x: hidden;
   animation: revealBlur 1.5s ease-out forwards;
@@ -214,17 +216,20 @@ nav ul li a:hover {
 
 .main-footer {
   padding: 1rem;
-  background: var(--primary);
+  background: #250610;
   border-top: none;
 }
 
 .footer-content {
+  color: #d4a5a5;
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0.6;
+  
   font-size: 0.85rem;
 }
 
