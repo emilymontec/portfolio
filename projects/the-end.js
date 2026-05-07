@@ -10,6 +10,7 @@ registerProject({
     technologies: [
         { class: "devicon-javascript-plain", tooltip: "JavaScript para el sistema web" },
         { class: "devicon-nodejs-plain", tooltip: "Node.js como framework para backend" },
+        { class: "devicon-express-plain", tooltip: "Express para las APIs REST" },
         { class: "devicon-react-plain", tooltip: "React para interfaz" },
         { class: "devicon-postgresql-plain", tooltip: "PostgreSQL para persistencia de datos" }
     ],
