@@ -14,6 +14,6 @@ registerProject({
     description: `Sistema bancario completo que replica operaciones reales (gestión de cuentas, transferencias, depósitos y retiros), complementado con un módulo de simulación financiera orientado al análisis de escenarios.
     El sistema incorpora validaciones estrictas para garantizar la integridad de los saldos y un enfoque transaccional que asegura la consistencia de las operaciones. Implementé además un sistema antifraude básico que analiza condiciones como comportamiento y ubicación, generando alertas ante actividades sospechosas sin interrumpir el flujo normal del usuario.
     La principal diferenciación es el motor de simulación, que permite proyectar el comportamiento financiero de cuentas a lo largo del tiempo bajo condiciones controladas por un administrador (intereses, préstamos y parámetros de crédito), separando la lógica operativa de la lógica de análisis.`,
-    repo: "https://github.com/emilymontec/java/tree/main/AtlasBank",
-    demo: ""
+    repo: "https://github.com/emilymontec/ATLASBANK",
+    demo: "https://atlasbank.up.railway.app"
 });
