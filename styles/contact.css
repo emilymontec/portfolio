@@ -73,9 +73,14 @@
 
 .contact-icon i {
   font-size: 36px;
+  line-height: 1;
   color: #fff;
   opacity: 0.5;
   transition: var(--transition-slow);
+}
+
+.contact-icon .fa-whatsapp {
+  font-size: 42px; /* Adjusted slightly from previous 44px for better balance */
 }
 
 .contact-icon:hover {
