@@ -6,7 +6,7 @@ registerProject({
   subtitle: "SISTEMA BANCARIO CON MOTOR DE SIMULACIÓN FINANCIERA",
   subtitle_es: "SISTEMA BANCARIO CON MOTOR DE SIMULACIÓN FINANCIERA",
   subtitle_en: "BANKING SYSTEM WITH FINANCIAL SIMULATION ENGINE",
-  image: "./assets/images/projects/atlasbank.png",
+  image: "./assets/images/projects/atlasbank.jpg",
   technologies: [
     { class: "devicon-java-plain", tooltip: "Java, lenguaje seleccionado" },
     { class: "devicon-spring-plain", tooltip: "Spring Boot como base (lógica) del sistema"},

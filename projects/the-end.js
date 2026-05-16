@@ -6,7 +6,7 @@ registerProject({
   subtitle: "GESTIÓN INTEGRAL DE OPERACIONES CINEMATOGRÁFICAS",
   subtitle_es: "GESTIÓN INTEGRAL DE OPERACIONES CINEMATOGRÁFICAS",
   subtitle_en: "COMPREHENSIVE CINEMA OPERATIONS MANAGEMENT",
-  image: "./assets/images/projects/the-end.png",
+  image: "./assets/images/projects/the-end.jpg",
   technologies: [
     { class: "devicon-javascript-plain", tooltip: "JavaScript para el sistema web", },
     { class: "devicon-nodejs-plain", tooltip: "Node.js como framework para backend", },
