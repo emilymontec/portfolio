@@ -41,7 +41,7 @@ function renderProjectDetail(project, lang) {
     project.technologies.forEach(tech => {
       const isObject = typeof tech === 'object' && tech !== null;
       const iconClass = isObject ? tech.class : tech;
-      const tooltip = isObject ? tech.tooltip : '';
+      const tooltip = isObject ? (tech[`tooltip_${lang}`] || tech.tooltip) : '';
 
       const iconWrapper = document.createElement('div');
       iconWrapper.className = 'stack-icon';

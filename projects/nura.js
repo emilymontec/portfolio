@@ -8,11 +8,11 @@ registerProject({
   subtitle_en: "ARTIFICIAL INTELLIGENCE SYSTEM FOR BUSINESS DATA ANALYSIS",
   image: "./assets/images/projects/nura.jpg",
   technologies: [
-    {class: "devicon-python-plain", tooltip: "Procesamiento de datos, lógica backend e integración de inteligencia artificial." },
-    {class: "devicon-django-plain", tooltip: "Arquitectura backend, autenticación y flujo estructurado de procesamiento." },
-    {class: "devicon-supabase-plain", tooltip: "Persistencia relacional y análisis consistente de información empresarial." },
-    {class: "devicon-pandas-plain", tooltip: "Procesamiento automatizado y análisis de datasets empresariales." },
-    {class: "devicon-vercel-plain", tooltip: "Despliegue y configuración de entorno productivo." },
+    {class: "devicon-python-plain", tooltip_es: "Procesamiento de datos, lógica backend e integración de inteligencia artificial.", tooltip_en: "Data processing, backend logic, and AI integration." },
+    {class: "devicon-django-plain", tooltip_es: "Arquitectura backend, autenticación y flujo estructurado de procesamiento.", tooltip_en: "Backend architecture, authentication, and structured processing flow." },
+    {class: "devicon-supabase-plain", tooltip_es: "Persistencia relacional y análisis consistente de información empresarial.", tooltip_en: "Relational persistence and consistent business data analysis." },
+    {class: "devicon-pandas-plain", tooltip_es: "Procesamiento automatizado y análisis de datasets empresariales.", tooltip_en: "Automated processing and analysis of business datasets." },
+    {class: "devicon-vercel-plain", tooltip_es: "Despliegue y configuración de entorno productivo.", tooltip_en: "Deployment and configuration of production environment." },
   ],
 
 description_es: `Nura es una plataforma de inteligencia empresarial impulsada por IA diseñada para automatizar el análisis de datos y facilitar la generación de decisiones estratégicas.
