@@ -7,10 +7,49 @@ registerProject({
   subtitle_es: "SISTEMA DE INTELIGENCIA ARTIFICIAL PARA ANÁLISIS DE DATOS EMPRESARIALES",
   subtitle_en: "ARTIFICIAL INTELLIGENCE SYSTEM FOR BUSINESS DATA ANALYSIS",
   image: "./assets/images/projects/nura.jpg",
-  technologies: [{ class: "devicon-python-plain", tooltip: "Lenguaje seleccionado para el proyecto" }],
-  description: "Plataforma de análisis empresarial conversacional: permite adjuntar archivos con datos de negocios, y el sistema realiza un análisis automático para detectar anomalías, identificar patrones y generar recomendaciones estratégicas accionables. \n\n La interfaz de chat hace accesible el análisis estadístico sin requerir conocimientos técnicos. \n\n Lo que está construido: \n\nCarga y procesamiento de archivos y la detección de anomalías están funcionales. El pipeline toma los datos, los procesa con Pandas y los pasa a Groq para generar insights contextualizados en lenguaje natural. \n\nEl proyecto está en desarrollo activo.",
-  description_es: "Plataforma de análisis empresarial conversacional: el usuario adjunta o pega archivos con datos de negocio, y el sistema realiza un análisis automático para detectar anomalías, identificar patrones y generar recomendaciones estratégicas accionables. La interfaz de chat hace accesible el análisis estadístico sin requerir conocimientos técnicos. \n\nLo que está construido:\n\nLa carga y procesamiento de archivos y la detección de anomalías están funcionales. El pipeline toma los datos, los procesa con Pandas y los pasa a Groq para generar insights contextualizados en lenguaje natural. \n\nEl proyecto está en desarrollo activo.",
-  description_en: "Conversational business analytics platform: the user uploads or pastes files with sales or business data, and the system automatically analyzes them to detect anomalies, identify patterns, and generate actionable strategic recommendations. The chat interface makes statistical analysis accessible without requiring technical knowledge. \n\nWhat’s built:\n\nFile upload and processing and anomaly detection are functional. The pipeline takes the data, processes it with Pandas, and passes it to Groq to generate insights contextualized in natural language. \n\nThe project is in active development.",
-  repo: "https://github.com/emilymontec/NURA",
-  demo: "...",
+  technologies: [
+    {class: "devicon-python-plain", tooltip: "Procesamiento de datos, lógica backend e integración de inteligencia artificial." },
+    {class: "devicon-django-plain", tooltip: "Arquitectura backend, autenticación y flujo estructurado de procesamiento." },
+    {class: "devicon-supabase-plain", tooltip: "Persistencia relacional y análisis consistente de información empresarial." },
+    {class: "devicon-pandas-plain", tooltip: "Procesamiento automatizado y análisis de datasets empresariales." },
+    {class: "devicon-vercel-plain", tooltip: "Despliegue y configuración de entorno productivo." },
+  ],
+
+description_es: `Nura es una plataforma de inteligencia empresarial impulsada por IA diseñada para automatizar el análisis de datos y facilitar la generación de decisiones estratégicas.
+
+La aplicación permite procesar archivos empresariales, analizar grandes volúmenes de información y detectar patrones relevantes, anomalías y métricas clave mediante procesamiento automatizado utilizando Pandas y PostgreSQL (Supabase).
+
+El sistema integra modelos de lenguaje mediante Groq para transformar resultados estadísticos en insights comprensibles, recomendaciones accionables y reportes inteligentes orientados a usuarios no técnicos.
+
+Toda la arquitectura backend fue desarrollada utilizando Django, implementando autenticación, persistencia de datos, procesamiento de archivos y flujo completo de análisis de información. El proyecto fue construido desde cero, incluyendo:
+Arquitectura backend
+Modelado de datos
+Integración IA
+Procesamiento automatizado
+Generación de reportes
+Despliegue en producción
+
+Uno de los principales desafíos técnicos fue diseñar un pipeline capaz de transformar información compleja en resultados claros y útiles sin perder precisión ni contexto empresarial. También fue necesario equilibrar rendimiento, flexibilidad y claridad visual para distintos tipos de datasets empresariales.
+`,
+
+description_en: `
+Nura is an AI-powered business intelligence platform designed to automate data analysis and support strategic decision-making.
+
+The application processes business files, analyzes large volumes of information and detects relevant patterns, anomalies and key metrics through automated processing using Pandas and PostgreSQL (Supabase).
+
+The system integrates language models through Groq to transform statistical outputs into understandable insights, actionable recommendations and intelligent reports aimed at non-technical users.
+
+The entire backend architecture was developed using Django, implementing authentication, data persistence, file processing and a complete information analysis workflow. The project was built entirely from scratch, including:
+Backend architecture
+Data modeling
+AI integration
+Automated processing
+Report generation
+Production deployment
+
+One of the main technical challenges was designing a pipeline capable of transforming complex information into clear and useful results without losing precision or business context. It was also necessary to balance performance, flexibility and clarity across different types of business datasets.
+`,
+repo: "https://github.com/emilymontec/NURA",
+demo: "https://nura-q50w.onrender.com/",
+
 });
