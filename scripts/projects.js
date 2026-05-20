@@ -65,6 +65,17 @@ function renderProjectDetail(project, lang) {
   } else {
     detailImg.style.display = 'none';
   }
+
+  // Etiqueta 'En Desarrollo'
+  const inProgressBadge = document.getElementById('detailBadge');
+  if (inProgressBadge) {
+    if (project.in_progress) {
+      inProgressBadge.textContent = lang === 'es' ? 'En Desarrollo' : 'In Progress';
+      inProgressBadge.style.display = 'flex';
+    } else {
+      inProgressBadge.style.display = 'none';
+    }
+  }
 }
 
 window.refreshProjectDetailLanguage = function (lang) {
@@ -179,6 +190,59 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         target.scrollIntoView({
           behavior: 'smooth'
         });
+      }
+    }
+  });
+});
+
+// Precargar proyectos y generar etiquetas 'En Desarrollo' dinámicamente en la grilla
+document.addEventListener('DOMContentLoaded', async () => {
+  const cards = document.querySelectorAll('.project-card[onclick]');
+  const loadPromises = [];
+  
+  // Iniciar carga de todos los proyectos en la grilla
+  cards.forEach(card => {
+    const match = card.getAttribute('onclick').match(/showDetail\(['"](.*?)['"]\)/);
+    if (match && match[1]) {
+      const id = match[1];
+      if (!PROJECT_REGISTRY[id]) {
+        loadPromises.push(loadProjectScript(id).catch(e => console.warn(`Error precargando ${id}`, e)));
+      }
+    }
+  });
+
+  await Promise.all(loadPromises);
+
+  // Sincronizar etiquetas de "En Desarrollo"
+  cards.forEach(card => {
+    const match = card.getAttribute('onclick').match(/showDetail\(['"](.*?)['"]\)/);
+    if (match && match[1]) {
+      const id = match[1];
+      const proj = PROJECT_REGISTRY[id];
+      
+      let badge = card.querySelector('.in-progress-badge');
+      
+      if (proj && proj.in_progress) {
+        if (!badge) {
+          badge = document.createElement('div');
+          badge.className = 'in-progress-badge';
+          badge.setAttribute('data-i18n', '');
+          badge.setAttribute('data-es', 'En Desarrollo');
+          badge.setAttribute('data-en', 'In Progress');
+          
+          const lang = localStorage.getItem('emc-lang') || 'es';
+          badge.textContent = lang === 'es' ? 'En Desarrollo' : 'In Progress';
+          
+          const imgContainer = card.querySelector('.project-image');
+          if (imgContainer) {
+            imgContainer.appendChild(badge);
+          }
+        }
+        badge.style.display = 'flex';
+      } else {
+        if (badge) {
+          badge.style.display = 'none';
+        }
       }
     }
   });

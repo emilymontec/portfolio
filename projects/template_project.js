@@ -7,6 +7,7 @@ registerProject({
   subtitle_es: "subtitulo_proyecto_es",
   subtitle_en: "subtitulo_proyecto_en",
   image: "./assets/images/projects/image.png",
+  in_progress: fot,
   technologies: [
     { class: "devicon-icon-plain", tooltip_es: "", tooltip_en: "" },
   ],
