@@ -83,6 +83,10 @@
   font-size: 42px; /* Adjusted slightly from previous 44px for better balance */
 }
 
+.contact-icon .fa-envelope {
+  font-size: 42px; /* Adjusted slightly from previous 44px for better balance */
+}
+
 .contact-icon:hover {
   background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
   transform: translateY(-8px) scale(1.1);

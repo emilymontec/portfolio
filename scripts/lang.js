@@ -39,6 +39,11 @@
 
     // Update html lang attribute
     document.documentElement.lang = lang;
+
+    // Refresca el detalle del proyecto si hay uno abierto.
+    if (typeof window.refreshProjectDetailLanguage === 'function') {
+      window.refreshProjectDetailLanguage(lang);
+    }
   }
 
   function toggle() {

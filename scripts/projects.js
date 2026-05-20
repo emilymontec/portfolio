@@ -1,5 +1,6 @@
 // Registro global de proyectos para que se almacenen una vez cargados
 const PROJECT_REGISTRY = {};
+let activeProjectId = null;
 
 // Función global que será llamada por los archivos JS cargados dinámicamente
 window.registerProject = function (data) {
@@ -8,12 +9,78 @@ window.registerProject = function (data) {
   }
 };
 
+function renderProjectDetail(project, lang) {
+  if (!project) return;
+
+  document.getElementById('detailTitle').textContent = project[`title_${lang}`] || project.title;
+  document.getElementById('detailSubtitle').textContent = project[`subtitle_${lang}`] || project.subtitle;
+  document.getElementById('detailDescription').textContent = project[`description_${lang}`] || project.description;
+
+  // Actualizar botones de enlaces
+  const repoBtn = document.getElementById('detailRepo');
+  const demoBtn = document.getElementById('detailDemo');
+
+  if (project.repo && project.repo !== "#") {
+    repoBtn.href = project.repo;
+    repoBtn.style.display = 'inline-flex';
+  } else {
+    repoBtn.style.display = 'none';
+  }
+
+  if (project.demo && project.demo !== "#") {
+    demoBtn.href = project.demo;
+    demoBtn.style.display = 'inline-flex';
+  } else {
+    demoBtn.style.display = 'none';
+  }
+
+  // Iconos de tecnologías
+  const techContainer = document.getElementById('detailTech');
+  techContainer.innerHTML = '';
+  if (project.technologies && Array.isArray(project.technologies)) {
+    project.technologies.forEach(tech => {
+      const isObject = typeof tech === 'object' && tech !== null;
+      const iconClass = isObject ? tech.class : tech;
+      const tooltip = isObject ? tech.tooltip : '';
+
+      const iconWrapper = document.createElement('div');
+      iconWrapper.className = 'stack-icon';
+
+      if (tooltip) {
+        iconWrapper.setAttribute('data-tooltip', tooltip);
+      }
+
+      const icon = document.createElement('i');
+      icon.className = iconClass;
+      iconWrapper.appendChild(icon);
+      techContainer.appendChild(iconWrapper);
+    });
+  }
+
+  // Imagen del detalle
+  const detailImg = document.getElementById('detailImage');
+  if (project.image) {
+    detailImg.src = project.image;
+    detailImg.style.display = 'block';
+  } else {
+    detailImg.style.display = 'none';
+  }
+}
+
+window.refreshProjectDetailLanguage = function (lang) {
+  const detail = document.getElementById('projectDetail');
+  if (!activeProjectId || !detail || detail.style.display === 'none') return;
+
+  renderProjectDetail(PROJECT_REGISTRY[activeProjectId], lang);
+};
+
 /**
  * Función para mostrar el detalle de un proyecto cargándolo dinámicamente
  */
 async function showDetail(id) {
   const grid = document.getElementById('projectsGrid');
   const detail = document.getElementById('projectDetail');
+  activeProjectId = id;
 
   // 1. Ocultar grid con transición natural
   grid.style.visibility = 'visible';
@@ -38,59 +105,7 @@ async function showDetail(id) {
 
     // Actualizar contenido del detalle (respeta idioma activo)
     const lang = localStorage.getItem('emc-lang') || 'es';
-    document.getElementById('detailTitle').textContent = project[`title_${lang}`] || project.title;
-    document.getElementById('detailSubtitle').textContent = project[`subtitle_${lang}`] || project.subtitle;
-    document.getElementById('detailDescription').textContent = project[`description_${lang}`] || project.description;
-    // Actualizar botones de enlaces
-    const repoBtn = document.getElementById('detailRepo');
-    const demoBtn = document.getElementById('detailDemo');
-
-    if (project.repo && project.repo !== "#") {
-      repoBtn.href = project.repo;
-      repoBtn.style.display = 'inline-flex';
-    } else {
-      repoBtn.style.display = 'none';
-    }
-
-    if (project.demo && project.demo !== "#") {
-      demoBtn.href = project.demo;
-      demoBtn.style.display = 'inline-flex';
-    } else {
-      demoBtn.style.display = 'none';
-    }
-
-    // Iconos de tecnologías
-    const techContainer = document.getElementById('detailTech');
-    techContainer.innerHTML = ''; // Limpiar iconos anteriores
-    if (project.technologies && Array.isArray(project.technologies)) {
-      project.technologies.forEach(tech => {
-        const isObject = typeof tech === 'object' && tech !== null;
-        const iconClass = isObject ? tech.class : tech;
-        const tooltip = isObject ? tech.tooltip : '';
-
-        const iconWrapper = document.createElement('div');
-        iconWrapper.className = 'stack-icon';
-
-        // Si hay descripción, se añade como tooltip
-        if (tooltip) {
-          iconWrapper.setAttribute('data-tooltip', tooltip);
-        }
-
-        const icon = document.createElement('i');
-        icon.className = iconClass;
-        iconWrapper.appendChild(icon);
-        techContainer.appendChild(iconWrapper);
-      });
-    }
-
-    // Imagen del detalle
-    const detailImg = document.getElementById('detailImage');
-    if (project.image) {
-      detailImg.src = project.image;
-      detailImg.style.display = 'block';
-    } else {
-      detailImg.style.display = 'none';
-    }
+    renderProjectDetail(project, lang);
 
     // Mostrar detalle
     detail.style.display = 'block';
@@ -127,6 +142,7 @@ function loadProjectScript(id) {
 function hideDetail() {
   const grid = document.getElementById('projectsGrid');
   const detail = document.getElementById('projectDetail');
+  activeProjectId = null;
 
   detail.classList.remove('active');
 
