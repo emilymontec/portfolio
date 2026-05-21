@@ -10,12 +10,12 @@ registerProject({
   in_progress: true,
   technologies: [
     { class: "devicon-javascript-plain", tooltip_es: "Lógica de interacción y procesamiento de información en tiempo real", tooltip_en: "Real-time interaction logic and information processing", },
-    { class: "devicon-nodejs-plain", tooltip_es: "Procesamiento backend y análisis de actividad de desarrolladores", tooltip_en: "Backend processing and developer activity analysis", },
-    { class: "devicon-express-original", tooltip_es: "API backend y gestión de rutas para procesamiento de datos y estadísticas", tooltip_en: "Backend API and route management for data processing and statistics",},
-    { class: "devicon-react-plain", tooltip_es: "Interfaces dinámicas para visualización interactiva de métricas y reportes", tooltip_en: "Dynamic interfaces for interactive visualization of metrics and reports", },
+    { class: "devicon-nodejs-plain", tooltip_es: "Procesamiento backend y generación de estadísticas de actividad", tooltip_en: "Backend processing and activity statistics generation", },
+    { class: "devicon-express-original", tooltip_es: "API backend y procesamiento de métricas de actividad obtenidas desde GitHub", tooltip_en: "Backend API and activity metrics processing using GitHub data", },
+    { class: "devicon-react-plain", tooltip_es: "Visualización interactiva de métricas y reportes personalizados", tooltip_en: "Interactive visualization of metrics and personalized reports", },
     { class: "devicon-supabase-plain", tooltip_es: "Autenticación, persistencia de datos y sincronización de actividad del usuario", tooltip_en: "Authentication, data persistence, and user activity synchronization", },
   ],
-  description:`
+  description: `
 GitHub Wrapped es una plataforma de analítica para desarrolladores inspirada en Spotify Wrapped, enfocada en visualizar métricas de productividad, actividad y patrones de desarrollo a partir de datos obtenidos desde GitHub.
 La aplicación analiza información relacionada con commits, repositorios, lenguajes más utilizados y frecuencia de actividad para generar reportes personalizados e insights sobre hábitos de programación.
 
