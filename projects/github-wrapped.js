@@ -1,5 +1,5 @@
 registerProject({
-  id: "GITHUB-WRAPPED",
+  id: "github-wrapped",
   title: "GitHub Wrapped: Tu Año en Código",
   title_es: "GitHub Wrapped: Tu Año en Código",
   title_en: "GitHub Wrapped: Your Year in Code",
