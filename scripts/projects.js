@@ -50,9 +50,14 @@ function renderProjectDetail(project, lang) {
         iconWrapper.setAttribute('data-tooltip', tooltip);
       }
 
-      const icon = document.createElement('i');
-      icon.className = iconClass;
-      iconWrapper.appendChild(icon);
+      if (isObject && tech.svg) {
+        iconWrapper.innerHTML = tech.svg;
+      } else {
+        const icon = document.createElement('i');
+        icon.className = iconClass;
+        iconWrapper.appendChild(icon);
+      }
+      
       techContainer.appendChild(iconWrapper);
     });
   }

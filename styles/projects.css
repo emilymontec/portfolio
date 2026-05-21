@@ -288,9 +288,13 @@
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.detail-tech-icons .stack-icon i {
+.detail-tech-icons .stack-icon i,
+.detail-tech-icons .stack-icon svg {
     font-size: 36px;
+    width: 36px;
+    height: 36px;
     color: #fff;
+    fill: #fff;
     opacity: 0.5;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -300,9 +304,11 @@
     transform: translateY(-8px) scale(1.1);
 }
 
-.detail-tech-icons .stack-icon:hover i {
+.detail-tech-icons .stack-icon:hover i,
+.detail-tech-icons .stack-icon:hover svg {
     opacity: 1;
     color: #fff;
+    fill: #fff;
     filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
 }
 
