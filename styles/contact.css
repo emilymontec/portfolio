@@ -37,6 +37,7 @@
   letter-spacing: 0.05em;
   text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(255, 255, 255, 0.3);
   transition: var(--transition-slow);
+  overflow-wrap: break-word;
 }
 
 .contact-info p {
@@ -51,6 +52,7 @@
 
 .contact-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   margin-top: 1rem;
@@ -144,6 +146,9 @@
 }
 
 @media (max-width: 900px) {
+  #contact {
+    padding: 4rem 5%;
+  }
   .contact-info {
     padding: 3rem 1.5rem;
   }
@@ -152,5 +157,28 @@
   }
   .contact-links {
     gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-info {
+    padding: 2rem 1rem;
+  }
+  .contact-info h2 {
+    font-size: 1.8rem;
+  }
+  .contact-links {
+    gap: 1rem;
+  }
+  .contact-icon {
+    width: 60px;
+    height: 60px;
+  }
+  .contact-icon i {
+    font-size: 28px;
+  }
+  .contact-icon .fa-whatsapp,
+  .contact-icon .fa-envelope {
+    font-size: 32px;
   }
 }
