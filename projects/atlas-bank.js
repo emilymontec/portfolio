@@ -1,5 +1,5 @@
 registerProject({
-  id: "ATLAS-Bank",
+  id: "atlas-bank",
   title: "ATLAS-Bank",
   title_es: "ATLAS-Bank: Simulador Bancario",
   title_en: "ATLAS-Bank: Banking Simulator",
