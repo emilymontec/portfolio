@@ -1,11 +1,11 @@
 registerProject({
   id: "github-wrapped",
-  title: "GitHub Wrapped: Tu Año en Código",
-  title_es: "GitHub Wrapped: Tu Año en Código",
-  title_en: "GitHub Wrapped: Your Year in Code",
-  subtitle: "ANÁLISIS PERSONALIZADO DE TU ACTIVIDAD EN GITHUB",
-  subtitle_es: "ANÁLISIS PERSONALIZADO DE TU ACTIVIDAD EN GITHUB",
-  subtitle_en: "PERSONALIZED ANALYSIS OF YOUR GITHUB ACTIVITY",
+  title: "GITHUB WRAPPED",
+  title_es: "GITHUB WRAPPED",
+  title_en: "GITHUB WRAPPED",
+  subtitle: "PLATAFORMA DE VISUALIZACIÓN DE ACTIVIDAD DE DESARROLLADORES",
+  subtitle_es: "PLATAFORMA DE VISUALIZACIÓN DE ACTIVIDAD DE DESARROLLADORES",
+  subtitle_en: "PLATFORM FOR VISUALIZING DEVELOPER ACTIVITY",
   image: "./assets/images/projects/github-wrapped.jpg",
   in_progress: true,
   technologies: [

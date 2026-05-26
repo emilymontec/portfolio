@@ -1,8 +1,8 @@
 registerProject({
   id: "atlas-bank",
-  title: "ATLAS-Bank",
-  title_es: "ATLAS-Bank: Simulador Bancario",
-  title_en: "ATLAS-Bank: Banking Simulator",
+  title: "BANCO ATLAS",
+  title_es: "BANCO ATLAS",
+  title_en: "ATLAS BANK",
   subtitle: "SISTEMA BANCARIO CON MOTOR DE SIMULACIÓN FINANCIERA",
   subtitle_es: "SISTEMA BANCARIO CON MOTOR DE SIMULACIÓN FINANCIERA",
   subtitle_en: "BANKING SYSTEM WITH FINANCIAL SIMULATION ENGINE",
