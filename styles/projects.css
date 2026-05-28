@@ -57,7 +57,7 @@
     top: 50%;
     transform: translate(-50%, -50%) scale(0.9);
     background: transparent;
-    color: #450815;
+    color: #b5666b;
     text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.4);
     padding: 0.8rem 1.8rem;
     border-radius: 4px;
@@ -128,7 +128,7 @@
     top: 15px;
     right: 15px;
     background: rgba(139, 34, 82, 0.25); /* Translucent accent */
-    color: var(--text-main);
+    color: #b5666b;
     padding: 0.35rem 0.85rem;
     font-size: 0.65rem;
     font-family: 'Lato', sans-serif;
@@ -151,9 +151,9 @@
     display: inline-block;
     width: 6px;
     height: 6px;
-    background: #ffb7c5; /* glowing soft color */
+    background: #b5666b; /* glowing soft color */
     border-radius: 50%;
-    box-shadow: 0 0 8px #ffb7c5;
+    box-shadow: 0 0 8px #b5666b;
     animation: pulse-glow 2s infinite ease-in-out;
 }
 

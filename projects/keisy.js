@@ -20,7 +20,7 @@ registerProject({
     { class: "devicon-supabase-plain", tooltip_es: "Persistencia estructurada de registros médicos y analítica clínica", tooltip_en: "Structured persistence for medical records and clinical analytics"},
   ],
   description: `
-  MedInsight es una plataforma full-stack orientada al sector salud diseñada para procesar, analizar y visualizar información clínica mediante automatización ETL, analítica médica y modelos predictivos.
+  KEISY es una plataforma full-stack orientada al sector salud diseñada para procesar, analizar y visualizar información clínica mediante automatización ETL, analítica médica y modelos predictivos.
 
   El sistema funciona como una plataforma inteligente de apoyo clínico para instituciones prestadoras de salud (IPS), permitiendo transformar grandes volúmenes de datos médicos desorganizados en información útil para la toma de decisiones. Integra múltiples módulos especializados, incluyendo:
   Procesamiento ETL
@@ -39,7 +39,7 @@ registerProject({
   La plataforma busca combinar ingeniería de datos, analítica clínica y experiencia de usuario en una solución moderna orientada al sector healthtech.
   `,
   description_es: `
-  MedInsight es una plataforma full-stack orientada al sector salud diseñada para procesar, analizar y visualizar información clínica mediante automatización ETL, analítica médica y modelos predictivos.
+  KEISY es una plataforma full-stack orientada al sector salud diseñada para procesar, analizar y visualizar información clínica mediante automatización ETL, analítica médica y modelos predictivos.
 
   El sistema funciona como una plataforma inteligente de apoyo clínico para instituciones prestadoras de salud (IPS), permitiendo transformar grandes volúmenes de datos médicos desorganizados en información útil para la toma de decisiones. Integra múltiples módulos especializados, incluyendo:
   Procesamiento ETL
@@ -58,7 +58,7 @@ registerProject({
   La plataforma busca combinar ingeniería de datos, analítica clínica y experiencia de usuario en una solución moderna orientada al sector healthtech.
   `,
   description_en: `
-  MedInsight is a full-stack platform designed for the healthcare sector to process, analyze, and visualize clinical information using ETL automation, medical analytics, and predictive models.
+  KEISY is a full-stack platform designed for the healthcare sector to process, analyze, and visualize clinical information using ETL automation, medical analytics, and predictive models.
 
   The system functions as an intelligent clinical support platform for healthcare providers (HCPs), enabling the transformation of large volumes of unstructured medical data into actionable insights for decision-making. It integrates multiple specialized modules, including:
   ETL processing
