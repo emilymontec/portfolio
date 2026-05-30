@@ -1,34 +1,17 @@
-# Portfolio - Fullstack Developer (Backend-Side)
+# My Portfolio
 
-Welcome to my portfolio. Here you'll find projects that showcase my ability to build robust, scalable, and well-structured web applications with a focus on the backend
+My personal developer portfolio showcasing selected projects, technical skills, and areas of interest in backend engineering, artificial intelligence, and software architecture. Acts as a central place to explore my work, including web applications, data-driven systems, and AI-powered solutions.
 
+The goal is to demonstrate how I approach problem-solving, system design, and product development through real projects.
 
-## Tools
+## Tech Stack
 
-| Category  | Stack |
-|------------|-----------------------------|
-| **Backend** | Node.js & Express, Django  |
-| **Frontend** | HTML, CSS, JavaScript (Vanilla), React |
-| **Databases** | PostgreSQL, MongoDB |
-| **DevOps** | Git & GitHub, CI/CD (GitHub Actions) |
-
-
-## Projects
-
-### AI Analytics Platform
-Full-stack AI-powered analytics platform designed to analyze business datasets, detect risks, identify opportunities, generate executive insights, and provide conversational data intelligence through specialized AI agents and memory systems. </br>
-`Python` `Django` `HTML` `CSS` `JavaScript (Vanilla)` `PostgreSQL` `Groq` `Render` `LLM`
-
-### Cinema Management System
-Full-stack web application designed to manage all cinema operations: movie billboards, showtimes, seat allocation, and ticket sales. </br>
-`JavaScript` `Node.js` `Express` `React` `PostgreSQL` `Render`
-
-### Banking Simulator
-System that replicates the core processes of a bank: transactions, transfers between accounts, bank account management, and simulation of financial products like credits, loans, and interest calculation. </br>
-`Java` `Spring Boot` `HTML` `CSS` `JavaScript (Vanilla)` `PostgreSQL` `Railway`
+| Category | Technologies                    |
+| -------- | --------------------------------|
+| Backend  | Django · Node.js + Express      |
+| Frontend | HTML · CSS · JavaScript · React |
+| Database | PostgreSQL · MongoDB            |
+| Tools    | Git · GitHub · Docker · Render  |
 
 
-## Contact
-
-- **Email:** emilymonterrosa.c@gmail.com
-- **LinkedIn:** https://www.linkedin.com/in/emilymontec/
+## [Take a Look 🔗](https://emilymontec.github.io/portfolio/)
