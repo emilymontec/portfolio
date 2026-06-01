@@ -72,6 +72,6 @@ One of the main technical challenges is handling large amounts of activity data,
 
 The project aims to combine data analytics, user experience and artificial intelligence into a modern platform designed for developers.
 `,
-  repo: "https://github.com/emilymontec/GITHUB-WRAPPED",
+  repo: "https://github.com/emilymontec/github-wrapped",
   demo: "",
 });
