@@ -51,6 +51,6 @@ Production deployment
 One of the main technical challenges was designing a pipeline capable of transforming complex information into clear and useful results without losing precision or business context. It was also necessary to balance performance, flexibility and clarity across different types of business datasets.
 `,
 repo: "https://github.com/emilymontec/nura",
-demo: "https://nura-q50w.onrender.com/",
+demo: "https://nura-iq.onrender.com/",
 
 });
