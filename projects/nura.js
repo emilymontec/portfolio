@@ -52,5 +52,4 @@ One of the main technical challenges was designing a pipeline capable of transfo
 `,
 repo: "https://github.com/emilymontec/nura",
 demo: "https://nura-iq.onrender.com/",
-
 });

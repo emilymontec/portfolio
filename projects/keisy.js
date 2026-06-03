@@ -7,7 +7,7 @@ registerProject({
   subtitle_es: "PLATAFORMA DE ANÁLISIS Y DETECCIÓN DE RIESGOS CLÍNICOS",
   subtitle_en: "CLINICAL ANALYTICS & RISK DETECTION PLATAFORM",
   image: "./assets/images/projects/keisy.jpg",
-  in_progress: true,
+  in_progress: false,
   technologies: [
     { class: "devicon-python-plain", tooltip_es: "Procesamiento de datos clínicos, automatización ETL y lógica analítica", tooltip_en: "Clinical data processing, ETL automation and analytical logic" },
     { class: "devicon-django-plain", tooltip_es: "Arquitectura backend y gestión segura de información clínica", tooltip_en: "Backend architecture and secure clinical information management" },
