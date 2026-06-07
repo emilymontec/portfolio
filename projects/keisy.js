@@ -79,5 +79,5 @@ registerProject({
   The platform aims to combine data engineering, clinical analytics, and user experience into a modern solution tailored for the healthtech sector.
   `,
   repo: "https://github.com/emilymontec/keisy",
-  demo: "https://keisy.onrender.com/",
+  demo: "https://keisy.onrender.com",
 });
