@@ -16,14 +16,60 @@ registerProject({
     { class: "devicon-supabase-plain", tooltip_es: "Autenticación, persistencia de datos y sincronización de actividad del usuario", tooltip_en: "Authentication, data persistence, and user activity synchronization", },
   ],
   description_es: `
-Desarrollé una plataforma full-stack inspirada en Spotify Wrapped que integra la API de GitHub para extraer datos de actividad de desarrolladores (commits, repositorios, lenguajes más usados, frecuencia de trabajo). Construí el backend con Node.js y Express para procesar la información y generar métricas, y el frontend con React para la visualización interactiva de estadísticas y reportes personalizados. Incluí autenticación y persistencia de datos con Supabase, y análisis impulsado por IA para generar insights.
+Descripción:
+Plataforma inspirada en Spotify Wrapped que analiza la actividad de desarrolladores en GitHub y genera reportes visuales personalizados sobre productividad, lenguajes utilizados, hábitos de programación y patrones de trabajo.
 
-Logré crear una plataforma que transforma datos brutos de GitHub en reportes visuales atractivos, permitiendo a los desarrolladores entender sus hábitos de programación, productividad y patrones de trabajo de manera clara y dinámica.
+Objetivo:
+Transformar datos técnicos de GitHub en métricas e insights fáciles de interpretar para que los desarrolladores puedan comprender mejor su evolución y desempeño.
+
+Rol:
+Desarrollo full-stack, integración con APIs externas, procesamiento de datos, generación de métricas y diseño de la experiencia de usuario.
+
+Características Principales:
+Integración con la API de GitHub.
+Análisis de commits, repositorios y actividad de desarrollo.
+Estadísticas sobre lenguajes de programación más utilizados.
+Reportes personalizados inspirados en Spotify Wrapped.
+Generación de insights mediante IA.
+Sistema de autenticación y almacenamiento de datos.
+
+Retos & Soluciones:
+Procesar y consolidar información proveniente de múltiples endpoints de GitHub.
+Diseñar visualizaciones atractivas que permitieran comunicar métricas complejas de forma sencilla y entretenida.
+
+Logros:
+Conversión de datos brutos de GitHub en reportes visuales interactivos.
+Visualización clara de hábitos de programación y productividad.
+Generación automática de insights personalizados para cada desarrollador.
+Mejora de la experiencia de análisis de actividad profesional mediante una interfaz intuitiva.
 `,
   description_en: `
-I developed a full-stack platform inspired by Spotify Wrapped that integrates the GitHub API to extract developer activity data (commits, repositories, most-used languages, work frequency). I built the backend with Node.js and Express to process information and generate metrics, and the frontend with React for interactive visualization of statistics and personalized reports. I included authentication and data persistence with Supabase, and AI-driven analysis to generate insights.
+Description:
+Spotify Wrapped-inspired platform that analyzes developer activity on GitHub and generates custom visual reports on productivity, languages used, programming habits, and work patterns.
 
-I manage to create a platform that transforms raw GitHub data into attractive visual reports, allowing developers to understand their programming habits, productivity, and work patterns in a clear and dynamic way.
+Objective:
+Transform GitHub's technical data into easy-to-interpret metrics and insights so developers can better understand their evolution and performance.
+
+Role:
+Full-stack development, external API integration, data processing, metrics generation, and user experience design.
+
+Key Features:
+Integration with GitHub API.
+Analysis of commits, repositories, and development activity.
+Statistics on most-used programming languages.
+Custom reports inspired by Spotify Wrapped.
+AI-powered insights generation.
+Authentication and data storage system.
+
+Challenges & Solutions:
+Process and consolidate information from multiple GitHub endpoints.
+Design attractive visualizations that communicate complex metrics in a simple and entertaining way.
+
+Achievements:
+Conversion of raw GitHub data into interactive visual reports.
+Clear visualization of programming habits and productivity.
+Automatic generation of personalized insights for each developer.
+Improvement of the professional activity analysis experience through an intuitive interface.
 `,
   repo: "https://github.com/emilymontec/github-wrapped",
   demo: "",

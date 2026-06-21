@@ -26,7 +26,10 @@ Plataforma de Business Intelligence impulsada por IA que permite a usuarios no t
 Objetivo:
 Automatizar el análisis de datos empresariales y convertir resultados estadísticos complejos en insights claros y recomendaciones accionables.
 
-Características principales:
+Rol:
+Desarrollo full-stack, integración con APIs externas, procesamiento & análisis de datos, generación de insights y diseño de la experiencia de usuario.
+
+Características Principales:
 Procesamiento automatizado de archivos empresariales.
 Limpieza y análisis de datos con Pandas.
 Generación de insights mediante IA.
@@ -34,8 +37,8 @@ Sistema de autenticación y gestión de usuarios.
 Generación automática de reportes.
 Despliegue en la nube.
 
-Retos y soluciones:
-Integrar análisis estadístico con modelos de lenguaje para producir resultados comprensibles para usuarios no técnicos.
+Retos & Soluciones:
+Lograr un análisis profundo y útil de archivos empresariales más allá de métricas descriptivas básicas.
 Diseñar arquitectura escalable para procesar grandes volúmenes de datos de manera eficiente.
 
 Logros:
@@ -51,7 +54,7 @@ AI-powered Business Intelligence platform that allows non-technical users to ana
 Objective:
 Automate business data analysis and convert complex statistical results into clear insights and actionable recommendations.
 
-Key features:
+Key Features:
 Automated business file processing.
 Data cleaning and analysis with Pandas.
 AI-powered insights generation.
@@ -59,7 +62,7 @@ User authentication and management system.
 Automatic report generation.
 Cloud deployment.
 
-Challenges & solutions:
+Challenges & Solutions:
 Integrate statistical analysis with language models to produce results understandable for non-technical users.
 Design a scalable architecture to efficiently process large volumes of data.
 
