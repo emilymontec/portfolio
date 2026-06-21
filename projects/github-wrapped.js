@@ -15,62 +15,19 @@ registerProject({
     { class: "devicon-react-plain", tooltip_es: "Visualización interactiva de métricas y reportes personalizados", tooltip_en: "Interactive visualization of metrics and personalized reports", },
     { class: "devicon-supabase-plain", tooltip_es: "Autenticación, persistencia de datos y sincronización de actividad del usuario", tooltip_en: "Authentication, data persistence, and user activity synchronization", },
   ],
-  description: `
-GitHub Wrapped es una plataforma de analítica para desarrolladores inspirada en Spotify Wrapped, enfocada en visualizar métricas de productividad, actividad y patrones de desarrollo a partir de datos obtenidos desde GitHub.
-La aplicación analiza información relacionada con commits, repositorios, lenguajes más utilizados y frecuencia de actividad para generar reportes personalizados e insights sobre hábitos de programación.
+  description_es: `
+¿Qué se hizo?
+Desarrollé una plataforma full-stack inspirada en Spotify Wrapped que integra la API de GitHub para extraer datos de actividad de desarrolladores (commits, repositorios, lenguajes más usados, frecuencia de trabajo). Construí el backend con Node.js y Express para procesar la información y generar métricas, y el frontend con React para la visualización interactiva de estadísticas y reportes personalizados. Incluí autenticación y persistencia de datos con Supabase, y análisis impulsado por IA para generar insights.
 
-El sistema integra funcionalidades de:
-Análisis de commits
-Estadísticas de productividad
-Visualización de actividad
-Análisis de lenguajes
-Reportes personalizados
-Insights impulsados por IA
-
-He construido tanto la lógica backend como la experiencia interactiva del usuario desde cero.
-
-La API backend se encarga de procesar información obtenida desde GitHub, estructurar métricas relevantes y generar resultados visuales comprensibles y dinámicos.
-Uno de los principales desafíos técnicos del proyecto es manejar correctamente grandes volúmenes de actividad, transformar datos complejos en métricas útiles y construir una experiencia visual atractiva sin perder rendimiento.
-
-El proyecto busca combinar análisis de datos, experiencia de usuario e inteligencia artificial en una plataforma moderna orientada a desarrolladores.
+¿Qué resultado se obtuvo?
+Una plataforma que transforma datos brutos de GitHub en reportes visuales atractivos, permitiendo a los desarrolladores entender sus hábitos de programación, productividad y patrones de trabajo de manera clara y dinámica.
 `,
-  description_es:`
-GitHub Wrapped es una plataforma de analítica para desarrolladores inspirada en Spotify Wrapped, enfocada en visualizar métricas de productividad, actividad y patrones de desarrollo a partir de datos obtenidos desde GitHub.
-La aplicación analiza información relacionada con commits, repositorios, lenguajes más utilizados y frecuencia de actividad para generar reportes personalizados e insights sobre hábitos de programación.
+  description_en: `
+What was done?
+I developed a full-stack platform inspired by Spotify Wrapped that integrates the GitHub API to extract developer activity data (commits, repositories, most-used languages, work frequency). I built the backend with Node.js and Express to process information and generate metrics, and the frontend with React for interactive visualization of statistics and personalized reports. I included authentication and data persistence with Supabase, and AI-driven analysis to generate insights.
 
-El sistema integra funcionalidades de:
-Análisis de commits
-Estadísticas de productividad
-Visualización de actividad
-Análisis de lenguajes
-Reportes personalizados
-Insights impulsados por IA
-
-He construido tanto la lógica backend como la experiencia interactiva del usuario desde cero.
-
-La API backend se encarga de procesar información obtenida desde GitHub, estructurar métricas relevantes y generar resultados visuales comprensibles y dinámicos.
-Uno de los principales desafíos técnicos del proyecto es manejar correctamente grandes volúmenes de actividad, transformar datos complejos en métricas útiles y construir una experiencia visual atractiva sin perder rendimiento.
-
-El proyecto busca combinar análisis de datos, experiencia de usuario e inteligencia artificial en una plataforma moderna orientada a desarrolladores.
-`,
-  description_en:`
-GitHub Wrapped is a developer analytics platform inspired by Spotify Wrapped, focused on visualizing productivity metrics, activity patterns and development insights using GitHub data.
-The application analyzes information related to commits, repositories, most-used languages and activity frequency to generate personalized reports and programming habit insights.
-
-The system integrates features such as:
-Commit analysis
-Productivity statistics
-Activity visualization
-Language analytics
-Personalized reports
-AI-powered insights
-
-I've built both the backend logic and the interactive user experience from scratch.
-
-The backend API is responsible for processing GitHub data, structuring relevant metrics and generating dynamic and understandable visual results.
-One of the main technical challenges is handling large amounts of activity data, transforming complex information into meaningful metrics and creating an engaging visual experience without sacrificing performance.
-
-The project aims to combine data analytics, user experience and artificial intelligence into a modern platform designed for developers.
+What result was obtained?
+A platform that transforms raw GitHub data into attractive visual reports, allowing developers to understand their programming habits, productivity, and work patterns in a clear and dynamic way.
 `,
   repo: "https://github.com/emilymontec/github-wrapped",
   demo: "",

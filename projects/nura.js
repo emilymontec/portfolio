@@ -19,39 +19,20 @@ registerProject({
     {svg: `<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M18.263.007c-3.121-.147-5.744 2.109-6.192 5.082-.018.138-.045.272-.067.405-.696 3.703-3.936 6.507-7.827 6.507-1.388 0-2.691-.356-3.825-.979a.2024.2024 0 0 0-.302.178V24H12v-8.999c0-1.656 1.338-3 2.987-3h2.988c3.382 0 6.103-2.817 5.97-6.244-.12-3.084-2.61-5.603-5.682-5.75"/></svg>`, tooltip_es: "Despliegue y configuración de entorno productivo en Render.", tooltip_en: "Deployment and configuration of production environment on Render." },
   ],
 
-description_es: `Nura es una plataforma de inteligencia empresarial impulsada por IA diseñada para automatizar el análisis de datos y facilitar la generación de decisiones estratégicas.
+description_es: `
+¿Qué se hizo?
+Desarrollé una plataforma de inteligencia empresarial impulsada por IA con backend en Django. Implementé procesamiento automatizado de archivos empresariales con Pandas, persistencia de datos en Supabase (PostgreSQL), e integración con modelos de lenguaje vía Groq para transformar resultados estadísticos en insights comprensibles y recomendaciones accionables. Construí toda la arquitectura desde cero, incluyendo autenticación, modelado de datos, generación de reportes y despliegue en Render.
 
-La aplicación permite procesar archivos empresariales, analizar grandes volúmenes de información y detectar patrones relevantes, anomalías y métricas clave mediante procesamiento automatizado utilizando Pandas y PostgreSQL (Supabase).
-
-El sistema integra modelos de lenguaje mediante Groq para transformar resultados estadísticos en insights comprensibles, recomendaciones accionables y reportes inteligentes orientados a usuarios no técnicos.
-
-Toda la arquitectura backend fue desarrollada utilizando Django, implementando autenticación, persistencia de datos, procesamiento de archivos y flujo completo de análisis de información. El proyecto fue construido desde cero, incluyendo:
-Arquitectura backend
-Modelado de datos
-Integración IA
-Procesamiento automatizado
-Generación de reportes
-Despliegue en producción
-
-Uno de los principales desafíos técnicos fue diseñar un pipeline capaz de transformar información compleja en resultados claros y útiles sin perder precisión ni contexto empresarial. También fue necesario equilibrar rendimiento, flexibilidad y claridad visual para distintos tipos de datasets empresariales.
+¿Qué resultado se obtuvo?
+Una herramienta que permite a usuarios no técnicos analizar grandes volúmenes de datos empresariales, detectar patrones y anomalías, y generar reportes inteligentes para tomar decisiones estratégicas de manera sencilla.
 `,
 
 description_en: `
-Nura is an AI-powered business intelligence platform designed to automate data analysis and support strategic decision-making.
+What was done?
+I developed an AI-powered business intelligence platform with Django backend. I implemented automated processing of business files with Pandas, data persistence in Supabase (PostgreSQL), and integration with language models via Groq to transform statistical results into understandable insights and actionable recommendations. I built the entire architecture from scratch, including authentication, data modeling, report generation, and deployment on Render.
 
-The application processes business files, analyzes large volumes of information and detects relevant patterns, anomalies and key metrics through automated processing using Pandas and PostgreSQL (Supabase).
-
-The system integrates language models through Groq to transform statistical outputs into understandable insights, actionable recommendations and intelligent reports aimed at non-technical users.
-
-The entire backend architecture was developed using Django, implementing authentication, data persistence, file processing and a complete information analysis workflow. The project was built entirely from scratch, including:
-Backend architecture
-Data modeling
-AI integration
-Automated processing
-Report generation
-Production deployment
-
-One of the main technical challenges was designing a pipeline capable of transforming complex information into clear and useful results without losing precision or business context. It was also necessary to balance performance, flexibility and clarity across different types of business datasets.
+What result was obtained?
+A tool that allows non-technical users to analyze large volumes of business data, detect patterns and anomalies, and generate intelligent reports to make strategic decisions easily.
 `,
 repo: "https://github.com/emilymontec/nura",
 demo: "https://nura-bi.onrender.com",
