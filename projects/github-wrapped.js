@@ -16,18 +16,14 @@ registerProject({
     { class: "devicon-supabase-plain", tooltip_es: "Autenticación, persistencia de datos y sincronización de actividad del usuario", tooltip_en: "Authentication, data persistence, and user activity synchronization", },
   ],
   description_es: `
-¿Qué se hizo?
 Desarrollé una plataforma full-stack inspirada en Spotify Wrapped que integra la API de GitHub para extraer datos de actividad de desarrolladores (commits, repositorios, lenguajes más usados, frecuencia de trabajo). Construí el backend con Node.js y Express para procesar la información y generar métricas, y el frontend con React para la visualización interactiva de estadísticas y reportes personalizados. Incluí autenticación y persistencia de datos con Supabase, y análisis impulsado por IA para generar insights.
 
-¿Qué logramos?
-Una plataforma que transforma datos brutos de GitHub en reportes visuales atractivos, permitiendo a los desarrolladores entender sus hábitos de programación, productividad y patrones de trabajo de manera clara y dinámica.
+Logré crear una plataforma que transforma datos brutos de GitHub en reportes visuales atractivos, permitiendo a los desarrolladores entender sus hábitos de programación, productividad y patrones de trabajo de manera clara y dinámica.
 `,
   description_en: `
-What was done?
 I developed a full-stack platform inspired by Spotify Wrapped that integrates the GitHub API to extract developer activity data (commits, repositories, most-used languages, work frequency). I built the backend with Node.js and Express to process information and generate metrics, and the frontend with React for interactive visualization of statistics and personalized reports. I included authentication and data persistence with Supabase, and AI-driven analysis to generate insights.
 
-What did we achieve?
-A platform that transforms raw GitHub data into attractive visual reports, allowing developers to understand their programming habits, productivity, and work patterns in a clear and dynamic way.
+I manage to create a platform that transforms raw GitHub data into attractive visual reports, allowing developers to understand their programming habits, productivity, and work patterns in a clear and dynamic way.
 `,
   repo: "https://github.com/emilymontec/github-wrapped",
   demo: "",

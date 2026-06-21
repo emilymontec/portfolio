@@ -25,15 +25,12 @@ registerProject({
 ¿Qué se hizo?
 Desarrollé una plataforma full-stack para el sector salud con backend en Django y Python, integrando pipelines ETL automatizados para procesar datos clínicos. Utilicé Pandas para limpieza y transformación de datasets médicos, y scikit-learn para modelos predictivos (Random Forest, árboles de decisión, regresión logística) para detección de riesgos clínicos y pacientes críticos. Construí dashboards interactivos con HTML, Bootstrap y Chart.js para visualizar KPIs médicos y estadísticas, y persistí datos en Supabase. Desplegué la plataforma en Render.
 
-¿Qué logramos?
-Una solución que transforma datos médicos desorganizados en información accionable para IPS, con detección automática de pacientes de alto riesgo y dashboards que facilitan la toma de decisiones clínicas basada en datos.
+Logré crear una solución que transforma datos médicos desorganizados en información accionable para IPS, con detección automática de pacientes de alto riesgo y dashboards que facilitan la toma de decisiones clínicas basada en datos.
 `,
   description_en: `
-What was done?
 I developed a full-stack healthcare platform with Django and Python backend, integrating automated ETL pipelines to process clinical data. I used Pandas for cleaning and transforming medical datasets, and scikit-learn for predictive models (Random Forest, decision trees, logistic regression) for clinical risk detection and critical patient identification. I built interactive dashboards with HTML, Bootstrap, and Chart.js to visualize medical KPIs and statistics, and stored data in Supabase. I deployed the platform on Render.
 
-What did we achieve?
-A solution that transforms disorganized medical data into actionable insights for HCPs, with automatic detection of high-risk patients and dashboards that facilitate data-driven clinical decision-making.
+I manage to create a solution that transforms disorganized medical data into actionable insights for HCPs, with automatic detection of high-risk patients and dashboards that facilitate data-driven clinical decision-making.
 `,
   repo: "https://github.com/emilymontec/keisy",
   demo: "https://keisy-medical.onrender.com",
