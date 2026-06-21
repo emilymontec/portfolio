@@ -23,7 +23,7 @@ description_es: `
 ¿Qué se hizo?
 Desarrollé una plataforma de inteligencia empresarial impulsada por IA con backend en Django. Implementé procesamiento automatizado de archivos empresariales con Pandas, persistencia de datos en Supabase (PostgreSQL), e integración con modelos de lenguaje vía Groq para transformar resultados estadísticos en insights comprensibles y recomendaciones accionables. Construí toda la arquitectura desde cero, incluyendo autenticación, modelado de datos, generación de reportes y despliegue en Render.
 
-¿Qué resultado se obtuvo?
+¿Qué logramos?
 Una herramienta que permite a usuarios no técnicos analizar grandes volúmenes de datos empresariales, detectar patrones y anomalías, y generar reportes inteligentes para tomar decisiones estratégicas de manera sencilla.
 `,
 
@@ -31,7 +31,7 @@ description_en: `
 What was done?
 I developed an AI-powered business intelligence platform with Django backend. I implemented automated processing of business files with Pandas, data persistence in Supabase (PostgreSQL), and integration with language models via Groq to transform statistical results into understandable insights and actionable recommendations. I built the entire architecture from scratch, including authentication, data modeling, report generation, and deployment on Render.
 
-What result was obtained?
+What did we achieve?
 A tool that allows non-technical users to analyze large volumes of business data, detect patterns and anomalies, and generate intelligent reports to make strategic decisions easily.
 `,
 repo: "https://github.com/emilymontec/nura",
