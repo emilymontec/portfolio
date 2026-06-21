@@ -12,6 +12,6 @@ The goal is to demonstrate how I approach problem-solving, system design, and pr
 | Frontend | HTML · CSS · JavaScript · React   |
 | Database | PostgreSQL · MongoDB              |
 | AI       | LLM Integration · Introduction ML |
-| Tools    | Git · GitHub · Render             |
+| Tools    | Git · GitHub · Vercel · Render    |
 
 ## [Take a Look 🔗](https://emilymontec.github.io/portfolio/)
