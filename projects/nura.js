@@ -20,15 +20,53 @@ registerProject({
   ],
 
 description_es: `
-Desarrollé una plataforma de inteligencia empresarial impulsada por IA con backend en Django. Implementé procesamiento automatizado de archivos empresariales con Pandas, persistencia de datos en Supabase (PostgreSQL), e integración con modelos de lenguaje vía Groq para transformar resultados estadísticos en insights comprensibles y recomendaciones accionables. Construí toda la arquitectura desde cero, incluyendo autenticación, modelado de datos, generación de reportes y despliegue en Render.
+Descripción:
+Plataforma de Business Intelligence impulsada por IA que permite a usuarios no técnicos analizar datos empresariales, detectar patrones y generar reportes inteligentes para apoyar la toma de decisiones estratégicas.
 
-Logré crear una nueva herramienta que permite a usuarios no técnicos analizar grandes volúmenes de datos empresariales, detectar patrones y anomalías, y generar reportes inteligentes para tomar decisiones estratégicas de manera sencilla.
+Objetivo:
+Automatizar el análisis de datos empresariales y convertir resultados estadísticos complejos en insights claros y recomendaciones accionables.
+
+Características principales:
+Procesamiento automatizado de archivos empresariales.
+Limpieza y análisis de datos con Pandas.
+Generación de insights mediante IA.
+Sistema de autenticación y gestión de usuarios.
+Generación automática de reportes.
+Despliegue en la nube.
+
+Retos y soluciones:
+Integrar análisis estadístico con modelos de lenguaje para producir resultados comprensibles para usuarios no técnicos.
+Diseñar arquitectura escalable para procesar grandes volúmenes de datos de manera eficiente.
+
+Logros:
+Creación de una herramienta que facilita el análisis de datos empresariales sin conocimientos técnicos.
+Generación automática de reportes inteligentes y recomendaciones estratégicas.
+Reducción del tiempo necesario para obtener información accionable a partir de datos complejos.
 `,
 
 description_en: `
-I developed an AI-powered business intelligence platform with Django backend. I implemented automated processing of business files with Pandas, data persistence in Supabase (PostgreSQL), and integration with language models via Groq to transform statistical results into understandable insights and actionable recommendations. I built the entire architecture from scratch, including authentication, data modeling, report generation, and deployment on Render.
+Description:
+AI-powered Business Intelligence platform that allows non-technical users to analyze business data, detect patterns, and generate intelligent reports to support strategic decision-making.
 
-I manage to create a tool that allows non-technical users to analyze large volumes of business data, detect patterns and anomalies, and generate intelligent reports to make strategic decisions easily.
+Objective:
+Automate business data analysis and convert complex statistical results into clear insights and actionable recommendations.
+
+Key features:
+Automated business file processing.
+Data cleaning and analysis with Pandas.
+AI-powered insights generation.
+User authentication and management system.
+Automatic report generation.
+Cloud deployment.
+
+Challenges & solutions:
+Integrate statistical analysis with language models to produce results understandable for non-technical users.
+Design a scalable architecture to efficiently process large volumes of data.
+
+Achievements:
+Creation of a tool that facilitates business data analysis without technical knowledge.
+Automatic generation of intelligent reports and strategic recommendations.
+Reduction of time needed to obtain actionable information from complex data.
 `,
 repo: "https://github.com/emilymontec/nura",
 demo: "https://nura-bi.onrender.com",
