@@ -7,6 +7,23 @@
 (function () {
   const STORAGE_KEY = 'emc-lang';
   let currentLang = localStorage.getItem(STORAGE_KEY) || 'es';
+  let currentCvLang = localStorage.getItem('emc-cv-lang') || 'es';
+
+  const CV_FILES = {
+    es: './docs/EmilyMonterrosaCastro.pdf',
+    en: './docs/EmilyMonterrosaCastro_en-us.pdf'
+  };
+
+  function updateCvLinks(cvLang) {
+    currentCvLang = cvLang;
+    localStorage.setItem('emc-cv-lang', cvLang);
+    const file = CV_FILES[cvLang];
+    document.querySelectorAll('.resume-view').forEach(a => a.href = file);
+    document.querySelectorAll('.resume-download').forEach(a => a.href = file);
+    document.querySelectorAll('.resume-lang-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.getAttribute('data-cv-lang') === cvLang);
+    });
+  }
 
   function applyLang(lang) {
     currentLang = lang;
@@ -56,6 +73,14 @@
   // Wait for DOM
   document.addEventListener('DOMContentLoaded', () => {
     applyLang(currentLang);
+
+    // Initialize CV language toggle
+    updateCvLinks(currentCvLang);
+    document.querySelectorAll('.resume-lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        updateCvLinks(btn.getAttribute('data-cv-lang'));
+      });
+    });
 
     const btn = document.getElementById('lang-toggle');
     if (btn) btn.addEventListener('click', toggle);
