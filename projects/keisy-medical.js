@@ -33,6 +33,7 @@ Completé el proyecto —backend, ML y frontend— en 2 semanas, trabajando en s
 Resultados:
 El principal desafío fue garantizar la calidad de los datos clínicos mediante procesos de limpieza y validación antes de su uso en los modelos predictivos, lo cual redujo significativamente los errores manuales de captura frente a un flujo sin automatizar.
 El modelo alcanzó 91% de accuracy, 75% de precisión, 64% de recall y 67% de F1-score.
+
 Proyecto entregado como demo funcional.
 `,
   description_en: `
@@ -47,6 +48,7 @@ I completed the project—backend, ML, and frontend—in 2 weeks, working indepe
 Results:
 The main challenge was ensuring the quality of clinical data through cleaning and validation processes before using it in predictive models, which significantly reduced manual data entry errors compared to a non-automated workflow.
 The model achieved 91% accuracy, 75% precision, 64% recall, and a 67% F1 score.
+
 Project delivered as a working demo.
 `,
   repo: "https://github.com/emilymontec/keisy",

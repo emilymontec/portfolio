@@ -20,56 +20,39 @@ registerProject({
   ],
 
 description_es: `
-Descripción:
-Plataforma de Business Intelligence impulsada por IA que permite a usuarios no técnicos analizar datos empresariales, detectar patrones y generar reportes inteligentes para apoyar la toma de decisiones estratégicas.
+Nura Intelligence es una plataforma de analítica conversacional impulsada por IA que transforma datos empresariales en insights, recomendaciones estratégicas, detección de riesgos y decisiones accionables.
+Los usuarios pueden importar conjuntos de datos, visualizarlos mediante dashboards interactivos con KPIs y gráficos personalizables, y consultar la información en lenguaje natural a través de un asistente conversacional.
+Incluye además un simulador de escenarios de negocio que permite evaluar posibles resultados antes de implementar decisiones reales.
 
-Objetivo:
-Automatizar el análisis de datos empresariales y convertir resultados estadísticos complejos en insights claros y recomendaciones accionables.
+Desarrollé la plataforma de extremo a extremo, diseñando una arquitectura de microservicios con Django, React y PostgreSQL, todo containerizado con Docker.
+Integré múltiples proveedores de modelos de lenguaje (Groq, OpenRouter, Cerebras) mediante un sistema de enrutamiento inteligente que selecciona automáticamente el modelo más adecuado según el contexto de la consulta —por ejemplo, priorizando modelos especializados en razonamiento cuando la solicitud implica una recomendación estratégica de negocio.
 
-Rol:
-Desarrollo full-stack, integración con APIs externas, procesamiento & análisis de datos, generación de insights y diseño de la experiencia de usuario.
+El sistema procesa y analiza los registros con Numpy, Pandas y Scikit-learn antes de generar respuestas contextualizadas, combinando análisis de datos con capacidades de IA generativa.
+Entre sus funcionalidades también destacan la importación/exportación de datos, exportación de dashboards y autenticación mediante Google.
 
-Características Principales:
-Procesamiento automatizado de archivos empresariales.
-Limpieza y análisis de datos con Pandas.
-Generación de insights mediante IA.
-Sistema de autenticación y gestión de usuarios.
-Generación automática de reportes.
-Despliegue en la nube.
+Resultados:
+El principal desafío fue integrar múltiples proveedores de IA manteniendo respuestas coherentes, contextualizadas y con tiempos adecuados, sin sacrificar escalabilidad.
+La arquitectura de microservicios permitió incorporar nuevas capacidades (motor de predicciones, motor analítico) de forma independiente, sin afectar los módulos existentes.
 
-Retos & Soluciones:
-Lograr un análisis profundo y útil de archivos empresariales más allá de métricas descriptivas básicas.
-Diseñar arquitectura escalable para procesar grandes volúmenes de datos de manera eficiente.
-
-Logros:
-Creación de una herramienta que facilita el análisis de datos empresariales sin conocimientos técnicos.
-Generación automática de reportes inteligentes y recomendaciones estratégicas.
-Reducción del tiempo necesario para obtener información accionable a partir de datos complejos.
+Proyecto personal actualmente en producción y en proceso de implementación de nuevas funciones.
 `,
 
 description_en: `
-Description:
-AI-powered Business Intelligence platform that allows non-technical users to analyze business data, detect patterns, and generate intelligent reports to support strategic decision-making.
+Nura Intelligence is an AI-powered conversational analytics platform that transforms business data into insights, strategic recommendations, risk detection, and actionable decisions.
+Users can import datasets, visualize them using interactive dashboards with customizable KPIs and charts, and query the information in natural language through a conversational assistant.
+It also includes a business scenario simulator that allows users to evaluate potential outcomes before implementing actual decisions.
 
-Objective:
-Automate business data analysis and convert complex statistical results into clear insights and actionable recommendations.
+I developed the platform from end to end, designing a microservices architecture using Django, React, and PostgreSQL, all containerized with Docker.
+I integrated multiple language model providers (Groq, OpenRouter, Cerebras) using an intelligent routing system that automatically selects the most appropriate model based on the context of the query—for example, prioritizing models specialized in reasoning when the request involves a strategic business recommendation.
 
-Key Features:
-Automated business file processing.
-Data cleaning and analysis with Pandas.
-AI-powered insights generation.
-User authentication and management system.
-Automatic report generation.
-Cloud deployment.
+The system processes and analyzes records using NumPy, Pandas, and Scikit-learn before generating contextualized responses, combining data analysis with generative AI capabilities.
+Other key features include data import/export, dashboard export, and Google authentication.
 
-Challenges & Solutions:
-Integrate statistical analysis with language models to produce results understandable for non-technical users.
-Design a scalable architecture to efficiently process large volumes of data.
+Results:
+The main challenge was to integrate multiple AI providers while maintaining consistent, contextualized, and timely responses, without sacrificing scalability.
+The microservices architecture allowed us to incorporate new capabilities (prediction engine, analytics engine) independently, without affecting existing modules.
 
-Achievements:
-Creation of a tool that facilitates business data analysis without technical knowledge.
-Automatic generation of intelligent reports and strategic recommendations.
-Reduction of time needed to obtain actionable information from complex data.
+Personal project currently in production and in the process of implementing new features.
 `,
 repo: "https://github.com/emilymontec/nura",
 demo: "https://nura-bi.onrender.com",

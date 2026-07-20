@@ -337,7 +337,8 @@
     color: rgba(255, 255, 255, 0.7);
     margin: 0 auto 4rem;
     max-width: 800px;
-    text-align: center;
+    text-align: justify;
+    text-justify: inter-word;
     white-space: pre-line;
 }
 
