@@ -6,7 +6,7 @@ registerProject({
   subtitle: "PLATAFORMA DE ANÁLISIS Y DETECCIÓN DE RIESGOS CLÍNICOS",
   subtitle_es: "PLATAFORMA DE ANÁLISIS Y DETECCIÓN DE RIESGOS CLÍNICOS",
   subtitle_en: "CLINICAL ANALYTICS & RISK DETECTION PLATAFORM",
-  image: "./assets/images/projects/keisy.jpg",
+  image: "./assets/images/projects/keisy-medical/keisy-medical.jpg",
   in_progress: false,
   technologies: [
     { class: "devicon-python-plain", tooltip_es: "Procesamiento de datos clínicos, automatización ETL y lógica analítica", tooltip_en: "Clinical data processing, ETL automation and analytical logic" },
@@ -51,6 +51,6 @@ The model achieved 91% accuracy, 75% precision, 64% recall, and a 67% F1 score.
 
 Project delivered as a working demo.
 `,
-  repo: "https://github.com/emilymontec/keisy",
+  repo: "https://github.com/emilymontec/keisy-medical",
   demo: "https://keisy-medical.onrender.com",
 });

@@ -6,7 +6,7 @@ registerProject({
   subtitle: "PLATAFORMA DE VISUALIZACIÓN DE ACTIVIDAD DE DESARROLLADORES",
   subtitle_es: "PLATAFORMA DE VISUALIZACIÓN DE ACTIVIDAD DE DESARROLLADORES",
   subtitle_en: "PLATFORM FOR VISUALIZING DEVELOPER ACTIVITY",
-  image: "./assets/images/projects/github-wrapped.jpg",
+  image: "./assets/images/projects/github-wrapped/github-wrapped.jpg",
   in_progress: true,
   technologies: [
     { class: "devicon-javascript-plain", tooltip_es: "Lógica de interacción y procesamiento de información en tiempo real", tooltip_en: "Real-time interaction logic and information processing", },
