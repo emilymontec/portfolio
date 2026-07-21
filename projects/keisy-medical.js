@@ -7,6 +7,13 @@ registerProject({
   subtitle_es: "PLATAFORMA DE ANÁLISIS Y DETECCIÓN DE RIESGOS CLÍNICOS",
   subtitle_en: "CLINICAL ANALYTICS & RISK DETECTION PLATAFORM",
   image: "./assets/images/projects/keisy-medical/keisy-medical.jpg",
+  images: [
+    "./assets/images/projects/keisy-medical/dashboard.jpeg",
+    "./assets/images/projects/keisy-medical/upload.jpeg",
+    "./assets/images/projects/keisy-medical/stats.jpeg",
+    "./assets/images/projects/keisy-medical/profile.jpeg",
+    "./assets/images/projects/keisy-medical/login.jpeg"
+  ],
   in_progress: false,
   technologies: [
     { class: "devicon-python-plain", tooltip_es: "Procesamiento de datos clínicos, automatización ETL y lógica analítica", tooltip_en: "Clinical data processing, ETL automation and analytical logic" },

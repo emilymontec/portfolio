@@ -1,6 +1,7 @@
 // Registro global de proyectos para que se almacenen una vez cargados
 const PROJECT_REGISTRY = {};
 let activeProjectId = null;
+let detailCarouselInterval = null;
 
 // Función global que será llamada por los archivos JS cargados dinámicamente
 window.registerProject = function (data) {
@@ -62,13 +63,54 @@ function renderProjectDetail(project, lang) {
     });
   }
 
-  // Imagen del detalle
+  // Imagen del detalle — carrusel con pan vertical
+  const detailContainer = document.querySelector('.detail-image-container');
+  detailContainer.querySelectorAll('.detail-carousel-img').forEach(el => el.remove());
+
+  if (detailCarouselInterval) {
+    clearInterval(detailCarouselInterval);
+    detailCarouselInterval = null;
+  }
+
+  const allImages = [];
+  if (project.images && project.images.length > 0) {
+    allImages.push(...project.images);
+  } else if (project.image) {
+    allImages.push(project.image);
+  }
+  const uniqueImages = [...new Set(allImages)];
+
   const detailImg = document.getElementById('detailImage');
-  if (project.image) {
-    detailImg.src = project.image;
-    detailImg.style.display = 'block';
-  } else {
+  if (uniqueImages.length === 0) {
     detailImg.style.display = 'none';
+    return;
+  }
+
+  detailImg.style.display = 'none';
+
+  const imgs = uniqueImages.map((src, i) => {
+    const img = document.createElement('img');
+    img.src = src;
+    img.alt = project.title || 'Project Preview';
+    img.className = 'detail-carousel-img';
+    if (i === 0) img.classList.add('active');
+    detailContainer.appendChild(img);
+    return img;
+  });
+
+  if (uniqueImages.length > 1) {
+    let current = 0;
+    detailCarouselInterval = setInterval(() => {
+      const outImg = imgs[current];
+      current = (current + 1) % imgs.length;
+      const inImg = imgs[current];
+
+      outImg.classList.remove('active');
+      outImg.classList.add('exit');
+      inImg.classList.add('active');
+
+      setTimeout(() => outImg.classList.remove('exit'), 900);
+    }, 5500);
   }
 
   // Etiqueta 'En Desarrollo'
@@ -159,6 +201,11 @@ function hideDetail() {
   const grid = document.getElementById('projectsGrid');
   const detail = document.getElementById('projectDetail');
   activeProjectId = null;
+
+  if (detailCarouselInterval) {
+    clearInterval(detailCarouselInterval);
+    detailCarouselInterval = null;
+  }
 
   detail.classList.remove('active');
 
