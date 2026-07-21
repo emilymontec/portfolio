@@ -4,14 +4,6 @@ My personal developer portfolio showcasing selected projects, technical skills, 
 
 The goal is to demonstrate how I approach problem-solving, system design, and product development through real projects.
 
-## Tech Stack
-
-| Category | Technologies                      |
-| -------- | ----------------------------------|
-| Backend  | Django · Node.js + Express        |
-| Frontend | HTML · CSS · JavaScript · React   |
-| Database | PostgreSQL · MongoDB              |
-| AI       | LLM Integration · Introduction ML |
-| Tools    | Git · GitHub · Vercel · Render    |
+---
 
 ## [Take a Look 🔗](https://emilymontec.github.io/portfolio/)
