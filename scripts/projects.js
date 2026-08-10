@@ -3,6 +3,27 @@ const PROJECT_REGISTRY = {};
 let activeProjectId = null;
 let detailCarouselInterval = null;
 
+/**
+ * Adjusts the image vertical pan offset based on its height relative to the container.
+ */
+function adjustImagePan(img, container) {
+  if (!img || !container) return;
+  if (!img.naturalWidth || !img.naturalHeight) return;
+
+  const containerWidth = container.clientWidth;
+  const containerHeight = container.clientHeight;
+  if (containerWidth === 0 || containerHeight === 0) return;
+
+  // Calculate scaled height when width is 100% of container
+  let scaledHeight = containerWidth * (img.naturalHeight / img.naturalWidth);
+  if (scaledHeight < containerHeight) {
+    scaledHeight = containerHeight;
+  }
+
+  const panY = containerHeight - scaledHeight;
+  img.style.setProperty('--pan-y', `${panY}px`);
+}
+
 // Función global que será llamada por los archivos JS cargados dinámicamente
 window.registerProject = function (data) {
   if (data && data.id) {
@@ -94,6 +115,16 @@ function renderProjectDetail(project, lang) {
     img.alt = project.title || 'Project Preview';
     img.className = 'detail-carousel-img';
     if (i === 0) img.classList.add('active');
+    
+    img.onload = () => {
+      adjustImagePan(img, detailContainer);
+    };
+    
+    // In case the image is cached and the container is already visible
+    if (img.complete && detailContainer.clientWidth > 0) {
+      adjustImagePan(img, detailContainer);
+    }
+
     detailContainer.appendChild(img);
     return img;
   });
@@ -167,6 +198,14 @@ async function showDetail(id) {
 
     // Mostrar detalle
     detail.style.display = 'block';
+
+    // Ajustar el paneo de las imágenes una vez que el contenedor tiene dimensiones
+    const detailContainer = document.querySelector('.detail-image-container');
+    if (detailContainer) {
+      detailContainer.querySelectorAll('.detail-carousel-img').forEach(img => {
+        adjustImagePan(img, detailContainer);
+      });
+    }
 
     // Forzar reflow para animación
     void detail.offsetWidth;
@@ -298,4 +337,14 @@ document.addEventListener('DOMContentLoaded', async () => {
       }
     }
   });
+});
+
+// Recalculate panning on window resize
+window.addEventListener('resize', () => {
+  const detailContainer = document.querySelector('.detail-image-container');
+  if (detailContainer) {
+    detailContainer.querySelectorAll('.detail-carousel-img').forEach(img => {
+      adjustImagePan(img, detailContainer);
+    });
+  }
 });
