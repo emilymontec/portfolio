@@ -6,12 +6,12 @@ The goal is to demonstrate how I approach problem-solving, system design, and pr
 
 ## Tech Stack
 
-| Category | Technologies                      |
-| -------- | ----------------------------------|
-| Backend  | Django · Node.js + Express        |
-| Frontend | HTML · CSS · JavaScript · React   |
-| Database | PostgreSQL · MongoDB              |
-| AI       | LLM Integration · Introduction ML |
-| Tools    | Git · GitHub · Vercel · Render    |
+| Category | Technologies                                      |
+| -------- | --------------------------------------------------|
+| Backend  | Django · Node.js + Express · Next.js · TypeScript |
+| Frontend | HTML · CSS · TailwindCSS · Bootstrap · React      |
+| Database | PostgreSQL · MySQL                                |
+| AI       | LLM Integration · Introduction ML                 |
+| Tools    | Git · GitHub · Vercel · Render · Docker           |
 
 ## [Take a Look 🔗](https://emilymontec.github.io/portfolio/)
