@@ -1,12 +1,12 @@
 registerProject({
-  id: "nura",
+  id: "nura-intelligence",
   title: "NURA INTELLIGENCE",
   title_es: "NURA INTELLIGENCE",
   title_en: "NURA INTELLIGENCE",
   subtitle: "SISTEMA DE INTELIGENCIA ARTIFICIAL PARA ANÁLISIS DE DATOS EMPRESARIALES",
   subtitle_es: "SISTEMA DE INTELIGENCIA ARTIFICIAL PARA ANÁLISIS DE DATOS EMPRESARIALES",
   subtitle_en: "ARTIFICIAL INTELLIGENCE SYSTEM FOR BUSINESS DATA ANALYSIS",
-  image: "./assets/images/projects/nura/nura.jpg",
+  image: "./assets/images/projects/nura-intelligence/nura-intelligence.jpg",
   images: [],
   in_progress: true,
   technologies: [
