@@ -8,15 +8,45 @@ registerProject({
   subtitle_en: "PHP FRAMEWORK FOR SMALL BUSINESS MANAGEMENT SYSTEMS",
   image: "./assets/images/projects/misi-framework/misi-framework.jpg",
   images: [
-    "./assets/images/projects/misi-framework/image.jpeg",
+    "./assets/images/projects/misi-framework/misi-framework.jpg",
   ],
   in_progress: false,
   technologies: [
     { class: "devicon-icon-plain", tooltip_es: "", tooltip_en: "" },
   ],
-  description: "...",
-  description_es: "...",
-  description_en: "...",
-  repo: "https://github.com/emilymontec/...",
+  description: `
+Misi es un framework PHP ligero desarrollado desde cero para crear sistemas administrativos y aplicaciones CRUD para pequeños y medianos negocios, enfocado en la reutilización de código, una arquitectura sencilla y el despliegue en hosting de bajo costo.
+
+Desarrollé el framework de forma integral, implementando routing, manejo HTTP, base de datos, migraciones, validación, autenticación, roles y permisos, protección CSRF, almacenamiento de archivos y logging. También incorporé una CLI con generadores de código, un sistema de módulos y un Business Core reutilizable para clientes, productos y categorías.
+
+Diseñé una arquitectura por capas que separa el núcleo técnico, las funcionalidades de negocio, los módulos y la aplicación específica de cada proyecto, permitiendo reutilizar la misma base para diferentes sistemas sin acoplarla a un negocio concreto.
+
+El principal desafío fue mantener el framework funcional y reutilizable sin añadir complejidad innecesaria. Misi alcanzó la versión 1.1.0 e incluye una aplicación de demostración, documentación técnica, auditoría de seguridad y soporte para despliegue en hosting sin acceso SSH.
+
+Proyecto desarrollado de forma integral como framework reutilizable para futuros proyectos web.
+  `,
+  description_es: `
+Misi es un framework PHP ligero desarrollado desde cero para crear sistemas administrativos y aplicaciones CRUD para pequeños y medianos negocios, enfocado en la reutilización de código, una arquitectura sencilla y el despliegue en hosting de bajo costo.
+
+Desarrollé el framework de forma integral, implementando routing, manejo HTTP, base de datos, migraciones, validación, autenticación, roles y permisos, protección CSRF, almacenamiento de archivos y logging. También incorporé una CLI con generadores de código, un sistema de módulos y un Business Core reutilizable para clientes, productos y categorías.
+
+Diseñé una arquitectura por capas que separa el núcleo técnico, las funcionalidades de negocio, los módulos y la aplicación específica de cada proyecto, permitiendo reutilizar la misma base para diferentes sistemas sin acoplarla a un negocio concreto.
+
+El principal desafío fue mantener el framework funcional y reutilizable sin añadir complejidad innecesaria. Misi alcanzó la versión 1.1.0 e incluye una aplicación de demostración, documentación técnica, auditoría de seguridad y soporte para despliegue en hosting sin acceso SSH.
+
+Proyecto desarrollado de forma integral como framework reutilizable para futuros proyectos web.
+  `,
+  description_en: `
+Misi is a lightweight PHP framework developed from scratch to create administrative systems and CRUD applications for small and medium-sized businesses, with a focus on code reusability, a simple architecture, and deployment on low-cost hosting.
+
+I developed the framework from the ground up, implementing routing, HTTP handling, database management, migrations, validation, authentication, roles and permissions, CSRF protection, file storage, and logging. I also incorporated a CLI with code generators, a module system, and a reusable Business Core for customers, products, and categories.
+
+I designed a layered architecture that separates the technical core, business logic, modules, and the project-specific application, allowing the same foundation to be reused for different systems without tying it to a specific business.
+
+The main challenge was to keep the framework functional and reusable without adding unnecessary complexity. Misi has reached version 1.1.0 and includes a demo application, technical documentation, a security audit, and support for deployment on hosting platforms without SSH access.
+
+This project was developed comprehensively as a reusable framework for future web projects.
+  `,
+  repo: "https://github.com/emilymontec/misi-framework",
   demo: "...",
 });
