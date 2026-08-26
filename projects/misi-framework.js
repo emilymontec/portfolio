@@ -8,11 +8,19 @@ registerProject({
   subtitle_en: "PHP FRAMEWORK FOR SMALL BUSINESS MANAGEMENT SYSTEMS",
   image: "./assets/images/projects/misi-framework/misi-framework.jpg",
   images: [
-    "./assets/images/projects/misi-framework/misi-framework.jpg",
+    "./assets/images/projects/misi-framework/home.png",
+    "./assets/images/projects/misi-framework/features.png",
+    "./assets/images/projects/misi-framework/start.png",
+    "./assets/images/projects/misi-framework/cli.png",
+    "./assets/images/projects/misi-framework/uikit.png",
   ],
   in_progress: false,
   technologies: [
-    { class: "devicon-icon-plain", tooltip_es: "", tooltip_en: "" },
+    { class: "devicon-php-plain", tooltip_es: "Lenguaje principal del framework: routing, HTTP, base de datos, migraciones, autenticación, CSRF, almacenamiento y logging", tooltip_en: "Core framework language: routing, HTTP handling, database, migrations, authentication, CSRF protection, file storage, and logging" },
+    { class: "devicon-javascript-plain", tooltip_es: "Interactividad del UI Kit y comportamiento de componentes en el lado del cliente", tooltip_en: "UI Kit interactivity and client-side component behavior" },
+    { class: "devicon-css3-plain", tooltip_es: "Estilos del UI Kit integrado en el framework: componentes, layouts y utilidades visuales", tooltip_en: "Styles for the built-in UI Kit: components, layouts, and visual utilities" },
+    { class: "devicon-html5-plain", tooltip_es: "Estructura de las vistas del framework, UI Kit y aplicación de demostración", tooltip_en: "Structure of framework views, UI Kit, and the demo application" },
+    { class: "devicon-mysql-plain", tooltip_es: "Base de datos principal: soporte para migraciones, consultas y gestión de esquemas desde el framework", tooltip_en: "Primary database: migration support, query handling, and schema management built into the framework" },
   ],
   description: `
 Misi es un framework PHP ligero desarrollado desde cero para crear sistemas administrativos y aplicaciones CRUD para pequeños y medianos negocios, enfocado en la reutilización de código, una arquitectura sencilla y el despliegue en hosting de bajo costo.
@@ -48,5 +56,5 @@ The main challenge was to keep the framework functional and reusable without add
 This project was developed comprehensively as a reusable framework for future web projects.
   `,
   repo: "https://github.com/emilymontec/misi-framework",
-  demo: "...",
+  demo: "https://misi.freedev.app",
 });
