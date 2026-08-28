@@ -8,11 +8,11 @@ registerProject({
   subtitle_en: "PHP FRAMEWORK FOR SMALL BUSINESS MANAGEMENT SYSTEMS",
   image: "./assets/images/projects/misi-framework/misi-framework.jpg",
   images: [
-    "./assets/images/projects/misi-framework/home.png",
-    "./assets/images/projects/misi-framework/features.png",
-    "./assets/images/projects/misi-framework/start.png",
-    "./assets/images/projects/misi-framework/cli.png",
-    "./assets/images/projects/misi-framework/uikit.png",
+    "./assets/images/projects/misi-framework/home.jpeg",
+    "./assets/images/projects/misi-framework/features.jpeg",
+    "./assets/images/projects/misi-framework/install.jpeg",
+    "./assets/images/projects/misi-framework/cli.jpeg",
+    "./assets/images/projects/misi-framework/ui-kit.jpeg",
   ],
   in_progress: false,
   technologies: [
