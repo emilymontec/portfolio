@@ -47,6 +47,8 @@
   max-width: 650px;
   line-height: 1.8;
   margin: 0 auto 3.5rem;
+  text-align: justify;
+  text-justify: inter-word;
   transition: var(--transition-slow);
 }
 

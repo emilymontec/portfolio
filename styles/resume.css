@@ -72,6 +72,8 @@
   font-size: 1.05rem;
   color: rgba(255, 255, 255, 0.65);
   line-height: 1.6;
+  text-align: justify;
+  text-justify: inter-word;
   transition: var(--transition-slow);
 }
 
