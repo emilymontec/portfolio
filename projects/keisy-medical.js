@@ -1,3 +1,22 @@
+/*
+<div class="project-card" onclick="showDetail('keisy-medical')"
+    data-tooltip-es="Click para ver más"
+    data-tooltip-en="Click to see more"
+    data-tooltip="Click para ver más">
+<div class="project-image">
+    <img src="./assets/images/projects/keisy-medical/keisy-medical.jpg" alt="KEISY-MEDICAL">
+</div>
+<div class="project-info">
+    <h3 data-i18n data-es="KEISY MEDICAL: Plataforma de Análisis & Detección de Riesgos Clínicos" data-en="KEISY MEDICAL: Clinical Analysis & Risk Detection Platform">KEISY MEDICAL: Plataforma de Análisis & Detección de Riesgos Clínicos</h3>
+    <p data-i18n-html
+        data-html-es="Plataforma de analítica para salud con ETL automatizado, dashboards interactivos y modelos de machine learning para detección de riesgos clínicos. Desarrollada con Django, Pandas, scikit-learn, Chart.js y Supabase."
+        data-html-en="Healthcare analytics platform featuring automated ETL pipelines, interactive dashboards, and machine learning models for clinical risk detection. Built with Django, Pandas, Scikit-learn, Chart.js and Supabase.">
+        Plataforma de analítica para salud con ETL automatizado, dashboards interactivos y modelos de machine learning para detección de riesgos clínicos. Desarrollada con Django, Pandas, Scikit-learn, Chart.js y Supabase.
+    </p>
+</div>
+</div>
+*/
+
 registerProject({
   id: "keisy-medical",
   title: "KEISY MEDICAL",
