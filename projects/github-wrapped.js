@@ -8,9 +8,11 @@ registerProject({
   subtitle_en: "ANNUAL DEVELOPER ACTIVITY RECAP FOR GITHUB",
   image: "./assets/images/projects/github-wrapped/github-wrapped.jpg",
   images: [
-    "./assets/images/projects/no-images.jpg",
+    "./assets/images/projects/github-wrapped/home.jpeg",
+    "./assets/images/projects/github-wrapped/dashboard.jpeg",
+    "./assets/images/projects/github-wrapped/config.jpeg",
   ],
-  in_progress: true,
+  in_progress: false,
   technologies: [
     { class: "devicon-nextjs-plain", tooltip_es: "Framework principal full-stack con App Router: frontend, API routes e imágenes Open Graph", tooltip_en: "Core full-stack framework with App Router: frontend, API routes, and Open Graph images" },
     { class: "devicon-typescript-plain", tooltip_es: "Tipado estático en todo el sistema: API clients, colas de trabajo y motor de analítica", tooltip_en: "Static typing across the whole system: API clients, job queues, and analytics engine" },
