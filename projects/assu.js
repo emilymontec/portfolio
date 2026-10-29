@@ -8,7 +8,9 @@ registerProject({
   subtitle_en: "AUTOMATIC TRANSFER VERIFICATION SYSTEM",
   image: "./assets/images/projects/assu/assu.jpg",
   images: [
-    "./assets/images/projects/no-images.jpg",
+    "./assets/images/projects/assu/dashboard.jpeg",
+    "./assets/images/projects/assu/monitoring.jpeg",
+    "./assets/images/projects/assu/settings.jpeg",
   ],
   in_progress: true,
   technologies: [
